@@ -11,6 +11,9 @@ if session.forced_language == 'en':
 def hst():
 	return dict()
 
+def series_info():
+        return dict()
+
 def index():
   series = db((db.series.series_id==db.series_settings.series_id) & (db.series.press_id==myconf.take("omp.press_id")) & (db.series_settings.locale==locale)).select(db.series.path, db.series.image, db.series_settings.series_id, db.series_settings.setting_name, db.series_settings.setting_value, orderby= [db.series_settings.series_id, db.series_settings.setting_name] )
   series_metadata =[]
