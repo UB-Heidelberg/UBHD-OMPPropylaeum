@@ -21,7 +21,6 @@ text = html2text("")}}
 		 	<img src="{{=URL(myconf.take('web.application'),'static','series/'+row['image'][4:].split(';')[1].split('"')[1])}}"/>
 			{{pass}}
                   </div>
-
                 </article>
 
             </div>
@@ -52,8 +51,12 @@ text = html2text("")}}
                             <li>
                               
                               <a href="{{=URL(myconf.take('web.application'),'catalog','series/'+str(row['path']))}}">{{=T('More information')}}</a>
+                              <a href="./series/{{=str(row['path'])}}_info.html">Weitere Informationen zu "{{=(row['title'])}}"</a>
+
                               {{if len(row['description']) > 1000            :}}
                             <a data-toggle="modal" href="#{{=str(row['path'])}}" >{{=T('Series Datails')}}</a>
+                            
+
                              {{pass}}
                             </li><br>
                               
