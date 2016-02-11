@@ -149,8 +149,8 @@ def book():
         if name and identification_code:
             identification_codes[
                 identification_code['value']] = name['setting_value']
-
-    published_date = db(pub_query & (db.publication_format_settings.setting_value == myconf.take('omp.doi_format_name')) & (
+    date_pub_query =  (db.publication_formats.submission_id == book_id) & (db.publication_format_settings.publication_format_id == db.publication_formats.publication_format_id)
+    published_date = db(date_pub_query & (db.publication_format_settings.setting_value == myconf.take('omp.doi_format_name')) & (
         db.publication_dates.publication_format_id == db.publication_format_settings.publication_format_id)).select(db.publication_dates.date)
 
     representatives = db(
