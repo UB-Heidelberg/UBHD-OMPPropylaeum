@@ -201,9 +201,9 @@
 
                                 <div class="box-bottom">
    {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('catalog','series/arch-ber'))}}
+                                    {{=A(T('More'),_href=URL('series','/archber_info'))}}
       {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('catalog','series/arch-ber'))}}
+                                    {{=A(T('More Information'),_href=URL('series','/archber_info'))}}
                                       {{pass}}
                                 </div>
 
