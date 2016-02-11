@@ -8,16 +8,17 @@ locale = 'de_DE'
 if session.forced_language == 'en':
   locale = 'en_US'
 
-def hst():
-	return dict()
 
-def series_info():
-        return dict()
+def saa_info():
+	return dict()
 
 def daidalos_info():
         return dict()
 
-def ByzanzOO_info():
+def byzanzoo_info():
+        return dict()
+
+def archber_info():
         return dict()
 
 def index():
@@ -41,4 +42,4 @@ def index():
   series_ids = db(db.series.press_id==myconf.take("omp.press_id")).select(db.series.series_id)
   if len(series_ids) == 0 :
     raise HTTP(200, "'invalid': no series in this press")
-  return dict(series_ids=series_ids, series_metadata=series_metadata)
+  return locals()
