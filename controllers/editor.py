@@ -9,4 +9,6 @@ LICENSE.md
 def dguf():
     return dict()
 
+def rgzm():
+    return dict()
 
