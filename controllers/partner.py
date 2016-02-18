@@ -6,6 +6,10 @@ LICENSE.md
 '''
 
 
+
+def cms():
+    return dict()
+
 def dguf():
     return dict()
 
