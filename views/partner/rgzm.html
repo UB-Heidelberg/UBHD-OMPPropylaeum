@@ -1,0 +1,92 @@
+{{extend 'layout.html'}}
+
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            {{if session.forced_language =='de': }}
+             <h3>Römisch-Germanische Zentralmuseum - <span style="font-weight: 500;">Leibniz-Forschungsinstitut für Archäologie (RGZM)</span></h3> 
+            {{pass}}
+            </h3>
+
+            <p>
+                {{if session.forced_language =='de': }}
+                
+                <div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/editor/rgzm_logo.png'),_width='145px')}}</p>
+                <br />
+                <p><b>Kontakt</b><br />
+                RGZM | Römisch-Germanisches Zentralmuseum<br />
+                Forschungsinstitut für Archäologie<br />
+                Ernst-Ludwig-Platz 2<br />
+                D-55116 Mainz<br /><br />
+             
+                Tel.: +49 6131 9124 0<br />
+                Fax: +49 6131 9124 199</p>
+
+                <p>
+                <b>Verlag</b><br />
+                Leitung<br />
+                Dr. Reinhard Köster<br />
+                koester@rgzm.de
+                </p>
+
+                <p>
+                Redaktion und Lektorat<br />
+                Dr. Claudia Nickel<br />
+                nickel@rgzm.de
+                </p>
+                </div>
+                <p>Das <a href="http://web.rgzm.de" title="Homepage der RGZ">RGZM</a> ist eine international tätige Forschungseinrichtung für Archäologie, das von Bund und Ländern getragen wird und zur Leibniz-Gemeinschaft deutscher Forschungseinrichtungen gehört. Gegliedert in mehrere Abteilungen, arbeitet das Institut im Bereich der Alten Welt sowie seiner Kontaktzonen von der Altsteinzeit bis ins Mittelalter. Daneben unterhält es eine ständige Schausammlung und wendet sich auch durch seine zahlreichen Publikationen und Veranstaltungen der anschaulichen Vermittlung neuester Forschungsergebnisse an eine breite Öffentlichkeit.<br />
+Abteilungs- und zeitübergreifend werden zeitlich befristete Forschungsschwerpunkte gebildet, bei denen Wissenschaftler der verschiedenen Abteilungen gemeinsam an kulturhistorischen Fragestellungen arbeiten. Es handelt sich dabei aktuell um folgende Themen:</p>
+
+<ul>
+    <li>Menschwerdung: Die Evolution menschlichen Verhaltens</li>
+    <li>Studien zur Dynamik neolithischer Gesellschaften (nlDynamics)</li>
+    <li>Archäologische Studien zu Austausch- und Anpassungsprozessen in Grenzzonen</li>
+    <li>Formen der Romanisierung in den Grenzprovinzen des Römischen Reiches an Rhein und Donau</li>
+    <li>Untersuchungen zu Struktur und Technik antiker Seefahrt im Mittelmeerraum</li>
+    <li>Werkstätten und Handel im Byzantinischen Reich</li>
+    <li>Entstehung einer Industrielandschaft: Das antike Steinbruch- und Bergwerksrevier zwischen Eifel und Rhein</li>
+    <li>Für Seelenheil und Lebensglück: Studien zum byzantinischen Pilgerwesen und seinen Wurzeln</li>
+</ul>
+
+                <p>Seit über 30 Jahren besitzt das RGZM einen hauseigenen <b>Verlag</b>. Neben der wissenschaftlichen Redaktion übernimmt der Verlag auch die Buchproduktion weitgehend in Eigenregie. Dies bietet eine große Unabhängigkeit und sowohl das Museum als auch die Autorinnen und Autoren profitieren von der Fachkompetenz des Verlages, von dessen hoher Flexibilität und enger Vernetzung.</p>
+                <p>Im Verlag des RGZM erscheinen drei wissenschaftliche Zeitschriften (<a href="http://journals.ub.uni-heidelberg.de/index.php/jahrb-rgzm" title="Homepage des Jahrbuchs des RGZM">Jahrbuch des RGZM</a>; <a href="http://journals.ub.uni-heidelberg.de/index.php/ak" title="Homepage des Archäologischen Korrespondenzblatts">Archäologisches Korrespondenzblatt</a>; Restaurierung und Archäologie)  sowie mehrere Monographienreihen. Hier werden Forschungsergebnisse veröffentlicht, die am RGZM erarbeitet wurden. Außerdem publiziert der Verlag auch Resultate externer, internationaler Forschung, sofern sie für die wissenschaftlichen Fragestellungen und Arbeitsziele des RGZM von Interesse sind. Darüber hinaus informieren Ausstellungskataloge und populärwissenschaftliche Bücher ein breites Publikum über neue Forschungen (siehe <a href="http://web.rgzm.de/publikationen/verlagsprogramm.html" title="Verlagsprogramm">Verlagsprogramm</a>).</p>
+                <p>Bände der Reihe "<a href="../series/byzanzoo_info.html" title="Informationen über Byzanz zwischen Orient und Okzident">Byzanz zwischen Orient und Okzident</a>", dem Publikationsorgan für das Forschungsprogramm des Leibniz-WissenschaftsCampusMainz, werden nach und nach über <b>Propylaeum eBooks</b> online im Open Access bereitgestellt.</p>
+                
+ 
+{{elif session.forced_language =='en': }}
+                <div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/editor/rgzm_logo.png'),_width='145px')}}</p>
+                <br />
+                <p><b>Contact</b><br />
+                RGZM | Römisch-Germanisches Zentralmuseum<br />
+                Forschungsinstitut für Archäologie<br />
+                Ernst-Ludwig-Platz 2<br />
+                D-55116 Mainz<br /><br />
+             
+                Tel.: +49 6131 9124 0<br />
+                Fax: +49 6131 9124 199</p>
+
+                <p>
+                <b>Press</b><br />
+                Leitung<br />
+                Dr. Reinhard Köster<br />
+                koester@rgzm.de
+                </p>
+
+                <p>
+                Redaktion und Lektorat<br />
+                Dr. Claudia Nickel<br />
+                nickel@rgzm.de
+                </p>
+                </div>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+                {{pass}}
+
+
+            </p>
+
+        </div>
+    </div>
+  </div>
+ 
