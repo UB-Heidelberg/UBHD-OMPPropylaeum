@@ -2161,7 +2161,18 @@ li.active {
 
 #infoBoxRechts {
   float: right;
+  background-color:#f7f7f7;
+  padding-top:1em;
+  padding-bottom:1em;
+  margin-left:1em;
 }
+
+#infoBoxRechts img {
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
 
 .boxListe {
   text-align: left;
@@ -2274,8 +2285,22 @@ footer {
   margin-top:13%;
 }
 
+#footer_logo_propylaeum img {
+  width: 60%;
+  padding-right: 0px;
+  filter:alpha(opacity=50);
+  opacity:0.5;
+  -moz-opacity:0.5;
+  -khtml-opacity:0.5;
+  -opera-opacity:0.5;
+  margin-top:9%;
+  margin-left:9%;
+}
+
+
+
 #footer_logo_pkp {
-  margin-top:10%;
+  margin-top:15%;
 }
 
 #footer_logo_pkp img{
