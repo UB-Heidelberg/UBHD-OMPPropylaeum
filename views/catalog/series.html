@@ -10,7 +10,8 @@ order[i['series_position']]=i['submission_id']
 pass
 }}
 <section id="content">
-
+<h2>{{=series_title}}</h2>
+  <h3>{{=series_subtitle}}</h3>
     <div style="height: 20px"></div>
     {{for e in sorted(order,reverse=True):}}
     {{entry=order[e]}}

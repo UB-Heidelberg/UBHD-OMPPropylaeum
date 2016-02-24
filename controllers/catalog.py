@@ -23,7 +23,19 @@ def series():
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id))
     submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
     subs = {}
-    
+
+    series_title = ""
+    series_subtitle = ""
+    rows = db(db.series.path == series).select(db.series.series_id)
+    if len(rows) == 1:
+        series_id = rows[0]['series_id']
+    	rows = db((db.series_settings.series_id == series_id) & (db.series_settings.setting_name == 'title') & (db.series_settings.locale == locale)).select(db.series_settings.setting_value)
+	if rows:
+	    series_title=rows[0]['setting_value']
+	rows = db((db.series_settings.series_id == series_id) & (db.series_settings.setting_name == 'subtitle') & (db.series_settings.locale == locale)).select(db.series_settings.setting_value)
+        if rows:
+            series_subtitle=rows[0]['setting_value']
+
     for i in submissions:
       authors=''
       if i.setting_name == 'abstract':
@@ -45,7 +57,7 @@ def series():
       series_positions = db((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id)  ).select(db.submissions.submission_id,db.submissions.series_position, orderby=db.submissions.series_position)
 
-    return dict(submissions=submissions, subs=subs, sp=series_positions)
+    return dict(submissions=submissions, subs=subs, sp=series_positions, series_title=series_title, series_subtitle=series_subtitle)
 
 def index():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
