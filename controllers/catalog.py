@@ -18,7 +18,6 @@ def series():
     if request.args[0]:
   	 series = request.args[0]
     
-    
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id))
     submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
@@ -165,8 +164,21 @@ def book():
             identification_codes[
                 identification_code['value']] = name['setting_value']
     date_pub_query =  (db.publication_formats.submission_id == book_id) & (db.publication_format_settings.publication_format_id == db.publication_formats.publication_format_id)
-    published_date = db(date_pub_query & (db.publication_format_settings.setting_value == myconf.take('omp.doi_format_name')) & (
-        db.publication_dates.publication_format_id == db.publication_format_settings.publication_format_id)).select(db.publication_dates.date)
+    publication_dates = db(date_pub_query & (db.publication_format_settings.setting_value == myconf.take('omp.doi_format_name')) & (
+        db.publication_dates.publication_format_id == db.publication_format_settings.publication_format_id)).select(db.publication_dates.date, db.publication_dates.role, db.publication_dates.date_format)
+
+    published_date = None
+    publication_year = ""
+    for row in publication_dates:
+        if row['date_format'] == '20': #YYYYMMDD
+		published_date = row['date']
+		publication_year = published_date[:4]
+	if row['date_format'] == '05' and row['role'] == '19': #YYYY, original date
+		print_published_date = row['date']
+
+    press_location = "Heidelberg"
+
+#{{=press_location}}: {{=press_name}}, {{=publication_year}}
 
     representatives = db(
         (db.representatives.submission_id == book_id) & (
@@ -196,6 +208,6 @@ def book():
     	if os.path.exists(path+t):
 		cover_image= URL(myconf.take('web.application'), 'static','monographs/' + book_id + '/simple/cover.'+t)
 
-    
-    return dict(abstract=abstract, authors=authors, author_bio=author_bio, book_id=book_id, chapters=chapters, cleanTitle=cleanTitle, cover_image=cover_image, full_files=full_files, identification_codes=identification_codes,
-                publication_formats=publication_formats, publication_format_settings_doi=publication_format_settings_doi, published_date=published_date, subtitle=subtitle, press_name=press_name, representatives=representatives)
+    return locals()
+    #return dict(abstract=abstract, authors=authors, author_bio=author_bio, book_id=book_id, chapters=chapters, cleanTitle=cleanTitle, cover_image=cover_image, full_files=full_files, identification_codes=identification_codes,
+    #            publication_formats=publication_formats, publication_format_settings_doi=publication_format_settings_doi, published_date=published_date, subtitle=subtitle, press_name=press_name, representatives=representatives)
