@@ -54,9 +54,12 @@ def index():
         locale = 'en_US'
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale))
-    submissions = db(query).select(db.submission_settings.ALL,orderby =[db.submissions.context_id,~db.submissions.series_position])
+    submissions = db(query).select(db.submission_settings.ALL,orderby=~db.submissions.date_submitted)
     subs = {}
+    order = []
     for i in submissions:
+      if not i.submission_id in order:
+	order.append(i.submission_id)
       authors=''
       if i.setting_name == 'abstract':
           subs.setdefault(i.submission_id, {})['abstract'] = i.setting_value
@@ -74,7 +77,7 @@ def index():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-    return dict(submissions=submissions, subs=subs)
+    return dict(submissions=submissions, subs=subs, order=order)
 
 
 
