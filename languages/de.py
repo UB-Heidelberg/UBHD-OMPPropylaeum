@@ -273,6 +273,7 @@
 'Preface': 'Allgemeines',
 'previous %s rows': 'vorherige %s Reihen',
 'Print On Demand': 'Print On Demand',
+'Print version published': 'Druckversion erschienen',
 'Produktform/Medienart': 'Produktform/Medienart',
 'Produktionsjahr': 'Produktionsjahr',
 'Profil': 'Profil',

@@ -14,7 +14,8 @@
           <div class="box-gray alignleft" style="height: auto;">
 
             <h5 style="color: #656565; margin-bottom: 0.5em;">{{=T('How to cite this title')}}</h5>
-            <p>{{=authors}}<br>
+            <p>
+		{{=", ".join([i.last_name+", "+i.first_name for i in authors_list])}}, 
               <i>{{=cleanTitle}}
                 {{if len(subtitle)>0:}}
                 : {{=subtitle}}
