@@ -5,6 +5,8 @@ Distributed under the GNU GPL For full terms see the file
 LICENSE.md
 '''
 import os
+from operator import itemgetter
+
 def series():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
     locale = 'de_DE'
@@ -20,7 +22,7 @@ def series():
     
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id))
-    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
+    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position|~db.submissions.date_submitted)
     subs = {}
 
     series_title = ""
@@ -35,10 +37,18 @@ def series():
         if rows:
             series_subtitle=rows[0]['setting_value']
 
+    series_positions = {}
     for i in submissions:
       series_position = db(db.submissions.submission_id == i.submission_id).select(db.submissions.series_position).first()['series_position']
       if series_position:
          subs.setdefault(i.submission_id, {})['series_position'] = series_position
+	 pos_counter = 0
+         try:
+	   int_pos = int(series_position)
+	   series_positions[i.submission_id] = int_pos
+	 except:
+	   series_positions[i.submission_id] = pos_counter
+	   pos_counter += 1
       authors=''
       if i.setting_name == 'abstract':
           subs.setdefault(i.submission_id, {})['abstract'] = i.setting_value
@@ -56,10 +66,10 @@ def series():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-      series_positions = db((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
-        db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id)  ).select(db.submissions.submission_id,db.submissions.series_position, orderby=db.submissions.series_position)
 
-    return dict(submissions=submissions, subs=subs, sp=series_positions, series_title=series_title, series_subtitle=series_subtitle)
+      order = [e[0] for e in sorted(series_positions.items(), key=itemgetter(1), reverse=True)]
+
+    return dict(submissions=submissions, subs=subs, order=order, series_title=series_title, series_subtitle=series_subtitle)
 
 def index():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
