@@ -3,18 +3,18 @@
 {{import re}}
 {{import os}}
 
-{{
-order={}
-for i in sp.as_list():
-order[i['series_position']]=i['submission_id']
-pass
-}}
 <section id="content">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
 <h2>{{=series_title}}</h2>
   <h3>{{=series_subtitle}}</h3>
-    <div style="height: 20px"></div>
-    {{for e in sorted(order,reverse=True):}}
-    {{entry=order[e]}}
+</div>
+</div>
+</div>
+
+
+    {{for entry in order:}}
     <div class="container" height="400px">
         <div class="row">
             <div class="col-lg-3">
