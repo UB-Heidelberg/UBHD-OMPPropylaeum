@@ -42,7 +42,7 @@ def series():
     for i in submissions:
       if not i.submission_id in order:
 	order.append(i.submission_id)
-      series_position = db(db.submissions.submission_id == i.submission_id).select(db.submissions.series_position).first()['series_position']
+      series_position = db.submissions(db.submissions.submission_id==i.submission_id).series_position
       if series_position:
          subs.setdefault(i.submission_id, {})['series_position'] = series_position
 	 pos_counter = 0
@@ -60,19 +60,27 @@ def series():
       if i.setting_name == 'title':
           subs.setdefault(i.submission_id, {})[
               'title'] = i.setting_value
-      author_q = ((db.authors.submission_id == i.submission_id))
-      authors_list = db(author_q).select(
-          db.authors.first_name, db.authors.last_name)
-      for j in authors_list:
-          authors += j.first_name + ' ' + j.last_name + ', '
-      if authors.endswith(', '):
-        authors = authors[:-2]
-          
+      
+      authors = db((db.authors.submission_id==i.submission_id)).select(
+            db.authors.first_name, db.authors.middle_name, db.authors.last_name, orderby=db.authors.seq)
+      editors = []
+      # check, if submission is an edited volume
+      if db.submissions(db.submissions.submission_id==i.submission_id).edited_volume == 1:
+        try:
+	   # look for editors using group ids
+          editors = db( (db.authors.submission_id==i.submission_id) & (db.authors.user_group_id==myconf.take('omp.editor_id')) ).select(
+            db.authors.first_name, db.authors.middle_name, db.authors.last_name, orderby=db.authors.seq)
+          authors = db( (db.authors.submission_id==i.submission_id) & (db.authors.user_group_id==myconf.take('omp.author_id')) ).select(
+            db.authors.first_name, db.authors.middle_name, db.authors.last_name, orderby=db.authors.seq)
+        except:
+	  # editor_id and/or author_id not set
+	  pass
       subs.setdefault(i.submission_id, {})['authors'] = authors
+      subs.setdefault(i.submission_id, {})['editors'] = editors
       if series_positions != {}:
         order = [e[0] for e in sorted(series_positions.items(), key=itemgetter(1), reverse=True)]
 
-    return dict(submissions=submissions, subs=subs, order=order, series_title=series_title, series_subtitle=series_subtitle)
+    return locals()
 
 def index():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
