@@ -15,7 +15,11 @@
 
             <h5 style="color: #656565; margin-bottom: 0.5em;">{{=T('How to cite this title')}}</h5>
             <p>
-		{{=", ".join([i.last_name+", "+i.first_name for i in authors_list])}}, 
+		{{if editors:}}
+		  {{=", ".join([e.last_name+", "+" ".join([e.first_name, e.middle_name]) for e in editors])}}
+		{{elif authors:}}
+                  {{=", ".join([e.last_name+", "+" ".join([e.first_name, e.middle_name]) for e in authors])}}
+		{{pass}}
               <i>{{=cleanTitle}}
                 {{if len(subtitle)>0:}}
                 : {{=subtitle}}
@@ -25,7 +29,7 @@
             </p>
             {{if publication_format_settings_doi:}}
             <p>
-              DOI: <a href="http://dx.doi.org/{{=publication_format_settings_doi['setting_value']}}" title="DOI: {{=authors}}, {{=cleanTitle}}, {{=press_name}}, 2015">{{=publication_format_settings_doi['setting_value']}}</a>
+              DOI: <a href="http://dx.doi.org/{{=publication_format_settings_doi['setting_value']}}" title="DOI: {{=cleanTitle}}, {{=press_name}}, 2015">{{=publication_format_settings_doi['setting_value']}}</a>
             </p>
             {{pass}}
             <h5 style="color: #656565; margin-bottom: 0.3em;">{{=T('Licenses')}}</h5>
@@ -179,7 +183,13 @@
             </div>
             <div class="post-heading">
               <br/>
-              <h5><a href="#">{{=authors}}</a></h5>
+                 <h5>
+		   {{if editors:}}
+		      {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in editors])+" "+T("(eds)")}}
+		   {{else:}}
+		      {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in authors])}}
+		   {{pass}}
+		</h5>
             </div>
             <h3>{{=XML(cleanTitle)}}</h3>
             <h4>{{=subtitle}}</h4>

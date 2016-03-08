@@ -6,6 +6,7 @@ LICENSE.md
 '''
 import os
 from operator import itemgetter
+from ompdal import OMPDAL
 
 def series():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
@@ -103,18 +104,13 @@ def index():
       if i.setting_name == 'title':
           subs.setdefault(i.submission_id, {})[
               'title'] = i.setting_value
-      author_q = ((db.authors.submission_id == i.submission_id))
-      authors_list = db(author_q).select(
-          db.authors.first_name, db.authors.last_name)
-      for j in authors_list:
-          authors += j.first_name + ' ' + j.last_name + ', '
-      if authors.endswith(', '):
-        authors = authors[:-2]
+
+      ompdal = OMPDAL(db, myconf)
+
+      subs.setdefault(i.submission_id, {})['authors'] = ompdal.getAuthors(i.submission_id)
+      subs.setdefault(i.submission_id, {})['editors'] = ompdal.getEditors(i.submission_id)
           
-      subs.setdefault(i.submission_id, {})['authors'] = authors
-    return dict(submissions=submissions, subs=subs, order=order)
-
-
+    return locals() 
 
 def book():
     abstract, authors, cleanTitle, publication_format_settings_doi, press_name, subtitle = '', '', '', '', '', ''
@@ -142,6 +138,11 @@ def book():
         authors += i.first_name + ' ' + i.last_name + ', '
     if authors.endswith(', '):
         authors = authors[:-2]
+
+    ompdal = OMPDAL(db, myconf)
+
+    authors = ompdal.getAuthors(book_id)
+    editors = ompdal.getEditors(book_id)
 
     author_bio = db((db.authors.submission_id == book_id) & (db.authors.author_id == db.author_settings.author_id) & (
         db.author_settings.locale == locale) & (db.author_settings.setting_name == 'biography')).select(db.author_settings.setting_value).first()
@@ -233,5 +234,3 @@ def book():
 		cover_image= URL(myconf.take('web.application'), 'static','monographs/' + book_id + '/simple/cover.'+t)
 
     return locals()
-    #return dict(abstract=abstract, authors=authors, author_bio=author_bio, book_id=book_id, chapters=chapters, cleanTitle=cleanTitle, cover_image=cover_image, full_files=full_files, identification_codes=identification_codes,
-    #            publication_formats=publication_formats, publication_format_settings_doi=publication_format_settings_doi, published_date=published_date, subtitle=subtitle, press_name=press_name, representatives=representatives)
