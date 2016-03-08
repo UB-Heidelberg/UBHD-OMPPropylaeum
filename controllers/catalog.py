@@ -6,6 +6,7 @@ LICENSE.md
 '''
 import os
 from operator import itemgetter
+local_import(dal)
 
 def series():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
@@ -110,8 +111,11 @@ def index():
           authors += j.first_name + ' ' + j.last_name + ', '
       if authors.endswith(', '):
         authors = authors[:-2]
+
+      subs.setdefault(i.submission_id, {})['authors'] = dal.OMPDAL.getAuthors(i.submission_id)
+      subs.setdefault(i.submission_id, {})['editors'] = dal.OMPDAL.getEditors(i.submission_id)
           
-      subs.setdefault(i.submission_id, {})['authors'] = authors
+      #subs.setdefault(i.submission_id, {})['authors'] = authors
     return dict(submissions=submissions, subs=subs, order=order)
 
 
@@ -142,6 +146,9 @@ def book():
         authors += i.first_name + ' ' + i.last_name + ', '
     if authors.endswith(', '):
         authors = authors[:-2]
+
+    authors = dal.OMPDAL.getAuthors(i.submission_id)
+    editors = dal.OMPDAL.getEditors(i.submission_id)
 
     author_bio = db((db.authors.submission_id == book_id) & (db.authors.author_id == db.author_settings.author_id) & (
         db.author_settings.locale == locale) & (db.author_settings.setting_name == 'biography')).select(db.author_settings.setting_value).first()
@@ -233,5 +240,3 @@ def book():
 		cover_image= URL(myconf.take('web.application'), 'static','monographs/' + book_id + '/simple/cover.'+t)
 
     return locals()
-    #return dict(abstract=abstract, authors=authors, author_bio=author_bio, book_id=book_id, chapters=chapters, cleanTitle=cleanTitle, cover_image=cover_image, full_files=full_files, identification_codes=identification_codes,
-    #            publication_formats=publication_formats, publication_format_settings_doi=publication_format_settings_doi, published_date=published_date, subtitle=subtitle, press_name=press_name, representatives=representatives)
