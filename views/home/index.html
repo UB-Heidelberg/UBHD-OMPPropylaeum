@@ -216,17 +216,18 @@ Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonu
                             <div class="box">
 
                                 <div class="box-gray aligncenter">
+
                                    {{if session.forced_language =='de': }}
                                     <h4>Digital Classics Books</h4>
                                    {{elif session.forced_language =='en': }}
                                     <h4>Digital Classics Books</h4>
                                    {{pass}}
                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/digital_classics_books.png'),_width='145px')}}
-
-
+                                   <p class="boxText">
                                 </div>
 
-                                <div class="box-bottom">&nbsp;
+                                <div class="box-bottom">
+                               &nbsp;
                                 {{if session.forced_language =='de': }}
                                 {{=A(T('More'),_href=URL('series','dcb_info'))}}
       {{elif session.forced_language =='en': }}
@@ -241,9 +242,9 @@ Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonu
                         <div class="col-lg-6" id="boxAktuelles">
 
                         <div class="box">
-                        <div class="box-gray aligncenter">
-                        <h4>Propylaeum E-Books</h4>
-                        <p class="boxText">
+                        <div class="box-gray">
+                       <h4>Propylaeum E-Books</h4>
+                        <p class="boxText aligncenter">
 {{if session.forced_language =='de': }}
 ist die Open-Access-Publikationsplattform von Proplyaeum für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
 Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinne und Altertumswissenschaften weltweit.<br>
@@ -251,8 +252,7 @@ Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP
         {{elif session.forced_language =='en': }}                
 
 Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-{{pass}}
-</p>
+{{pass}}</p>
                         </div>
 
               <div class="box-bottom">&nbsp;</div>
