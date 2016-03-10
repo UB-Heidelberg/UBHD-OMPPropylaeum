@@ -260,7 +260,7 @@ header ul.nav li ul li a {
 
 
 .navbar .nav > li > a {
-  color: #40448b;
+  color: #0060aa;
   text-shadow: none;
 }
 
@@ -2222,7 +2222,7 @@ li.active {
 .flex-caption .btn-theme,
 .widget ul.tags li a,
 .widget ul.tags li a:hover {
-  background:  #40448b !important;
+  background:  #0060aa !important;
   border: none;
 }
 

@@ -3,7 +3,7 @@
 a, a:hover,a:focus,a:active, footer a.text-link:hover, strike, .post-meta span a:hover, footer a.text-link, 
 ul.meta-post li a:hover, ul.cat li a:hover, ul.recent li h6 a:hover, ul.portfolio-categ li.active a, ul.portfolio-categ li.active a:hover, ul.portfolio-categ li a:hover,ul.related-post li h4 a:hover, span.highlight,article .post-heading h3 a:hover,
 .navbar .nav > .active > a,.navbar .nav > .active > a:hover,.navbar .nav > li > a:hover,.navbar .nav > li > a:focus,.navbar .nav > .active > a:focus, .validation  { 
-	color:#40448b;
+	color:#0060aa;
         font-weight:bold;
 }
 
@@ -50,12 +50,12 @@ header .nav li.active ul.dropdown-menu li.active a{
 .pagination ul > .active > span,
 .flex-control-nav li a:hover, 
 .flex-control-nav li a.active {
-  background-color: #40448b;
+  background-color: #0060aa;
 }
 
 
 .breadcrumb {
-  background-color: #40448b;
+  background-color: #0060aa;
 }
 
 /* === border color === */
@@ -126,7 +126,7 @@ ul.clients li:hover {
 }
 
 .box-bottom a {
-    color: #40448b;
+    color: #0060aa;
 }
 
 /* buttons */
