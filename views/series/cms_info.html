@@ -1,0 +1,86 @@
+{{extend 'layout.html'}}
+
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Corpus der minoischen und mykenischen Siegel  
+                {{elif session.forced_language =='en': }}
+                Corpus der minoischen und mykenischen Siegel
+            {{pass}}
+            </h3>
+
+
+                {{if session.forced_language =='de': }}
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/partner/cms_logo.png'),_width='145px')}}</p>
+<br>
+                <p><b>Kontakt</b><br>
+                Institut für Klassische Archäologie<br />
+                Marstallhof 4<br />
+                D-69117 Heidelberg<br /><br />
+ 
+                Prof. Dr. Diamantis Panagiotopoulos<br />
+                Tel.: +49 6221 54 2511<br />
+                E-Mail: diamantis.panagiotopoulos@zaw.uni-heidelberg.de<br /><br />
+               
+                Bestellung der Bände als <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/volumessale.html" title="Printversion">Printversion</a>:
+cms@zaw.uni-heidelberg.de<br /><br />
+               
+                
+                Die Bildrechte liegen beim CMS. Für Veröffentlichungsgenehmigungen wenden Sie sich bitte cms@zaw.uni-heidelberg.de.</p>
+                </div>
+                <p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/cms_baende.jpg'),_width='300px',_style='float:right')}}Die Schriftenreihe "Corpus der minoischen und mykenischen Siegel (CMS)" besteht aus aktuell 13 z.T. mehrteiligen Bänden (CMS I-XIII) sowie 9 Beiheften, in denen insgesamt mehr als 9.000 minoische und mykenische Siegel bzw. Siegelabdrücke in standardisierter <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/documentation.html" title="Dokumentation">Form</a> publiziert werden.</p>
+<p>In den ersten 4 Bänden (CMS I-V inkl. Suppl.) werden die Bestände griechischer Museen und Sammlungen. (u.a. Athen, Nationalmuseum; Iraklion, Archäologisches Museum) veröffentlicht, die Bände VI-XI (inkl. Suppl) enthalten die europäischer Sammlungen (u.a.
+London, British Museum; Oxford. The Ashmolean Museum). In den Bänden XII-XIII werden Siegel und Siegelabdrücke in nordamerikanischen Sammlungen publiziert.
+Die 9 Beihefte enthalten die Ergebnisse internationaler Tagung, die vom CMS organisiert wurden, oder Studien zu Einzelthemen (u.a. talismanischen Siegel).</p>
+                 <p>Die seit 1964 in gedruckter Form erschienenen Bände werden nun in Kooperation mit den Verantwortlichen des <a href="./partner/cms.html" title="Informationen über CMS">CMS</a> nach und nach über Propylaeum eBooks im Open Access online bereitgestellt.</p>
+
+<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="../catalog/series/cms">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                            
+
+                        </ul>
+                    </div>
+
+                     {{elif session.forced_language =='en': }}
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/partner/cms_logo.png'),_width='145px')}}</p>
+<br>
+                <p><b>Contact</b><br>
+                Institut für Klassische Archäologie<br />
+                Marstallhof 4<br />
+                D-69117 Heidelberg<br /><br />
+
+                Prof. Dr. Diamantis Panagiotopoulos<br />
+                Tel.: +49 6221 54 2511<br />
+                E-Mail: diamantis.panagiotopoulos@zaw.uni-heidelberg.de<br /><br />
+
+                Bestellung der Bände als <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/volumessale.html" title="Printversion">Printversion</a>:
+cms@zaw.uni-heidelberg.de<br /><br />
+
+                Die Bildrechte liegen beim CMS. Für Veröffentlichungsgenehmigungen wenden Sie sich bitte cms@zaw.uni-heidelberg.de.</p>
+                </div>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                               <p><a href="../catalog/series/cms">{{=T('Volumes')}}</a></p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+{{pass}}
+
+        </div>
+    </div>
+</div>
+
