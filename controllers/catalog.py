@@ -130,15 +130,6 @@ def book():
     #if len(book) == 0:
     #    redirect(URL('catalog', 'index'))
 
-    author_q = ((db.authors.submission_id == book_id))
-    authors_list = db(author_q).select(
-        db.authors.first_name, db.authors.last_name)
-
-    for i in authors_list:
-        authors += i.first_name + ' ' + i.last_name + ', '
-    if authors.endswith(', '):
-        authors = authors[:-2]
-
     ompdal = OMPDAL(db, myconf)
 
     authors = ompdal.getAuthors(book_id)

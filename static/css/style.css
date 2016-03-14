@@ -46,6 +46,8 @@ h1,h2, h3, h4, h5, h6 {
 	margin-bottom: 20px;
 }
 
+h4.titel_zweizeilig {margin-top:-0.2em;}
+
 #service-navi {background-color:#fff;}
 
 #main {background-color:#fff;

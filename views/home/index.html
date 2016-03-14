@@ -220,20 +220,20 @@ Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonu
                                 <div class="box-gray aligncenter">
 
                                    {{if session.forced_language =='de': }}
-                                    <h4>Digital Classics Books</h4>
+                                    <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
                                    {{elif session.forced_language =='en': }}
-                                    <h4>Digital Classics Books</h4>
+                                    <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
                                    {{pass}}
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/digital_classics_books.png'),_width='145px')}}
+                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','series/11-series.png'),_width='145px')}}
                                    <p class="boxText">
                                 </div>
 
                                 <div class="box-bottom">
                                &nbsp;
                                 {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('series','dcb_info'))}}
+                                {{=A(T('More'),_href=URL('series','cms_info'))}}
       {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('series','dcb_info'))}}
+                               {{=A(T('More Information'),_href=URL('series','cms_info'))}}
                                 {{pass}}
                                 </div>
 
