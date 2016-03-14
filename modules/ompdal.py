@@ -30,3 +30,12 @@ class OMPDAL:
 		except:
 			return []
 		return self.db((self.db.authors.submission_id==submission_id) & (self.db.authors.user_group_id==chapter_author_group_id)).select(self.db.authors.first_name, self.db.authors.middle_name, self.db.authors.last_name, orderby=self.db.authors.seq)
+
+	def getSeries(self):
+		return self.db(self.db.series.press_id==self.conf.take("omp.press_id")).select(self.db.series.series_id, self.db.series.path, self.db.series.image)
+
+	def getLocalizedSeriesSettings(self, series_id, locale):
+		return self.db((self.db.series_settings.series_id==series_id) & (self.db.series_settings.locale==locale)).select(self.db.series_settings.series_id, self.db.series_settings.locale, self.db.series_settings.setting_name, self.db.series_settings.setting_value)
+
+        def getSeriesSettings(self, series_id):
+        	return self.db(self.db.series_settings.series_id==series_id).select(self.db.series_settings.series_id, self.db.series_settings.locale, self.db.series_settings.setting_name, self.db.series_settings.setting_value)
