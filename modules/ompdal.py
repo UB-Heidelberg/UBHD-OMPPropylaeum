@@ -39,3 +39,44 @@ class OMPDAL:
 
         def getSeriesSettings(self, series_id):
         	return self.db(self.db.series_settings.series_id==series_id).select(self.db.series_settings.series_id, self.db.series_settings.locale, self.db.series_settings.setting_name, self.db.series_settings.setting_value)
+
+	def getLocalizedChapters(self, submission_id, locale):
+		q = ((self.db.submission_chapters.submission_id == submission_id) 
+			& (self.db.submission_chapters.chapter_id == self.db.submission_chapter_settings.chapter_id)
+			& (self.db.submission_file_settings.locale == locale)
+			& (self.db.submission_file_settings.setting_name == "chapterID") 
+			& (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id) 
+			& (self.db.submission_file_settings.file_id == self.db.submission_files.file_id) 
+			& (self.db.submission_chapter_settings.setting_name == 'title'))
+
+		return self.db(q).select(self.db.submission_chapters.chapter_id, 
+				self.db.submission_chapter_settings.setting_value, 
+				self.db.submission_files.assoc_id, 
+				self.db.submission_files.submission_id, 
+				self.db.submission_files.genre_id,
+				self.db.submission_files.file_id, 
+				self.db.submission_files.revision, 
+				self.db.submission_files.file_stage, 
+				self.db.submission_files.date_uploaded, 
+				orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id], 
+				groupby=[self.db.submission_chapters.chapter_id])
+
+        def getChapters(self, submission_id):
+                q = ((self.db.submission_chapters.submission_id == submission_id)
+                        & (self.db.submission_chapters.chapter_id == self.db.submission_chapter_settings.chapter_id)
+                        & (self.db.submission_file_settings.setting_name == "chapterID")
+                        & (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id)
+                        & (self.db.submission_file_settings.file_id == self.db.submission_files.file_id)
+                        & (self.db.submission_chapter_settings.setting_name == 'title'))
+
+                return self.db(q).select(self.db.submission_chapters.chapter_id,
+                                self.db.submission_chapter_settings.setting_value,
+                                self.db.submission_files.assoc_id,
+                                self.db.submission_files.submission_id,
+                                self.db.submission_files.genre_id,
+                                self.db.submission_files.file_id,
+                                self.db.submission_files.revision,
+                                self.db.submission_files.file_stage,
+                                self.db.submission_files.date_uploaded,
+                                orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id],
+                                groupby=[self.db.submission_chapters.chapter_id])
