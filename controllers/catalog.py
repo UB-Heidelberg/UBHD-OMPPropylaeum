@@ -113,7 +113,7 @@ def index():
     return locals() 
 
 def book():
-    abstract, authors, cleanTitle, publication_format_settings_doi, press_name, subtitle = '', '', '', '', '', ''
+    abstract, cleanTitle, publication_format_settings_doi, press_name, subtitle = '', '', '', '', ''
     locale = ''
     if session.forced_language == 'en':
         locale = 'en_US'
@@ -213,7 +213,19 @@ def book():
             subtitle = i.setting_value
         if i.setting_name == 'title':
             cleanTitle = i.setting_value
-     
+
+    sub = ompdal.getSubmission(book_id)
+    series_info = {}
+    if sub.series_id:
+       series_settings = ompdal.getLocalizedSeriesSettings(sub.series_id, locale)
+       if not series_settings:
+               ompdal.getSeriesSettings(sub.series_id)
+       for r in series_settings:
+               if r.setting_name == "title":
+                       series_info["series_title"] = r.setting_value
+               elif r.setting_name == "subtitle":
+                       series_info["series_subtitle"] = r.setting_value
+       series_info["series_position"] = sub.series_position
     
     types=['jpg','png','gif']
     cover_image=''
