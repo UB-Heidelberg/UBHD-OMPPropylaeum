@@ -402,10 +402,4 @@
 'Zolltarifnummer Verzeihnis': 'Zolltarifnummer Verzeihnis',
 'Zusatz ISBN / EAN': 'Zusatz ISBN / EAN',
 'Zusatzinformationen': 'Zusatzinformationen',
-'Published': 'Veröffentlicht am',
-'Print version published': 'Druckversion erschienen',
-'ed': 'Hrsg',
-'eds': 'Hrsg',
-'and': 'und',
-'vol.': 'Band',
 }
