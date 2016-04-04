@@ -39,11 +39,18 @@ pass
                 <article>
                     <div class="post-heading">
                         <h4>
-			{{if subs[entry]['editors']:}}
-				{{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['editors']])+" "+T("(eds)")}}
-			{{else:}}
-				{{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['authors']])}}
-			{{pass}}
+                        {{if subs[entry]['editors']:}}
+                                {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['editors']])+" "+T("(eds)")}}
+                                {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['editors']])}}
+                                {{if len(subs[entry]['editors']) > 1:}}
+                                        {{=T("(eds)")}}
+                                {{else:}}
+                                        {{=T("(ed.)")}}
+                                {{pass}}
+                        {{else:}}
+                                {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['authors']])}}
+                        {{pass}}
+
 			</h4>
                             <h4>{{=subs[entry]['title']}}<br />
                                 {{=subs[entry]['subtitle']}}</h4>

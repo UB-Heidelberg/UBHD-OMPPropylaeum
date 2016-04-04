@@ -105,17 +105,17 @@
                   <div class="media-body">      
                       <p class="media-heading">
         {{if session.forced_language =='de': }}  
-            <h5>Neu in Propylaeum – eBooks</h5>
+            <h5>Neu in Propylaeum–eBOOKS</h5>
         {{elif session.forced_language =='en': }}
-            <h5>New in Propylaeum – eBooks</h5> 
+            <h5>New in Propylaeum–eBOOKS</h5> 
         {{pass}}          
                       </p>
                   <p class="boxText">
         {{if session.forced_language =='de': }}  
 Der erste Band der Schriftenreihe <a href="{{=URL(myconf.take('web.application'),'series','byzanzoo_info.html')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL(myconf.take('web.application'),'catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
                {{elif session.forced_language =='en': }}      
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                          {{pass}}                                   
+                 The first volume of the book series  <a href="{{=URL(myconf.take('web.application'),'series','byzanzoo_info.html')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL(myconf.take('web.application'),'catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
+                 {{pass}}                                   
                                       </p>
                                     </div>
                                 </div>          
@@ -136,7 +136,7 @@ Der erste Band der Schriftenreihe <a href="{{=URL(myconf.take('web.application')
 {{if session.forced_language =='de': }}
                   Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
         {{elif session.forced_language =='en': }}
-Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.           
+Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
 {{pass}}
             <!--<a href="http://open-access.net/community/open_access_tage/ " target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>-->
                       </p>
@@ -220,20 +220,20 @@ Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonu
                                 <div class="box-gray aligncenter">
 
                                    {{if session.forced_language =='de': }}
-                                    <h4>Digital Classics Books</h4>
+                                    <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
                                    {{elif session.forced_language =='en': }}
-                                    <h4>Digital Classics Books</h4>
+                                    <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
                                    {{pass}}
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/digital_classics_books.png'),_width='145px')}}
+                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','series/11-series.png'),_width='145px')}}
                                    <p class="boxText">
                                 </div>
 
                                 <div class="box-bottom">
                                &nbsp;
                                 {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('series','dcb_info'))}}
+                                {{=A(T('More'),_href=URL('series','cms_info'))}}
       {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('series','dcb_info'))}}
+                               {{=A(T('More Information'),_href=URL('series','cms_info'))}}
                                 {{pass}}
                                 </div>
 
@@ -245,15 +245,16 @@ Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonu
 
                         <div class="box">
                         <div class="box-gray">
-                       <h4>Propylaeum E-Books</h4>
+                       <h4>Propylaeum–eBOOKS</h4>
                         <p class="boxText aligncenter">
 {{if session.forced_language =='de': }}
-ist die Open-Access-Publikationsplattform von Proplyaeum für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
+ist die Open-Access-Publikationsplattform von Propylaeum für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
 Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinne und Altertumswissenschaften weltweit.<br>
 Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
         {{elif session.forced_language =='en': }}                
-
-Lorem ipsum deedledee dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+is the Open Access publication platform by Propylaeum for scientific ebooks on Classical Studies.<br>
+We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). The service is free of charge and provides academics from all over the world<br>
+We are using the Open-Source-Software OMP (Open Monograph Press) by the Public Knowledge Project (PKP).
 {{pass}}</p>
                         </div>
 
