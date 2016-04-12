@@ -6,7 +6,9 @@ LICENSE.md
 '''
 import os
 from operator import itemgetter
+
 from ompdal import OMPDAL
+
 
 def series():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
@@ -83,34 +85,54 @@ def series():
 
     return locals()
 
+
 def index():
-    abstract, author, cleanTitle, subtitle = '', '', '', ''
     locale = 'de_DE'
     if session.forced_language == 'en':
         locale = 'en_US'
-    query = ((db.submissions.context_id == myconf.take('omp.press_id'))  & (db.submissions.status == 3) & (
+    ignored_submissions =  myconf.take('omp.ignore_submissions') if myconf.take('omp.ignore_submissions') else -1
+    query = ((db.submissions.context_id == myconf.take('omp.press_id')) & (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale))
-    submissions = db(query).select(db.submission_settings.ALL,orderby=~db.submissions.date_submitted)
+    submissions = db(query).select(db.submission_settings.ALL, db.submissions.series_id, db.submissions.series_position,
+                                   orderby=~db.submissions.date_submitted)
     subs = {}
     order = []
+    series_info = {}
+    ompdal = OMPDAL(db, myconf)
     for i in submissions:
-      if not i.submission_id in order:
-	order.append(i.submission_id)
-      authors=''
-      if i.setting_name == 'abstract':
-          subs.setdefault(i.submission_id, {})['abstract'] = i.setting_value
-      if i.setting_name == 'subtitle':
-          subs.setdefault(i.submission_id, {})['subtitle'] = i.setting_value
-      if i.setting_name == 'title':
-          subs.setdefault(i.submission_id, {})[
-              'title'] = i.setting_value
+        id = i.submission_settings.submission_id
+        if id not in order:
+            order.append(id)
+        setting_name = i.submission_settings.setting_name
+        setting_value = i.submission_settings.setting_value
+        if setting_name == 'abstract':
+            subs.setdefault(id, {})['abstract'] = setting_value
+        if setting_name == 'subtitle':
+            subs.setdefault(id, {})['subtitle'] = setting_value
+        if setting_name == 'title':
+            subs.setdefault(id, {})['title'] = setting_value
+        subs.setdefault(id, {})['authors'] = ompdal.getAuthors(id)
+        for row in ompdal.getPublicationDates(id):
+            if row['date_format'] == '00':
+                subs[id]['publication_date'] = row['date']
+        subs[id]['editors'] = ompdal.getEditors(id)
+        subs[id]['series_position'] = i.submissions.series_position
+        series_id = i.submissions.series_id
+        if series_id != 0:
+            subs[id]['series_id'] = series_id
+            if series_id not in series_info:
+                series_settings = ompdal.getLocalizedSeriesSettings(series_id, locale)
+                if not series_settings:
+                    series_settings = ompdal.getSeriesSettings(series_id)
+                series_info[series_id] = {}
+                for s in series_settings:
+                    if s.setting_name == 'title':
+                        series_info[series_id]['title'] = s.setting_value
+                    if s.setting_name == 'subtitle':
+                        series_info[series_id]['subtitle'] = s.setting_value
 
-      ompdal = OMPDAL(db, myconf)
+    return locals()
 
-      subs.setdefault(i.submission_id, {})['authors'] = ompdal.getAuthors(i.submission_id)
-      subs.setdefault(i.submission_id, {})['editors'] = ompdal.getEditors(i.submission_id)
-          
-    return locals() 
 
 def book():
     abstract, authors, cleanTitle, publication_format_settings_doi, press_name, subtitle = '', '', '', '', '', ''

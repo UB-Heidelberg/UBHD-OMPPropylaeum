@@ -1,19 +1,16 @@
 {{extend 'layout.html'}}
-<div id="main" class="container">
 {{import re}}
 {{import os}}
 
+<div id="main" class="container">
 <section id="content">
-
     <div style="height: 20px"></div>
     {{for entry in order:}}
-
-
-    <div class="container" height="400px">
-        <div class="row">
-            <div class="col-lg-3">
-                <article>
-                    <div class="post-image">
+        <div class="container" height="400px">
+            <div class="row">
+                <div class="col-lg-3">
+                    <article>
+                        <div class="post-image">
 {{
     types=['jpg','png','gif']
     cover_image=''
@@ -33,28 +30,32 @@ pass
                 <article>
                     <div class="post-heading">
                         <h4>
-			{{if subs[entry]['editors']:}}
-				{{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['editors']])+" "+T("(eds)")}}
-			{{else:}}
-				{{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['authors']])}}
-			{{pass}}
-			</h4>
-                            <h4>{{=subs[entry]['title']}}<br />
-                                {{=subs[entry]['subtitle']}}</h4>
+                        {{if subs[entry]['editors']:}}
+                            {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['editors']])+" "+T("(eds)")}}
+                        {{else:}}
+                            {{=", ".join([" ".join([e.first_name, e.middle_name, e.last_name]) for e in subs[entry]['authors']])}}
+                        {{pass}}
+                        </h4>
+                        <h4>{{=subs[entry]['title']}}<br />
+                        {{=subs[entry]['subtitle']}}</h4>
+                        <p>
+                        {{if 'publication_date' in subs[entry]:}}{{=subs[entry]['publication_date'][:4]}}<br/>{{pass}}
+                        {{if subs[entry].has_key('series_id'):
+                            series_subtitle = series_info[subs[entry]['series_id']]['subtitle']
+                            series_title = series_info[subs[entry]['series_id']]['title']
+                        }}
+                        <i>{{=series_title}}{{ if series_subtitle: }} – {{=series_subtitle}}{{pass}}{{if subs[entry]['series_position']:}},  {{=T('Vol.')}} {{=subs[entry]['series_position']}} {{pass}}</i>
+                        {{pass}}
+                        </p>
                     </div>
                     <p>
                         <i class="icon-quote-left"></i>
-                        {{#=re.compile(r'<[^>]+>').sub('',subs[entry]['abstract'])}}
                         {{=XML(subs[entry]['abstract'])}}
                     </p>
                     <div class="widget">
                         <h5 class="widgetheading"></h5>
                         <ul class="tags">
-                            {{if session.forced_language =='de': }}
-                            <li><a href="{{=URL(myconf.take('web.application'),'catalog','book/'+str(entry))}}">{{=T('Mehr' )}}</a></li>
-                            {{elif session.forced_language =='en': }}
-                            <li><a href="{{=URL(myconf.take('web.application'),'catalog','book/'+str(entry))}}">{{=T('More Information' )}}</a></li>
-                            {{pass}}
+                            <li><a href="{{=URL('book', args=[entry])}}">{{=T('More Information' )}}</a></li>
                         </ul>
                     </div>
                 </article>
@@ -62,7 +63,5 @@ pass
         </div>
     </div>
     {{pass}}
-
-    </div>
-    </div>
 </section>
+</div>

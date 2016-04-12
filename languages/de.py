@@ -234,7 +234,7 @@
 'Modified On': 'Verändert am',
 'More': 'Mehr',
 'More information': 'Mehr',
-'More Information': 'More Information',
+'More Information': 'Mehr',
 'Mwst.': 'Mwst.',
 'My Sites': 'Meine Seiten',
 'Name': 'Name',

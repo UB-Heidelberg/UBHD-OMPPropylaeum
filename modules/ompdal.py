@@ -16,7 +16,8 @@ class OMPDAL:
 					self.db.authors.first_name, 
 					self.db.authors.middle_name, 
 					self.db.authors.last_name, 
-					orderby=self.db.authors.seq)
+					orderby=self.db.authors.seq
+		)
 
 	def getEditors(self, submission_id):
         	"""
@@ -26,12 +27,13 @@ class OMPDAL:
 			editor_group_id = self.conf.take('omp.editor_id')
 		except:
 			return []
-		return self.db((self.db.authors.submission_id==submission_id) 
+		return self.db((self.db.authors.submission_id==submission_id)
 				& (self.db.authors.user_group_id==editor_group_id)).select(
-					self.db.authors.first_name, 
-					self.db.authors.middle_name, 
-					self.db.authors.last_name, 
-					orderby=self.db.authors.seq)
+					self.db.authors.first_name,
+					self.db.authors.middle_name,
+					self.db.authors.last_name,
+					orderby=self.db.authors.seq
+		)
 
 	def getChapterAuthors(self, submission_id):
        		"""
@@ -41,12 +43,13 @@ class OMPDAL:
 			chapter_author_group_id = self.conf.take('omp.author_id')
 		except:
 			return []
-		return self.db((self.db.authors.submission_id==submission_id) 
+		return self.db((self.db.authors.submission_id==submission_id)
 				& (self.db.authors.user_group_id==chapter_author_group_id)).select(
-					self.db.authors.first_name, 
-					self.db.authors.middle_name, 
-					self.db.authors.last_name, 
-					orderby=self.db.authors.seq)
+					self.db.authors.first_name,
+					self.db.authors.middle_name,
+					self.db.authors.last_name,
+					orderby=self.db.authors.seq
+		)
 
         def getSubmission(self, submission_id):
 		"""
@@ -59,54 +62,52 @@ class OMPDAL:
 		Get series info.
 		"""
 		return self.db(self.db.series.press_id==self.conf.take("omp.press_id")).select(
-					self.db.series.series_id, 
-					self.db.series.path, 
-					self.db.series.image)
+					self.db.series.series_id,
+					self.db.series.path,
+					self.db.series.image
+		)
 
 	def getLocalizedSeriesSettings(self, series_id, locale):
 		"""
 		Get series settings for a given locale.
 		"""
-		return self.db((self.db.series_settings.series_id==series_id) 
+		return self.db((self.db.series_settings.series_id==series_id)
 				& (self.db.series_settings.locale==locale)).select(
-					self.db.series_settings.series_id, 
-					self.db.series_settings.locale, 
-					self.db.series_settings.setting_name, 
-					self.db.series_settings.setting_value)
+					self.db.series_settings.series_id,
+					self.db.series_settings.locale,
+					self.db.series_settings.setting_name,
+					self.db.series_settings.setting_value
+		)
 
         def getSeriesSettings(self, series_id):
 		"""
 		Get series settings.
 		"""
         	return self.db(self.db.series_settings.series_id==series_id).select(
-					self.db.series_settings.series_id, 
-					self.db.series_settings.locale, 
-					self.db.series_settings.setting_name, 
-					self.db.series_settings.setting_value)
+					self.db.series_settings.series_id,
+					self.db.series_settings.locale,
+					self.db.series_settings.setting_name,
+					self.db.series_settings.setting_value
+		)
 
 	def getLocalizedChapters(self, submission_id, locale):
 		"""
 		Get all chapters associated with the given submission and a given locale.
 		"""
-		q = ((self.db.submission_chapters.submission_id == submission_id) 
+		q = ((self.db.submission_chapters.submission_id == submission_id)
 				& (self.db.submission_chapters.chapter_id == self.db.submission_chapter_settings.chapter_id)
 				& (self.db.submission_file_settings.locale == locale)
-				& (self.db.submission_file_settings.setting_name == "chapterID") 
-				& (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id) 
-				& (self.db.submission_file_settings.file_id == self.db.submission_files.file_id) 
-				& (self.db.submission_chapter_settings.setting_name == 'title'))
+				& (self.db.submission_file_settings.setting_name == "chapterID")
+				& (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id)
+				& (self.db.submission_file_settings.file_id == self.db.submission_files.file_id)
+				& (self.db.submission_chapter_settings.setting_name == 'title')
+		)
 
-		return self.db(q).select(self.db.submission_chapters.chapter_id, 
-					self.db.submission_chapter_settings.setting_value, 
-					self.db.submission_files.assoc_id, 
-					self.db.submission_files.submission_id, 
-					self.db.submission_files.genre_id,
-					self.db.submission_files.file_id, 
-					self.db.submission_files.revision, 
-					self.db.submission_files.file_stage, 
-					self.db.submission_files.date_uploaded, 
-					orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id], 
-					groupby=[self.db.submission_chapters.chapter_id])
+		return self.db(q).select(self.db.submission_chapters.chapter_id,
+					self.db.submission_chapter_settings.setting_value,
+					self.db.submission_files.ALL,
+					orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id],
+		)
 
         def getChapters(self, submission_id):
 		"""
@@ -117,16 +118,137 @@ class OMPDAL:
                         	& (self.db.submission_file_settings.setting_name == "chapterID")
                         	& (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id)
                         	& (self.db.submission_file_settings.file_id == self.db.submission_files.file_id)
-                        	& (self.db.submission_chapter_settings.setting_name == 'title'))
+                        	& (self.db.submission_chapter_settings.setting_name == 'title')
+		)
 
                 return self.db(q).select(self.db.submission_chapters.chapter_id,
-                                	self.db.submission_chapter_settings.setting_value,
-                                	self.db.submission_files.assoc_id,
-                                	self.db.submission_files.submission_id,
-                                	self.db.submission_files.genre_id,
-                                	self.db.submission_files.file_id,
-                                	self.db.submission_files.revision,
-                                	self.db.submission_files.file_stage,
-                                	self.db.submission_files.date_uploaded,
+                                        self.db.submission_chapter_settings.setting_value,
+                                        self.db.submission_files.ALL,
                                 	orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id],
-                                	groupby=[self.db.submission_chapters.chapter_id])
+		)
+
+	def getLocalizedLatestRevisionOfChapters(self, submission_id, locale):
+                """
+                Get the latest revision for all chapter files associated with the given submission and a given locale.
+                """
+                q = ((self.db.submission_chapters.submission_id == submission_id)
+                                & (self.db.submission_chapters.chapter_id == self.db.submission_chapter_settings.chapter_id)
+                                & (self.db.submission_file_settings.locale == locale)
+                                & (self.db.submission_file_settings.setting_name == "chapterID")
+                                & (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id)
+                                & (self.db.submission_file_settings.file_id == self.db.submission_files.file_id)
+                                & (self.db.submission_chapter_settings.setting_name == 'title')
+                )
+
+                chapters = self.db(q).select(self.db.submission_chapters.chapter_id,
+                                        self.db.submission_chapter_settings.setting_value,
+                                        self.db.submission_files.ALL,
+                                        orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id],
+                                        distinct=True
+                )
+
+		latest_revision_chapters = []
+                for row in chapters:
+                        latest_revision = self.db(self.db.submission_files.file_id == row.submission_files.file_id).select(self.db.submission_files.revision.max()).first()[self.db.submission_files.revision.max()]
+                        if row.submission_files.revision == latest_revision:
+                                latest_revision_chapters.append(row)
+
+                return latest_revision_chapters
+
+	def getLatestRevisionOfChapters(self, submission_id):
+                """
+                Get the latest revision for all chapter files associated with the given submission.
+                """
+                q = ((self.db.submission_chapters.submission_id == submission_id)
+                                & (self.db.submission_chapters.chapter_id == self.db.submission_chapter_settings.chapter_id)
+                                & (self.db.submission_file_settings.setting_name == "chapterID")
+                                & (self.db.submission_file_settings.setting_value == self.db.submission_chapters.chapter_id)
+                                & (self.db.submission_file_settings.file_id == self.db.submission_files.file_id)
+                                & (self.db.submission_chapter_settings.setting_name == 'title')
+                )
+
+		chapters = self.db(q).select(self.db.submission_chapters.chapter_id,
+                                        self.db.submission_chapter_settings.setting_value,
+                                        self.db.submission_files.ALL,
+					orderby=[self.db.submission_chapters.chapter_seq, self.db.submission_files.assoc_id],
+                                        distinct=True
+		)
+
+		latest_revision_chapters = []
+		for row in chapters:
+			latest_revision = self.db(self.db.submission_files.file_id == row.submission_files.file_id).select(self.db.submission_files.revision.max()).first()[self.db.submission_files.revision.max()]
+			if row.submission_files.revision == latest_revision:
+				latest_revision_chapters.append(row)
+
+		return latest_revision_chapters
+
+	def getLatestRevisionsOfFullBook(self, submission_id):
+		try:
+			monograph_type_id = self.conf.take('omp.monograph_type_id')
+		except:
+			return []
+		sf = self.db.submission_files
+		q = ((sf.submission_id == submission_id)
+                        & (sf.genre_id == monograph_type_id)
+                        & (sf.file_stage > 5)
+		)
+		files = []
+		for f in self.db(q).select(sf.file_id, orderby=sf.file_id, distinct=True):
+			latest_revision = self.db(sf.file_id == f.file_id).select(sf.revision.max()).first()[sf.revision.max()]
+			q_latest = ((sf.file_id == f.file_id)
+				& (sf.revision == latest_revision)
+                	)
+			files.append(self.db(q_latest).select(sf.ALL, orderby=sf.file_id, distinct=True).first())
+
+		return files
+
+	def getPublicationDates(self, submission_id):
+		q = ((self.db.publication_formats.submission_id == submission_id)
+			& (self.db.publication_format_settings.publication_format_id == self.db.publication_formats.publication_format_id)
+			& (self.db.publication_format_settings.setting_value == self.conf.take('omp.doi_format_name'))
+			& (self.db.publication_dates.publication_format_id == self.db.publication_format_settings.publication_format_id)
+		)
+		return self.db(q).select(self.db.publication_dates.date,
+			self.db.publication_dates.role,
+			self.db.publication_dates.date_format
+		)
+
+	def getAllPublicationFormats(self, submission_id, available=True, approved=True):
+                """
+                Get all publication formats for the given submission id.
+                """
+		pf = self.db.publication_formats
+		q = (pf.submission_id == submission_id) & (pf.is_available == available) & (pf.is_approved == approved)
+		return self.db(q).select(pf.ALL)
+
+	def getPhysicalPublicationFormats(self, submission_id, available=True, approved=True):
+		"""
+		Get all publication formats marked as physical format for the given submission id.
+		"""
+                pf = self.db.publication_formats
+                q = (pf.submission_id == submission_id) & (pf.is_available == available) & (pf.is_approved == approved) & (pf.physical_format == True)
+                return self.db(q).select(pf.ALL)
+
+	def getDigitalPublicationFormats(self, submission_id, available=True, approved=True):
+                """
+                Get all publication formats not marked as physical format for the given submission id.
+                """
+                pf = self.db.publication_formats
+                q = (pf.submission_id == submission_id) & (pf.is_available == available) & (pf.is_approved == approved) & (pf.physical_format == False)
+                return self.db(q).select(pf.ALL)
+
+	def getPublicationFormatSettings(self, publication_format_id):
+		pfs = self.db.publication_format_settings
+		q = (pfs.submission_id == submission_id)
+		return self.db(q).select(pfs.ALL)
+
+	def getLocalizedPublicationFormatSettings(self, publication_format_id, locale):
+                pfs = self.db.publication_format_settings
+                q = (pfs.submission_id == submission_id) & (pfs.locale == locale)
+                return self.db(q).select(pfs.ALL)
+
+	def getPublicationFormatByName(self, submission_id, name, available=True, approved=True, locale=None):
+		pf = self.db.publication_formats
+		pfs = self.db.publication_format_settings
+		q = (pf.submission_id == submission_id) & (pf.is_available == available) & (pf.is_approved == approved) & (pfs.submission_id == pf.submission_id) & (pfs.setting_name == "name") & (pfs.setting_value == name)
+		return self.db(q).select(pf.ALL, groupby=pf.submission_id)
