@@ -12,7 +12,7 @@
 
 
                 {{if session.forced_language =='de': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/partner/cms_logo.png'),_width='145px')}}</p>
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/partner/cms_logo.png'),_width='145px')}}</p>
 <br>
                 <p><b>Kontakt</b><br>
                 Institut für Klassische Archäologie<br />
@@ -29,7 +29,7 @@ cms@zaw.uni-heidelberg.de<br /><br />
                 
                 Die Bildrechte liegen beim CMS. Für Veröffentlichungsgenehmigungen wenden Sie sich bitte cms@zaw.uni-heidelberg.de.</p>
                 </div>
-                <p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/cms_baende.jpg'),_width='300px',_style='float:right',_title='Die Editionen des Corpus der Minoischen und Mykenischen Siegel')}}Die Schriftenreihe "Corpus der minoischen und mykenischen Siegel (CMS)" besteht aus aktuell 13 z.T. mehrteiligen Bänden (CMS I-XIII) sowie 9 Beiheften, in denen insgesamt mehr als 9.000 minoische und mykenische Siegel bzw. Siegelabdrücke in <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/documentation.html" title="Dokumentation">standardisierter Form</a> publiziert werden.</p>
+                <p>{{=IMG(_src=URL('static','images/series/cms_baende.jpg'),_width='300px',_style='float:right',_title='Die Editionen des Corpus der Minoischen und Mykenischen Siegel')}}Die Schriftenreihe "Corpus der minoischen und mykenischen Siegel (CMS)" besteht aus aktuell 13 z.T. mehrteiligen Bänden (CMS I-XIII) sowie 9 Beiheften, in denen insgesamt mehr als 9.000 minoische und mykenische Siegel bzw. Siegelabdrücke in <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/documentation.html" title="Dokumentation">standardisierter Form</a> publiziert werden.</p>
 <p>In den ersten 4 Bänden (CMS I-V inkl. Suppl.) werden die Bestände griechischer Museen und Sammlungen. (u.a. Athen, Nationalmuseum; Iraklion, Archäologisches Museum) veröffentlicht, die Bände VI-XI (inkl. Suppl) enthalten die europäischer Sammlungen (u.a.
 London, British Museum; Oxford. The Ashmolean Museum). In den Bänden XII-XIII werden Siegel und Siegelabdrücke in nordamerikanischen Sammlungen publiziert.
 Die 9 Beihefte enthalten die Ergebnisse internationaler Tagung, die vom CMS organisiert wurden, oder Studien zu Einzelthemen (u.a. talismanischen Siegel).</p>
@@ -40,7 +40,7 @@ Die 9 Beihefte enthalten die Ergebnisse internationaler Tagung, die vom CMS orga
              
                             <li>
                               
-                               <p><a href="../catalog/series/cms">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/cms')}}">{{=T('Volumes')}}</a></p>
 
                             </li>
                               
@@ -50,7 +50,7 @@ Die 9 Beihefte enthalten die Ergebnisse internationaler Tagung, die vom CMS orga
                     </div>
 
                      {{elif session.forced_language =='en': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/partner/cms_logo.png'),_width='145px')}}</p>
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/partner/cms_logo.png'),_width='145px')}}</p>
 <br>
                 <p><b>Contact</b><br>
                 Institut für Klassische Archäologie<br />
@@ -67,14 +67,14 @@ cms@zaw.uni-heidelberg.de<br /><br />
                 Publication rights for images published in the CMS series are reserved by the CMS. For permission to use images for publication, contact us at cms@zaw.uni-heidelberg.de.</p>
                 </div>
 
-                <p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/cms_baende.jpg'),_width='300px',_style='float:right',_title='The editions of Corpus der Minoischen und Mykenischen Siegel')}}The “Corpus der minoischen und mykenischen Siegel (CMS)”-series currently comprises 13 catalogues and 9 supplementary volumes (CMS Beihefte), presenting more than 9.000 seals or ancient seal impressions in a <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/documentation.html" title="Dokumentation">standardized format</a>.</p>
+                <p>{{=IMG(_src=URL('static','images/series/cms_baende.jpg'),_width='300px',_style='float:right',_title='The editions of Corpus der Minoischen und Mykenischen Siegel')}}The “Corpus der minoischen und mykenischen Siegel (CMS)”-series currently comprises 13 catalogues and 9 supplementary volumes (CMS Beihefte), presenting more than 9.000 seals or ancient seal impressions in a <a href="http://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/cmsseries/documentation.html" title="Dokumentation">standardized format</a>.</p>
                 <p>The material in the series is organized according to where it is kept. Volumes CMS I-V are devoted to items kept in Greek collections (e.g. the National Museum of Athens; Heraklion Archeological Museum) , CMS VI-XI (incl. supplements) to that of other European collections (e.g. British Museum London; The Ashmolean Museum Oxford), and CMS XII- XIII to North American collections. The nine supplementary volumes (Beihefte) report proceedings of international conferences organized by the CMS, or studies dedicated to individual topics such as talisman seals etc.</p>
                 <p>he volumes, first published in printed versions from 1964 onwards, will gradually be made available online in Open Access by <b>Propylaeum-eBooks</b> in collaboration with the persons responsible for CMS <a href="./partner/cms.html" title="Informationen about CMS">CMS</a>.
 <div class="widget">
                         <ul class="tags">
              
                             <li>
-                               <p><a href="../catalog/series/cms">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/cms')}}">{{=T('Volumes')}}</a></p>
                             </li>
 
                         </ul>

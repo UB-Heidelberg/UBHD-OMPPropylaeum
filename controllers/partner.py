@@ -5,8 +5,6 @@ Distributed under the GNU GPL v3. For full terms see the file
 LICENSE.md
 '''
 
-
-
 def cms():
     return dict()
 
