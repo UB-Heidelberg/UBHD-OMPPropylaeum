@@ -8,11 +8,8 @@ LICENSE.md
 def profile():
     return dict()
 
-
 def our_service():
     return dict()
 
-
 def technology():
     return dict()
-
