@@ -112,9 +112,9 @@
                       </p>
                   <p class="boxText">
         {{if session.forced_language =='de': }}  
-Der erste Band der Schriftenreihe <a href="{{=URL('series','byzanzoo_info.html')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
+Der erste Band der Schriftenreihe <a href="{{=URL('series','info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
                {{elif session.forced_language =='en': }}      
-                 The first volume of the book series  <a href="{{=URL('series','byzanzoo_info.html')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
+                 The first volume of the book series  <a href="{{=URL('series','info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
                  {{pass}}                                   
                                       </p>
                                     </div>
@@ -203,9 +203,9 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
 
                                 <div class="box-bottom">
    {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('series','/archber_info'))}}
+                                    {{=A(T('More'),_href=URL('series','/info/archber'))}}
       {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('series','/archber_info'))}}
+                                    {{=A(T('More Information'),_href=URL('series','info/archber'))}}
                                       {{pass}}
                                 </div>
 
@@ -231,9 +231,9 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
                                 <div class="box-bottom">
                                &nbsp;
                                 {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('series','cms_info'))}}
+                                {{=A(T('More'),_href=URL('series','info/cms'))}}
       {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('series','cms_info'))}}
+                               {{=A(T('More Information'),_href=URL('series','info/cms'))}}
                                 {{pass}}
                                 </div>
 
