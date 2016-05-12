@@ -170,7 +170,7 @@ db.define_table("series_editors",
                 Field("user_id", "integer"),
                 Field("can_edit", "boolean"),
                 Field("can_review", "boolean"),
-                primarykey=['series_id', 'press_id', 'user_id'],
+                primarykey=['press_id', 'series_id', 'user_id'],
                 migrate=False
                 )
 
