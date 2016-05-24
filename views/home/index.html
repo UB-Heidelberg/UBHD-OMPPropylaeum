@@ -27,7 +27,7 @@
 
                                     <h4>Neuerscheinung</h4>
 
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/53/simple/cover.png'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/53/simple/cover.png'),_width='145px')}}
                                 </div>
 
                                 <div class="box-bottom">
@@ -40,7 +40,7 @@
                         <div class="box-gray aligncenter">
 
    <h4>New Titles</h4>
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/53/simple/cover.png'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/53/simple/cover.png'),_width='145px')}}
                                 </div>
 
              <div class="box-bottom">
@@ -60,7 +60,7 @@
               <div class="box-gray aligncenter">
               {{if session.forced_language =='de': }}
                   <h4>Neuerscheinung</h4>
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/39/simple/cover.jpg'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/39/simple/cover.jpg'),_width='145px')}}
                </div>
 
                <div class="box-bottom">
@@ -70,7 +70,7 @@
                </div>
           {{elif session.forced_language =='en': }}
                 <h4>New Titles</h4>
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/39/simple/cover.jpg'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/39/simple/cover.jpg'),_width='145px')}}
                </div>
 
                <div class="box-bottom">
@@ -100,7 +100,7 @@
           
               <div class="media">
                   <div class="media-left pull-left">
-<img src="{{=URL(myconf.take('web.application'),'static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+<img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
                   </div>                        
                   <div class="media-body">      
                       <p class="media-heading">
@@ -112,9 +112,9 @@
                       </p>
                   <p class="boxText">
         {{if session.forced_language =='de': }}  
-Der erste Band der Schriftenreihe <a href="{{=URL(myconf.take('web.application'),'series','byzanzoo_info.html')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL(myconf.take('web.application'),'catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
+Der erste Band der Schriftenreihe <a href="{{=URL('series','info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
                {{elif session.forced_language =='en': }}      
-                 The first volume of the book series  <a href="{{=URL(myconf.take('web.application'),'series','byzanzoo_info.html')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL(myconf.take('web.application'),'catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
+                 The first volume of the book series  <a href="{{=URL('series','info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
                  {{pass}}                                   
                                       </p>
                                     </div>
@@ -122,7 +122,7 @@ Der erste Band der Schriftenreihe <a href="{{=URL(myconf.take('web.application')
           
           <div class="media">
                   <div class="media-left pull-left">
-                       <img src="{{=URL(myconf.take('web.application'),'static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
+                       <img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
                   </div>                        
                   <div class="media-body">      
                       <p class="media-heading">
@@ -152,7 +152,7 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
                                 <!--<div class="media">
                                     <div class="media-left pull-left">
                                         <a href="#">
-                                            <img src="{{=URL(myconf.take('web.application'),'static','images/press/home/cluster.jpg')}}" width="50px"/>
+                                            <img src="{{=URL('static','images/press/home/cluster.jpg')}}" width="50px"/>
                                         </a>
                                     </div>
                                     <div class="media-body">
@@ -197,15 +197,15 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
    <h4>Archäologische Berichte</h4>
                                        {{pass}}
 
-                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/22/simple/cover.jpg'),_width='145px')}}
+                                    {{=IMG(_src=URL('static','files/presses/3/monographs/22/simple/cover.jpg'),_width='145px')}}
 
                                 </div>
 
                                 <div class="box-bottom">
    {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('series','/archber_info'))}}
+                                    {{=A(T('More'),_href=URL('series','/info/archber'))}}
       {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('series','/archber_info'))}}
+                                    {{=A(T('More Information'),_href=URL('series','info/archber'))}}
                                       {{pass}}
                                 </div>
 
@@ -224,16 +224,16 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
                                    {{elif session.forced_language =='en': }}
                                     <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
                                    {{pass}}
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','series/11-series.png'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/series/11-series.png'),_width='145px')}}
                                    <p class="boxText">
                                 </div>
 
                                 <div class="box-bottom">
                                &nbsp;
                                 {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('series','cms_info'))}}
+                                {{=A(T('More'),_href=URL('series','info/cms'))}}
       {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('series','cms_info'))}}
+                               {{=A(T('More Information'),_href=URL('series','info/cms'))}}
                                 {{pass}}
                                 </div>
 

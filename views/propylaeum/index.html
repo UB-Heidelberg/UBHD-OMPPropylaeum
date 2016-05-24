@@ -1,0 +1,40 @@
+{{extend 'layout.html'}}
+<div id="main" class="container">
+    <div class="row">      
+        <div class="col-lg-12">
+            <h3>  {{if session.forced_language =='de': }}
+Propylaeum &ndash; Fachinformationsdienst Altertumswissenschaften
+                {{elif session.forced_language =='en': }}
+Propylaeum &ndash; Specialized Information Service Classics
+            {{pass}}
+            </h3>                          
+
+                {{if session.forced_language =='de': }}
+<p><a href="http://www.propylaeum.de" title="Homepage Portal Fachinformationsdienst Altertumswissenschaften">{{=IMG(_src=URL('static','images/propylaeum/logo_propylaeum_de.png'),_width='230px',_style='float:right',_title='Propylaeum - Fachinformationsdienst Altertumswissenschaften')}}</a>Im Rahmen des neuen DFG-Programms <a href="http://www.dfg.de/service/presse/pressemitteilungen/2013/pressemitteilung_nr_54/index.html" title="DFG-Pressemitteilung Fachinformationsdienste" target="_blank" class="extern">"Fachinformationsdienste für die Wissenschaft" </a> bauen die <a href="http://www.ub.uni-heidelberg.de/" target="_blank" class="extern">Universitätsbibliothek Heidelberg</a> und die <a href="https://www.bsb-muenchen.de/index.php" target="_blank" class="extern">Bayerische Staatsbibliothek München</a> ihre bestehenden Angebote zu einem gemeinsamen <a href="http://www.propylaeum.de" title="Homepage Propylaeum - Fachinformationsdienst Altertumswissenschaften">Propylaeum - Fachinformationsdienst Altertumswissenschaften</a> aus. Ziel ist, noch stärker als bisher maßgeschneiderte Angebote für die altertumswissenschaftlichen Fachcommunity zu entwickeln.</p>
+<p>In enger Abstimmung mit der Fachwissenschaft werden in den kommenden drei Jahren folgende Schwerpunkte verfolgt:</p>
+
+  <ol>
+    <li>Bereitstellung von Informationsressourcen</li>
+    <li>Ausbau der fachspezifischen Informationsinfrastruktur von Propylaeum / PopylaeumSEARCH</li>
+    <li>Elektronisches Publizieren im Open Access – Propylaeum-E-Publishing</li> 
+    <li>Nachhaltigkeit für exzellente Fachinformation</li>
+    <li>Linked Open Data – „Digital Classics“</li>
+    <li>Wissenschaftskommunikation / Öffentlichkeitsarbeit / Marketing</li>
+  </ol>
+
+<p>Die Bayerische Staatsbibliothek München ist dabei für die Fachgebiete <a href="faecher/byzantinistik/">Byzantinistik</a>, <a href="faecher/alte-geschichte/">Alte Geschichte</a>, <a href="faecher/klassische-philologie/">Klassische Philologie</a>, <a href="faecher/mittel-und-neulateinische-philologie/">Mittel- und Neulateinische Philologie</a> sowie die <a href="faecher/vor-und-fruehgeschichte/">Vor- und Frühgeschichte</a> zuständig, die Universitätsbibliothek Heidelberg zeichnet für die <a href="faecher/aegyptologie/">Ägyptologie</a> und die <a href="faecher/archaeologie/">Klassische Archäologie</a> verantwortlich.</p>
+
+{{elif session.forced_language =='en': }}
+
+                {{pass}}
+
+
+
+
+        </div>
+    </div>
+  </div>  
+
+
+
+

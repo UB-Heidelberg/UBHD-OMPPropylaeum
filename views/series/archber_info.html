@@ -12,7 +12,7 @@
 
 
                 {{if session.forced_language =='de': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
 <br>
                 <p><b>Herausgeber</b><br>
                 Priv.-Doz. Dr. Frank Siegmund<br />
@@ -30,7 +30,7 @@
              
                             <li>
                               
-                               <p><a href="../catalog/series/archber">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/archber')}}">{{=T('Volumes')}}</a></p>
 
                             </li>
                               
@@ -40,7 +40,7 @@
                     </div>
 
                      {{elif session.forced_language =='en': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
 <br>
                 <p><b>Editors</b><br>
                 Priv.-Doz. Dr. Frank Siegmund<br />
@@ -50,14 +50,15 @@
                 Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
                 </div>
 
-<p>"Archäologischen Berichte" (Arch. Ber.) is the monograph series of <a href="http://www.dguf.de/index.php" title="Homepage of DGUF">DGUF</a>. It has been published since 1987, with a frequency of approximately one volume a year. The DGUF’s aim for founding the series was to offer authors a means to publish cost-effectively and promptly, while providing extensive dissemination of the material and effective quality control. To reach this aim more effectively, since volume 25 (2014, the content has been published both in print, and online in Open Access in collaboration with Heidelberg University Library. If needed, additional material and Open Data can be included in the online-version, following the example of the DGUFs journal <a href="http://journals.ub.uni-heidelberg.de/index.php/arch-inf/index" title="Homepage of Archäologischen Informationen">“Archäologische Informationen”</a>.</p>
-<p>Several volumes have included articles produced by the DGUF itself, such as the two-volume commemorative volume dedicated to Wolfgang Traute (Arch. Ber. 14, 2001) or the literature recommendations by the DGUF work group “Archäologie in Schule und Bildung” (Archeology in Schools and Education) (Arch. Ber. 21, 2006). Most of the content, however, consists of high-quality texts written in response to examination questions, or high-quality dissertations, that are printed promptly, and cost-efficiently, for both authors and readers.</p>
-<p>Volumes 1 to 24 of the series were produced using offset printing; since volume 25 the books have been printed on demand. The list of volumes that are currently only available in a printed edition can be viewed online on the <a href="http://www.dguf.de/index.php?id=61" title="list of volumes in stock">DGUF</a> website, including their selling prices, and can be ordered here: verlag@dguf.de</p>
+<p>Die „Archäologischen Berichte“ (Arch. Ber.) sind die Monografien der <a href="http://www.dguf.de/index.php" title="Homepage der DGUF">Deutschen Gesellschaft für Ur- und Frühgeschichte e.V. (DGUF)</a>. Sie erscheinen seit 1987 mit etwa einem Band pro Jahr. Ziel der DGUF bei der Gründung der Reihe war es, den Autoren eine Möglichkeit zu bieten, mit hoher Reichweite und wissenschaftsüblicher Qualitätssicherung preiswert und schnell publizieren zu können. Um dieses Ziel noch wirksamer erreichen zu können, erscheinen die Monografien seit Band 25 (2014) hybrid: in einer Druckausgabe und – in Kooperation mit der Universitätsbibliothek Heidelberg – zusätzlich online im Open Access. Wie die Zeitschrift der DGUF, die <a href="http://journals.ub.uni-heidelberg.de/index.php/arch-inf/index" title="Homepage der Archäologischen Informationen">„Archäologischen Informationen“</a> nehmen auch die Monografien seit Band 25 bei Bedarf ergänzende Materialien und Open Data auf.</p>
+<p>In einigen Bänden der Reihe wurden Arbeiten publiziert, die in der DGUF selbst entstanden sind, wie etwa die zweibändige Gedenkschrift für Wolfgang Taute (Arch. Ber. 14, 2001) oder die Literaturempfehlungen des DGUF-Arbeitskreises "Archäologie in Schule und Bildung" (Arch. Ber. 21, 2006). Die überwiegende Mehrheit der Bände entsteht jedoch aus guten Examensarbeiten und Dissertationen, die wir hier – kostengünstig für Autoren wie Leser – zeitnah zum Druck bringen. Die Werke erscheinen mit weltweiter Reichweite, gedruckt und im Open Access, samt Verlag und ISBN-Nummer in einer etablierten Reihe: Ein erheblicher Mehrwert gegenüber einer Publikation in Eigenregie, für Autoren wie für Leser.</p>
+<p>Die Bände 1 bis 24 der Reihe wurden im Offset-Druck hergestellt, ab Band 25 erfolgt der Druck der Bücher im Print-on-Demand-Verfahren. Die noch als gedrucktes Exemplar lieferbaren Bände sind einschließlich der Preise auf der Website der <a href="http://www.dguf.de/index.php?id=61" title="Verzeichnis der lieferbaren Bände">DGUF</a> ersichtlich und können bei der DGUF bestellt werden: verlag@dguf.de</p>
+
 <div class="widget">
                         <ul class="tags">
              
                             <li>
-                               <p><a href="../catalog/series/archber">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/archber')}}">{{=T('Volumes')}}</a></p>
                             </li>
 
                         </ul>
