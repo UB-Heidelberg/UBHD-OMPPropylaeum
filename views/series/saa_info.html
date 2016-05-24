@@ -13,7 +13,7 @@
 
                 {{if session.forced_language =='de': }}
 
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/saa_logo.png'),_width='230px')}}</p>
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/saa_logo.png'),_width='230px')}}</p>
 <br>
                 <p><b>Poznań Archaeological Museum</b><br>
                 ul. Wodna 27 – Pałac Górków<br />
@@ -31,7 +31,7 @@
 
                             <li>
 
-                              <p><a href="../catalog/series/saa">{{=T('Volumes')}}</a></p>
+                              <p><a href="{{=URL('catalog', 'series/saa')}}">{{=T('Volumes')}}</a></p>
 
                             </li>
 
@@ -42,7 +42,7 @@
 
 
                      {{elif session.forced_language =='en': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/saa_logo.png'),_width='230px')}}</p>
+<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/saa_logo.png'),_width='230px')}}</p>
 <br>
                 <p><b>Poznań Archaeological Museum</b><br>
                 ul. Wodna 27 – Pałac Górków<br />
@@ -60,7 +60,7 @@
 
                             <li>
 
-                               <p><a href="../catalog/series/saa">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/saa')}}">{{=T('Volumes')}}</a></p>
 
                             </li>
 
