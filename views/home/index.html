@@ -17,7 +17,7 @@
                                 {{if session.forced_language =='de': }}
                                 <div class="box-gray aligncenter">
                                     <h4>Neuerscheinung</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/53/simple/cover.png'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/53/simple/cover.png'),_width='145px', _class='bildrahmen')}}
                                 </div>
                                 <div class="box-bottom">
                                     {{=A(T('More'),_href=URL('catalog','book/53'))}}
@@ -25,7 +25,7 @@
                             {{elif session.forced_language =='en': }}
                         <div class="box-gray aligncenter">
                                 <h4>New Titles</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/53/simple/cover.png'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/53/simple/cover.png'),_width='145px', _class='bildrahmen')}}
                                 </div>
              <div class="box-bottom">
                   {{=A(T('More Information'),_href=URL('catalog','book/53'))}}
@@ -38,14 +38,14 @@
               <div class="box-gray aligncenter">
               {{if session.forced_language =='de': }}
                   <h4>Neuerscheinung</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
                </div>
                <div class="box-bottom">
                {{=A(T('More'),_href=URL('catalog','book/145'))}}
                </div>
           {{elif session.forced_language =='en': }}
                 <h4>New Titles</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
                </div>
                <div class="box-bottom">
                   {{=A(T('More Information'),_href=URL('catalog','book/145'))}}
@@ -141,7 +141,7 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
    {{elif session.forced_language =='en': }}
    <h4>Archäologische Berichte</h4>
                                        {{pass}}
-                                    {{=IMG(_src=URL('static','files/presses/3/monographs/22/simple/cover.jpg'),_width='145px')}}
+                                    {{=IMG(_src=URL('static','files/presses/3/monographs/22/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
                                 </div>
                                 <div class="box-bottom">
    {{if session.forced_language =='de': }}
@@ -160,7 +160,7 @@ Are you aware of the platform <b><a href="https://www.open-access.net/startseite
                                    {{elif session.forced_language =='en': }}
                                     <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
                                    {{pass}}
-                                   {{=IMG(_src=URL('static','files/presses/3/series/11-series.png'),_width='145px')}}
+                                   {{=IMG(_src=URL('static','files/presses/3/series/11-series.png'),_width='145px', _class='bildrahmen')}}
                                    <p class="boxText">
                                 </div>
                                 <div class="box-bottom">
