@@ -66,7 +66,7 @@
 <img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
                   </div>                        
                   <div class="media-body">      
-                      <p class="media-heading">
+                      <p class="media-heading">24.08.16<br />
         {{if session.forced_language =='de': }}  
             <h5>Neu in Propylaeum–eBOOKS</h5>
         {{elif session.forced_language =='en': }}
@@ -75,7 +75,7 @@
                      </p>
                      
                   <p class="boxText">
-                  {{if session.forced_language =='de': }}24.08.16<br />
+                  {{if session.forced_language =='de': }}
                   Die fast 3.000 Seiten umfassende <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> erfasst alle wissenschaftlichen Rezensionen aus dem Zeitraum von 1855 bis 1939 zu Veröffentlichungen zu lateinischen Texten bzw. übergreifenden Themen, in denen lateinische Texte angemessen berücksichtigt sind. Damit wird dieses reiche Material, das den zeitgenössischen Forschungsdiskurs unmittelbar widerspiegelt, erstmals umfassend dokumentiert und erschlossen. 
                   {{elif session.forced_language =='en': }}      
                   {{pass}}  
