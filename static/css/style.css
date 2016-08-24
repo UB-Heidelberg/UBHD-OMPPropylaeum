@@ -27,7 +27,7 @@ body {
 	font-weight:300;
 	line-height:1.6em;
 	color:#656565;
-        background-color:#ededed;
+  background-color:#ededed;
 }
 
 
@@ -2287,6 +2287,7 @@ li.active {
 
 .media-heading {
   margin: 0;
+  text-align: left;
 }
 
 .media-body h5 {
