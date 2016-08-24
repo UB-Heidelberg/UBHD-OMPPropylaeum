@@ -78,7 +78,23 @@
                   {{if session.forced_language =='de': }}
                   Die fast 3.000 Seiten umfassende <a href="{{=URL('catalog','book/53')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> erfasst alle wissenschaftlichen Rezensionen aus dem Zeitraum von 1855 bis 1939 zu Veröffentlichungen zu lateinischen Texten bzw. übergreifenden Themen, in denen lateinische Texte angemessen berücksichtigt sind. Damit wird dieses reiche Material, das den zeitgenössischen Forschungsdiskurs unmittelbar widerspiegelt, erstmals umfassend dokumentiert und erschlossen. 
                   {{elif session.forced_language =='en': }}      
-                  {{pass}}   
+                  {{pass}}  
+                  </p>
+                   </div>
+                  </div>  
+                  <div class="media">
+                  <div class="media-left pull-left">
+<img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+                  </div>                        
+                  <div class="media-body">      
+                      <p class="media-heading">
+        {{if session.forced_language =='de': }}  
+            <h5>Neu in Propylaeum–eBOOKS</h5>
+        {{elif session.forced_language =='en': }}
+            <h5>New in Propylaeum–eBOOKS</h5> 
+        {{pass}}          
+                     </p>
+                   
                   <p class="boxText">
         {{if session.forced_language =='de': }}        
 Der erste Band der Schriftenreihe <a href="{{=URL('series','info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
