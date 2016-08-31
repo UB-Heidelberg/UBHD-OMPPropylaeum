@@ -1115,7 +1115,7 @@ article .post-heading h3 a:hover {
 	text-decoration:none;
 }
 
-.col-lg-9 {width:70%;}
+
 
 /* --- post meta --- */
 .post-meta {
@@ -2307,11 +2307,12 @@ li.active {
 /**************/
 
 #infoBoxRechts {
-  float: right;
-  background-color:#f7f7f7;
+/*  float: right;
   padding-top:1em;
-  padding-bottom:1em;
-  margin-left:1em;
+  margin-left:1em;*/
+  background-color:#f7f7f7;
+  overflow: hidden;
+  padding: 15px;
 }
 
 #infoBoxRechts img {

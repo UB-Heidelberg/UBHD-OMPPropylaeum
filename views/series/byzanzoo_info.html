@@ -9,11 +9,28 @@
                 WissenschaftsCampus Mainz: Byzanz zwischen Orient und Okzident
             {{pass}}
             </h3>
-
+        </div>
 
                 {{if session.forced_language =='de': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/byzanzoo_logo.png'),_width='230px')}}</p>
-<br>
+		<div class="col-lg-9">		
+		    <p>Der <a href="http://www.historische.kulturwissenschaften.uni-mainz.de/979.php" title="WissenschaftsCampus Mainz">WissenschaftsCampus Mainz</a> ist eine Forschungskooperation zwischen dem <a href="http://web.rgzm.de/" title="Homepage des Leibniz Institut Römisch-Germanisches Zentralmuseums">Leibniz Institut Römisch-Germanisches Zentralmuseum</a> und der <a href="http://www.uni-mainz.de/" title="Homepage der Johannes Gutenberg-Universität Mainz">Johannes Gutenberg-Universität Mainz</a>. Ziel ist es, eine breite Plattform für interdisziplinäre Byzanzforschung institutionell zu etablieren. Beteiligt sind neben der Byzantinistik sowie der Christlichen Archäologie und Byzantinischen Kunstgeschichte sämtliche Fächer, die zur Erforschung des Byzantinischen Reiches und seiner Kultur beitragen. Der WissenschaftsCampus Mainz fördert die Integration der zersplitterten Wissenschaftsdisziplinen, die sich mit Byzanz befassen. Er ermöglicht themenorientierte, multidisziplinäre, historisch-kulturwissenschaftliche Forschung unter einem Dach und bewirkt durch einen gemeinsamen Auftritt der Byzanzforschung eine bessere Sichtbarkeit dieses Fachgebiets.</p>
+            <p>Die Schriftenreihe "Byzanz zwischen Orient und Okzident" dient als Publikationsorgan für das Forschungsprogramm des Leibniz-WissenschaftsCampusMainz, das Byzanz, seine Brückenfunktion zwischen Ost und West sowie kulturelle Transfer- und Rezeptionsprozesse von der Antike bis in die Neuzeit in den Blick nimmt. Die Methoden und Untersuchungsgegenstände der verschiedenen Disziplinen, die sich mit Byzanz beschäftigen, werden dabei jenseits traditioneller Fächergrenzen zusammengeführt, um mit einem historisch-kulturwissenschaftlichen Zugang Byzanz und seine materielle und immaterielle Kultur umfassend zu erforschen.</p>
+                  <div class="widget">
+                        <ul class="tags">
+
+                            <li>
+
+                               <p><a href="{{=URL('catalog', 'series/byzanzoo')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">	
+		
+         <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/byzanzoo_logo.png'),_width='230px')}}</p>
                 <p><b>Herausgeber</b><br>
                 Leibniz-WissenschaftsCampus Mainz: Byzanz zwischen Orient und Okzident<br />
                 Dr. Benjamin Fourlas <br />
@@ -23,11 +40,17 @@
                 
                 E-Mail: fourlas@rgzm.de<br />
                 Internet: <a href="http://www.byzanz-mainz.de/" title="Homepage">Homepage</a></p>
-                </div>
+         </div>
+		</div> 
 
-<p>Der <a href="http://www.historische.kulturwissenschaften.uni-mainz.de/979.php" title="WissenschaftsCampus Mainz">WissenschaftsCampus Mainz</a> ist eine Forschungskooperation zwischen dem <a href="http://web.rgzm.de/" title="Homepage des Leibniz Institut Römisch-Germanisches Zentralmuseums">Leibniz Institut Römisch-Germanisches Zentralmuseum</a> und der <a href="http://www.uni-mainz.de/" title="Homepage der Johannes Gutenberg-Universität Mainz">Johannes Gutenberg-Universität Mainz</a>. Ziel ist es, eine breite Plattform für interdisziplinäre Byzanzforschung institutionell zu etablieren. Beteiligt sind neben der Byzantinistik sowie der Christlichen Archäologie und Byzantinischen Kunstgeschichte sämtliche Fächer, die zur Erforschung des Byzantinischen Reiches und seiner Kultur beitragen. Der WissenschaftsCampus Mainz fördert die Integration der zersplitterten Wissenschaftsdisziplinen, die sich mit Byzanz befassen. Er ermöglicht themenorientierte, multidisziplinäre, historisch-kulturwissenschaftliche Forschung unter einem Dach und bewirkt durch einen gemeinsamen Auftritt der Byzanzforschung eine bessere Sichtbarkeit dieses Fachgebiets.</p>
-<p>Die Schriftenreihe "Byzanz zwischen Orient und Okzident" dient als Publikationsorgan für das Forschungsprogramm des Leibniz-WissenschaftsCampusMainz, das Byzanz, seine Brückenfunktion zwischen Ost und West sowie kulturelle Transfer- und Rezeptionsprozesse von der Antike bis in die Neuzeit in den Blick nimmt. Die Methoden und Untersuchungsgegenstände der verschiedenen Disziplinen, die sich mit Byzanz beschäftigen, werden dabei jenseits traditioneller Fächergrenzen zusammengeführt, um mit einem historisch-kulturwissenschaftlichen Zugang Byzanz und seine materielle und immaterielle Kultur umfassend zu erforschen.</p>
-<div class="widget">
+
+
+
+                     {{elif session.forced_language =='en': }}
+		<div class="col-lg-9">		
+		    <p>Der <a href="http://www.historische.kulturwissenschaften.uni-mainz.de/979.php" title="WissenschaftsCampus Mainz">WissenschaftsCampus Mainz</a> ist eine Forschungskooperation zwischen dem <a href="http://web.rgzm.de/" title="Homepage des Leibniz Institut Römisch-Germanisches Zentralmuseums">Leibniz Institut Römisch-Germanisches Zentralmuseum</a> und der <a href="http://www.uni-mainz.de/" title="Homepage der Johannes Gutenberg-Universität Mainz">Johannes Gutenberg-Universität Mainz</a>. Ziel ist es, eine breite Plattform für interdisziplinäre Byzanzforschung institutionell zu etablieren. Beteiligt sind neben der Byzantinistik sowie der Christlichen Archäologie und Byzantinischen Kunstgeschichte sämtliche Fächer, die zur Erforschung des Byzantinischen Reiches und seiner Kultur beitragen. Der WissenschaftsCampus Mainz fördert die Integration der zersplitterten Wissenschaftsdisziplinen, die sich mit Byzanz befassen. Er ermöglicht themenorientierte, multidisziplinäre, historisch-kulturwissenschaftliche Forschung unter einem Dach und bewirkt durch einen gemeinsamen Auftritt der Byzanzforschung eine bessere Sichtbarkeit dieses Fachgebiets.</p>
+            <p>Die Schriftenreihe "Byzanz zwischen Orient und Okzident" dient als Publikationsorgan für das Forschungsprogramm des Leibniz-WissenschaftsCampusMainz, das Byzanz, seine Brückenfunktion zwischen Ost und West sowie kulturelle Transfer- und Rezeptionsprozesse von der Antike bis in die Neuzeit in den Blick nimmt. Die Methoden und Untersuchungsgegenstände der verschiedenen Disziplinen, die sich mit Byzanz beschäftigen, werden dabei jenseits traditioneller Fächergrenzen zusammengeführt, um mit einem historisch-kulturwissenschaftlichen Zugang Byzanz und seine materielle und immaterielle Kultur umfassend zu erforschen.</p>
+                  <div class="widget">
                         <ul class="tags">
 
                             <li>
@@ -36,15 +59,13 @@
 
                             </li>
 
-
-
                         </ul>
                     </div>
-
-
-                     {{elif session.forced_language =='en': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/byzanzoo_logo.png'),_width='230px')}}</p>
-<br>
+		</div>
+		
+		<div class="col-lg-3">	
+		
+         <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/byzanzoo_logo.png'),_width='230px')}}</p>
                 <p><b>Editors</b><br>
                 Leibniz-WissenschaftsCampus Mainz: Byzanz zwischen Orient und Okzident<br />
                 Dr. Benjamin Fourlas <br />
@@ -54,26 +75,13 @@
                 
                 E-Mail: fourlas@rgzm.de<br />
                 Internet: <a href="http://www.byzanz-mainz.de/" title="Homepage">Homepage</a></p>
-                </div>
+         </div>
+		</div> 
 
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-<div class="widget">
-                        <ul class="tags">
-
-                            <li>
-
-                               <p><a href="{{=URL('catalog', 'series/byzanzoo')}}">{{=T('Volumes')}}</a></p>
-
-                            </li>
-
-
-
-                        </ul>
-                    </div>
 
 {{pass}}
 
         </div>
     </div>
-</div>
+
 

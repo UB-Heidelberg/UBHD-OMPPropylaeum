@@ -9,11 +9,20 @@
                 Digital Classics Books
             {{pass}}
             </h3>
+		</div>	
+		
+		
+       {{if session.forced_language =='de': }}
 
-              <div id="infoBoxRechts" class="col-lg-3">
+		<div class="col-lg-9">
+		    <p>Die Reihe <b>Digital Classics Books</b> wird als Monographienreihe im Open Access erscheinen und soll sowohl für Qualifikationsschriften offenstehen, die im Kontext von Digital Humanities-Projekten entstehen sowie für einzelne umfangreichere Beiträge bzw. mehrere, inhaltlich zusammenhängende Aufsätze, die als Sammelband erscheinen können.</p>
+            <p><b>Digital Classics Books</b> soll eine Reihe werden, die Arbeiten aus den Altertumswissenschaften und angrenzenden Gebieten in Verbindung mit der Anwendung oder Entwicklung von Methoden aus den Digital Humanities veröffentlicht. Die eBooks werden für die Nutzer frei zum Download bereitgestellt und die weitergehenden Möglichkeiten des ePublishing sollen mit dieser Publikationsform ebenfalls realisiert werden. Die Reihe wird daher sowohl die Integration von Forschungsdaten direkt im Buch als auch online in einem Datenrepositorium ermöglichen. So sollen Leser nicht nur exemplarische Ergebnisse im Anhang, sondern die exportierten und aufbereiteten Gesamtergebnisse in Form von Tabellen im Datenrepositorium zu ihrer Verfügung haben.</p>
+            <p>Elektronische und gedruckte Publikationen sollen sich in der Reihe ergänzen, da gleichzeitig Print on Demand angeboten wird: Die Publikation der Werke erfolgt daher parallel in mehreren Versionen - sowohl in kostenfreier, digitaler Form (als PDF- und HTML-Datei) wie auch als gedrucktes Buch (Hard- oder Softcover), das im Sortiments- und im Online-Buchhandel kostengünstig erhältlich sein wird. Wir möchten damit für Autorinnen und Autoren zusätzlich zu unserem eJournal <b><a href="http://journals.ub.uni-heidelberg.de/index.php/dco/index" title="Link zur Zeitschrift">Digital Classics Online</a></b> einen weiteren interessanten Publikationsort anbieten, der auch den Bedürfnissen der traditionellen Buchwissenschaften nach Verlagspublikation als gedruckter Monographie nachkommt und für Autoren entsprechend unseren Vorstellungen von Open Access ohne Gebühren zur Verfügung gestellt wird.</p>
+		</div>
+		
+		<div class="col-lg-3">
+              <div id="infoBoxRechts">
                 <p>{{=IMG(_src=URL('static','images/series/dcb_logo.png'),_width='230px')}}</p>
-
-                {{if session.forced_language =='de': }}
 
                 <p><b>Herausgeber</b><br>                
                 Dr. Roxana Kath<br />  
@@ -35,33 +44,27 @@
                 </p>
                 
               </div>
-                <p>Die Reihe <b>Digital Classics Books</b> wird als Monographienreihe im Open Access erscheinen und soll sowohl für Qualifikationsschriften offenstehen, die im Kontext von Digital Humanities-Projekten entstehen sowie für einzelne umfangreichere Beiträge bzw. mehrere, inhaltlich zusammenhängende Aufsätze, die als Sammelband erscheinen können.</p>
-                <p><b>Digital Classics Books</b> soll eine Reihe werden, die Arbeiten aus den Altertumswissenschaften und angrenzenden Gebieten in Verbindung mit der Anwendung oder Entwicklung von Methoden aus den Digital Humanities veröffentlicht. Die eBooks werden für die Nutzer frei zum Download bereitgestellt und die weitergehenden Möglichkeiten des ePublishing sollen mit dieser Publikationsform ebenfalls realisiert werden. Die Reihe wird daher sowohl die Integration von Forschungsdaten direkt im Buch als auch online in einem Datenrepositorium ermöglichen. So sollen Leser nicht nur exemplarische Ergebnisse im Anhang, sondern die exportierten und aufbereiteten Gesamtergebnisse in Form von Tabellen im Datenrepositorium zu ihrer Verfügung haben.</p>
-                <p>Elektronische und gedruckte Publikationen sollen sich in der Reihe ergänzen, da gleichzeitig Print on Demand angeboten wird: Die Publikation der Werke erfolgt daher parallel in mehreren Versionen - sowohl in kostenfreier, digitaler Form (als PDF- und HTML-Datei) wie auch als gedrucktes Buch (Hard- oder Softcover), das im Sortiments- und im Online-Buchhandel kostengünstig erhältlich sein wird. Wir möchten damit für Autorinnen und Autoren zusätzlich zu unserem eJournal <b><a href="http://journals.ub.uni-heidelberg.de/index.php/dco/index" title="Link zur Zeitschrift">Digital Classics Online</a></b> einen weiteren interessanten Publikationsort anbieten, der auch den Bedürfnissen der traditionellen Buchwissenschaften nach Verlagspublikation als gedruckter Monographie nachkommt und für Autoren entsprechend unseren Vorstellungen von Open Access ohne Gebühren zur Verfügung gestellt wird.</p>
-<!--<div class="widget">
-                        <ul class="tags">
-             
-                            <li>
-                              
-                               <p><a href="{{=URL('catalog', 'series/archber')}}">{{=T('Volumes')}}</a></p>
+		</div>	  
 
-                            </li>
-                              
-                            
-
-                        </ul>
-                    </div>
--->
                      {{elif session.forced_language =='en': }}
+		<div class="col-lg-9">
+		    <p>Die Reihe <b>Digital Classics Books</b> wird als Monographienreihe im Open Access erscheinen und soll sowohl für Qualifikationsschriften offenstehen, die im Kontext von Digital Humanities-Projekten entstehen sowie für einzelne umfangreichere Beiträge bzw. mehrere, inhaltlich zusammenhängende Aufsätze, die als Sammelband erscheinen können.</p>
+            <p><b>Digital Classics Books</b> soll eine Reihe werden, die Arbeiten aus den Altertumswissenschaften und angrenzenden Gebieten in Verbindung mit der Anwendung oder Entwicklung von Methoden aus den Digital Humanities veröffentlicht. Die eBooks werden für die Nutzer frei zum Download bereitgestellt und die weitergehenden Möglichkeiten des ePublishing sollen mit dieser Publikationsform ebenfalls realisiert werden. Die Reihe wird daher sowohl die Integration von Forschungsdaten direkt im Buch als auch online in einem Datenrepositorium ermöglichen. So sollen Leser nicht nur exemplarische Ergebnisse im Anhang, sondern die exportierten und aufbereiteten Gesamtergebnisse in Form von Tabellen im Datenrepositorium zu ihrer Verfügung haben.</p>
+            <p>Elektronische und gedruckte Publikationen sollen sich in der Reihe ergänzen, da gleichzeitig Print on Demand angeboten wird: Die Publikation der Werke erfolgt daher parallel in mehreren Versionen - sowohl in kostenfreier, digitaler Form (als PDF- und HTML-Datei) wie auch als gedrucktes Buch (Hard- oder Softcover), das im Sortiments- und im Online-Buchhandel kostengünstig erhältlich sein wird. Wir möchten damit für Autorinnen und Autoren zusätzlich zu unserem eJournal <b><a href="http://journals.ub.uni-heidelberg.de/index.php/dco/index" title="Link zur Zeitschrift">Digital Classics Online</a></b> einen weiteren interessanten Publikationsort anbieten, der auch den Bedürfnissen der traditionellen Buchwissenschaften nach Verlagspublikation als gedruckter Monographie nachkommt und für Autoren entsprechend unseren Vorstellungen von Open Access ohne Gebühren zur Verfügung gestellt wird.</p>
+		</div>
+		
+		<div class="col-lg-3">
+              <div id="infoBoxRechts">
+                <p>{{=IMG(_src=URL('static','images/series/dcb_logo.png'),_width='230px')}}</p>
 
-                <p><b>Editors</b><br>
-                Dr. Roxana Kath<br /> 
+                <p><b>Editors</b><br>                
+                Dr. Roxana Kath<br />  
                 Dr. Michaela Rücker<br />
-                Prof. Dr. Reinhold Scholl<br />
+                Prof. Dr. Reinhold Scholl<br /> 
                 Prof. Dr. Charlotte Schubert<br />
                 </p>
                 <p>
-                <b>Contact</b><br />
+                <b>Kontakt</b><br />
                 Prof. Dr. Charlotte Schubert<br />
 
                 Lehrstuhl für Alte Geschichte<br />
@@ -72,20 +75,10 @@
                 E-Mail: schubert@rz.uni-leipzig.de<br />
                 Internet: <a href="https://www.uni-leipzig.de/~geschalt/ag101.htm" title="Homepage">Homepage</a>
                 </p>
-
+                
               </div>
+		</div>	  
 
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-<!--<div class="widget">
-                        <ul class="tags">
-             
-                            <li>
-                               <p><a href="{{=URL('catalog', 'series/archber')}}">{{=T('Volumes')}}</a></p>
-                            </li>
-
-                        </ul>
-                    </div>
--->
 {{pass}}
 
         </div>

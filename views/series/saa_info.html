@@ -9,24 +9,13 @@
                 Studies in African Archaeology 
             {{pass}}
             </h3>
+		</div>	
 
 
                 {{if session.forced_language =='de': }}
-
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/saa_logo.png'),_width='230px')}}</p>
-<br>
-                <p><b>Poznań Archaeological Museum</b><br>
-                ul. Wodna 27 – Pałac Górków<br />
-                61-781 Poznań<br />
-                Polen<br />
-                E-Mail: muzarp@man.poznan.pl</p>
-                <p><b>Editor-in-chief</b><br>
-                Prof. Marzena Szmyt<br />
-                E-Mail: marzena.szmyt@muzarp.poznan.pl</p>
-                </div>
-
-<p>Die Reihe “Studies in African Archaeology” (SAA) wird seit 1984 vom <a href="http://www.muzarp.poznan.pl/en/" title="Homepage des Museums">Archaeological Museum</a> in Poznań (PL ISSN 0866-9244) herausgegeben. In der Reihe erscheinen Monographien zur Vorgeschichte des nord-östlchen Afrikas sowie Tagungsberichte der alle vier Jahre stattfindenden Konferenz  “Later Prehistory of Northeastern Africa” (LPNEA), die seit 1980 in Polen durchgeführt wird.</p>
-<div class="widget">
+        <div class="col-lg-9"> 
+		   <p>Die Reihe “Studies in African Archaeology” (SAA) wird seit 1984 vom <a href="http://www.muzarp.poznan.pl/en/" title="Homepage des Museums">Archaeological Museum</a> in Poznań (PL ISSN 0866-9244) herausgegeben. In der Reihe erscheinen Monographien zur Vorgeschichte des nord-östlchen Afrikas sowie Tagungsberichte der alle vier Jahre stattfindenden Konferenz  “Later Prehistory of Northeastern Africa” (LPNEA), die seit 1980 in Polen durchgeführt wird.</p>
+                    <div class="widget">
                         <ul class="tags">
 
                             <li>
@@ -35,27 +24,29 @@
 
                             </li>
 
-
-
                         </ul>
-                    </div>
-
-
-                     {{elif session.forced_language =='en': }}
-<div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/series/saa_logo.png'),_width='230px')}}</p>
-<br>
+                    </div> 
+		</div>
+		
+		<div class="col-lg-3">
+            <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/saa_logo.png'),_width='230px')}}</p>
                 <p><b>Poznań Archaeological Museum</b><br>
                 ul. Wodna 27 – Pałac Górków<br />
                 61-781 Poznań<br />
-                Poland <br />
+                Polen<br />
                 E-Mail: muzarp@man.poznan.pl</p>
                 <p><b>Editor-in-chief</b><br>
                 Prof. Marzena Szmyt<br />
                 E-Mail: marzena.szmyt@muzarp.poznan.pl</p>
-                </div>
+            </div>
+		</div>	
 
-<p>“Studies in African Archaeology” (SAA) is a publication series published since 1984 by the <a href="http://www.muzarp.poznan.pl/en/" title="Museum Homepage">Archaeological Museum</a> in Poznań. In the series appear monographs on the prehistory of north-eastern Africa and proceedings of quadrennial international conferences entitled “Later Prehistory of Northeastern Africa” (LPNEA) that have been organised in Poland since 1980.</p>
-<div class="widget">
+
+        {{elif session.forced_language =='en': }}
+		
+		<div class="col-lg-9"> 
+		   <p>“Studies in African Archaeology” (SAA) is a publication series published since 1984 by the <a href="http://www.muzarp.poznan.pl/en/" title="Museum Homepage">Archaeological Museum</a> in Poznań. In the series appear monographs on the prehistory of north-eastern Africa and proceedings of quadrennial international conferences entitled “Later Prehistory of Northeastern Africa” (LPNEA) that have been organised in Poland since 1980.</p>
+                    <div class="widget">
                         <ul class="tags">
 
                             <li>
@@ -64,10 +55,22 @@
 
                             </li>
 
-
-
                         </ul>
                     </div>
+		</div>
+		
+		<div class="col-lg-3">
+            <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/saa_logo.png'),_width='230px')}}</p>
+                <p><b>Poznań Archaeological Museum</b><br>
+                ul. Wodna 27 – Pałac Górków<br />
+                61-781 Poznań<br />
+                Poland<br />
+                E-Mail: muzarp@man.poznan.pl</p>
+                <p><b>Editor-in-chief</b><br>
+                Prof. Marzena Szmyt<br />
+                E-Mail: marzena.szmyt@muzarp.poznan.pl</p>
+            </div>
+		</div>	
 
 
 {{pass}}
@@ -75,5 +78,5 @@
 
         </div>
     </div>
-</div>
+
 
