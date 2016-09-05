@@ -2264,10 +2264,6 @@ li.active {
 
 /**Aktuelles-Box**/
 
-#boxAktuelles {
-  width: 45%;
-} 
-
 #boxAktuelles .box .media {
   font-size: 0.9em;
   line-height: 1.42857em;
