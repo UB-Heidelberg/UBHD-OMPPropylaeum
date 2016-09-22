@@ -1,14 +1,9 @@
 {{extend 'layout.html'}}
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12" style="height: 500px">
-        <div id="main" class="container">
-
-            <h3>            {{=T('Contact')}}</h3>
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>{{=T('Contact')}}</h3>
 
             <p>
-
-
               {{if session.forced_language=='de':}}
                      <strong>Dr. Maria Effinger</strong><br>
                          Universitätsbibliothek Heidelberg<br>
@@ -24,10 +19,8 @@
                          Germany<br>
                          Tel.: +49 6221 54-3561<br>
                          E-Mail: effinger@ub.uni-heidelberg.de
-                {{pass}}
-                </p>
+              {{pass}}
+             </p>
 
-        </div>
-        </div>
-    </div>
+		</div>
 </div>

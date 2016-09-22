@@ -1,7 +1,7 @@
 {{extend 'layout.html'}}
-<div id="main" class="container">
-    <div class="row">
-        <div class="col-lg-12">
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
             <h3>  {{if session.forced_language =='de': }}
                 Rechte und Lizenzen
                 {{elif session.forced_language =='en': }}
@@ -9,22 +9,19 @@
 
             {{pass}}
             </h3>
-            <p>
-                {{if session.forced_language =='de': }}
 
-            <p><b>Propylaeum-eBOOKS</b> betreibt eine autorenfreundliche Rechtepolitik, die die Einräumung eines zeitlich und räumlich nicht eingeschränkten einfachen Nutzungsrechts zur Online-Veröffentlichung und zur Verbreitung der Druckausgabe umfasst. Autoren und Autorinnen behalten das Urheberrecht an dem Werk und gewähren <b>Propylaeum-eBOOKS</b> das Recht zu dessen Erst - bzw. Zweitveröffentlichung. Parallel dazu wird das Werk im Regelfall unter eine <a href="https://creativecommons.org/licenses/?lang=de" title="Creative Commons">Creative-Commons-Lizenz</a> gestellt. Diese erlaubt es anderen, das Werk weiterzuverbreiten, unter der Bedingung, dass der Autor/die Autorin benannt und auf die Erstveröffentlichung in diesem Verlag hingewiesen wird.<br />
-Autoren/Autorinnen können weitere, gesonderte Verträge mit anderen Anbietern für eine nicht exklusive Verbreitung einer von <b>Propylaeum-eBOOKS</b> veröffentlichten Version des Buches abschließen. Sie können es zum Beispiel auf einem institutionellen Repositorium einstellen oder bei einem anderen Verlag als Buch veröffentlichen.</p>
+            {{if session.forced_language =='de': }}
 
+				<p><b>Propylaeum-eBOOKS</b> betreibt eine autorenfreundliche Rechtepolitik, die die Einräumung eines zeitlich und räumlich nicht eingeschränkten einfachen Nutzungsrechts zur Online-Veröffentlichung und zur Verbreitung der Druckausgabe umfasst. Autoren und Autorinnen behalten das Urheberrecht an dem Werk und gewähren <b>Propylaeum-eBOOKS</b> das Recht zu dessen Erst - bzw. Zweitveröffentlichung. Parallel dazu wird das Werk im Regelfall unter eine <a href="https://creativecommons.org/licenses/?lang=de" title="Creative Commons">Creative-Commons-Lizenz</a> gestellt. Diese erlaubt es anderen, das Werk weiterzuverbreiten, unter der Bedingung, dass der Autor/die Autorin benannt und auf die Erstveröffentlichung in diesem Verlag hingewiesen wird.<br />
+				Autoren/Autorinnen können weitere, gesonderte Verträge mit anderen Anbietern für eine nicht exklusive Verbreitung einer von <b>Propylaeum-eBOOKS</b> veröffentlichten Version des Buches abschließen. Sie können es zum Beispiel auf einem institutionellen Repositorium einstellen oder bei einem anderen Verlag als Buch veröffentlichen.</p>
 
-
-
-{{elif session.forced_language =='en': }}
-<p><b>Propylaeum-eBOOKS</b> maintains an author-friendly rights policy, which includes granting authors exclusive, unrestricted rights to both the online publication and the dissemination of the final printed version. Authors retain copyright of the work and simply grant <b>Propylaeum-eBOOKS</b> the right to initial publication. Works are placed under a <a href="https://creativecommons.org/licenses/?lang=en" title="Creative Commons">Creative Commons license</a>, which allows for future redistribution of the work, under the condition that the author is named and heiBOOKS is given due credit as the first place of publication.<br />
-Authors can also enter into separate contracts for the non-exclusive distribution of a version of the work published by <b>Propylaeum-eBOOKS</b>. For example, books may be placed in an institutional repository, or published in print form through another press.</p>
+			{{elif session.forced_language =='en': }}
+			
+				<p><b>Propylaeum-eBOOKS</b> maintains an author-friendly rights policy, which includes granting authors exclusive, unrestricted rights to both the online publication and the dissemination of the final printed version. Authors retain copyright of the work and simply grant <b>Propylaeum-eBOOKS</b> the right to initial publication. Works are placed under a <a href="https://creativecommons.org/licenses/?lang=en" title="Creative Commons">Creative Commons license</a>, which allows for future redistribution of the work, under the condition that the author is named and heiBOOKS is given due credit as the first place of publication.<br />
+				Authors can also enter into separate contracts for the non-exclusive distribution of a version of the work published by <b>Propylaeum-eBOOKS</b>. For example, books may be placed in an institutional repository, or published in print form through another press.</p>
 
 
-                {{pass}}
+            {{pass}}
 
         </div>
-    </div>
-  </div>  
+</div>  

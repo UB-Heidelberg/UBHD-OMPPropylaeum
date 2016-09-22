@@ -1,8 +1,7 @@
 {{extend 'layout.html'}}
 
-<div id="main" class="container">
-    <div class="row">
-        <div class="col-lg-12">
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
             <h3>  {{if session.forced_language =='de': }}
                 Archäologische Berichte  
                 {{elif session.forced_language =='en': }}
@@ -10,8 +9,9 @@
             {{pass}}
             </h3>
 		</div>	
+</div>
 
-
+<div class="row">
         {{if session.forced_language =='de': }}
 				
 		<div class="col-lg-9">		
@@ -76,7 +76,6 @@
         </div>  
 {{pass}}
 
-        </div>
-    </div>
+</div>
 
 

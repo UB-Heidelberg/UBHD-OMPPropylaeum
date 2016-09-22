@@ -4,220 +4,160 @@
         $('.flexslider').flexslider();
     });
 </script>
-<div class="container">
-    <!-- end header -->
-    <section id="content">
-        <div class="container">
-            <div class="row" style="height:40px;"></div>
-            <div class="row">
-                <div class="col-lg-12">
-    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="box">
-                                {{if session.forced_language =='de': }}
+
+<div class="row news-row">
+    <div class="col-lg-12">
+		<div class="row">
+            <div class="col-lg-3">
+                <div class="box">
+                    {{if session.forced_language =='de': }}
                                 <div class="box-gray aligncenter">
                                     <h4>Neuerscheinung</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/150/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+                                    {{=IMG(_src=URL('static','files/presses/3/monographs/150/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
                                 </div>
-                                <div class="box-bottom">
-                                    {{=A(T('More'),_href=URL('catalog','book/150'))}}
-                                </div>
-                            {{elif session.forced_language =='en': }}
-                        <div class="box-gray aligncenter">
-                                <h4>New Titles</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/150/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-                                </div>
-             <div class="box-bottom">
-                  {{=A(T('More Information'),_href=URL('catalog','book/150'))}}
-              </div>
-               {{pass}}
-          </div>
-      </div>
-      <div class="col-lg-3">
-          <div class="box">
-              <div class="box-gray aligncenter">
-              {{if session.forced_language =='de': }}
-                  <h4>Neuerscheinung</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-               </div>
-               <div class="box-bottom">
-               {{=A(T('More'),_href=URL('catalog','book/145'))}}
-               </div>
-          {{elif session.forced_language =='en': }}
-                <h4>New Titles</h4>
-                                   {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-               </div>
-               <div class="box-bottom">
-                  {{=A(T('More Information'),_href=URL('catalog','book/145'))}}
-               </div>
-                {{pass}}
-          </div>
-      </div>
-      <div id="boxAktuelles" class="col-lg-6">
-          <div class="box">
-        <div class="box-gray aligncenter" style="overflow-y: scroll">
-          {{if session.forced_language =='de': }}       
-              <h4>Aktuelles</h4>
-          {{elif session.forced_language =='en': }}
-              <h4>News</h4>
-          {{pass}}
-              <div class="media">
-                  <div class="media-left pull-left">
-<img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
-                  </div>                        
-                  <div class="media-body">      
-                      <p class="media-heading">24.08.16<br />
-        {{if session.forced_language =='de': }}  
-            <h5>Neu in Propylaeum–eBOOKS</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>New in Propylaeum–eBOOKS</h5> 
-        {{pass}}          
-                     </p>
-                     
-                  <p class="boxText">
-                  {{if session.forced_language =='de': }}
-                  Die fast 3.000 Seiten umfassende <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> erfasst alle wissenschaftlichen Rezensionen aus dem Zeitraum von 1855 bis 1939 zu Veröffentlichungen zu lateinischen Texten bzw. übergreifenden Themen, in denen lateinische Texte angemessen berücksichtigt sind. Damit wird dieses reiche Material, das den zeitgenössischen Forschungsdiskurs unmittelbar widerspiegelt, erstmals umfassend dokumentiert und erschlossen. 
-                  {{elif session.forced_language =='en': }}      
-                  At almost 3,000 pages, the <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> (Review Bibliography of Latin Literary History of the Antiquity (1855-1939)) includes all academic reviews of publications concerned with Latin texts, or on general topics in which Latin texts are included, that were published between 1855 and 1939. Thus, this resource provides the first ever comprehensive documentation and cataloging of this rich source of information about scholarly discourse on Latin texts from this era.
-                  {{pass}}  
-                  </p>
-                   </div>
-                  </div>  
-                  <div class="media">
-                  <div class="media-left pull-left">
-<img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
-                  </div>                        
-                  <div class="media-body">      
-                      <p class="media-heading">
-        {{if session.forced_language =='de': }}  
-            <h5>Neu in Propylaeum–eBOOKS</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>New in Propylaeum–eBOOKS</h5> 
-        {{pass}}          
-                     </p>
+                                <div class="box-bottom">{{=A(T('More'),_href=URL('catalog','book/150'))}}</div>
+                    {{elif session.forced_language =='en': }}
+								<div class="box-gray aligncenter">
+										<h4>New Titles</h4>
+										   {{=IMG(_src=URL('static','files/presses/3/monographs/150/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+								</div>
+								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/150'))}}</div>
+					{{pass}}
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="box">
+					{{if session.forced_language =='de': }}				
+								<div class="box-gray aligncenter">
+									  <h4>Neuerscheinung</h4>
+									  {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+								</div>
+								<div class="box-bottom">{{=A(T('More'),_href=URL('catalog','book/145'))}}</div>
+					{{elif session.forced_language =='en': }}
+								<div class="box-gray aligncenter">
+									  <h4>New Titles</h4>
+									  {{=IMG(_src=URL('static','files/presses/3/monographs/145/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+								</div>
+							   <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/145'))}}</div>
+					{{pass}}
+				</div>
+			</div>
+			
+			<div id="boxAktuelles" class="col-lg-6">
+				<div class="box">
+					<div class="box-gray aligncenter" style="overflow-y: scroll">
+						{{if session.forced_language =='de': }}<h4>Aktuelles</h4>{{elif session.forced_language =='en': }}<h4>News</h4>{{pass}}
+						<div class="media">
+							<div class="media-left pull-left"><img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" /></div>                        
+							<div class="media-body">
+								<p class="media-heading">24.08.16<br />
+								{{if session.forced_language =='de': }}<h5>Neu in Propylaeum–eBOOKS</h5>{{elif session.forced_language =='en': }}<h5>New in Propylaeum–eBOOKS</h5> {{pass}}
+								</p>
+					 
+								<p class="boxText">
+								{{if session.forced_language =='de': }}
+								Die fast 3.000 Seiten umfassende <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> erfasst alle wissenschaftlichen Rezensionen aus dem Zeitraum von 1855 bis 1939 zu Veröffentlichungen zu lateinischen Texten bzw. übergreifenden Themen, in denen lateinische Texte angemessen berücksichtigt sind. Damit wird dieses reiche Material, das den zeitgenössischen Forschungsdiskurs unmittelbar widerspiegelt, erstmals umfassend dokumentiert und erschlossen. 
+								{{elif session.forced_language =='en': }}      
+								At almost 3,000 pages, the <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> (Review Bibliography of Latin Literary History of the Antiquity (1855-1939)) includes all academic reviews of publications concerned with Latin texts, or on general topics in which Latin texts are included, that were published between 1855 and 1939. Thus, this resource provides the first ever comprehensive documentation and cataloging of this rich source of information about scholarly discourse on Latin texts from this era.
+								{{pass}}  
+								</p>
+							</div>
+						</div>  
+						
+						<div class="media">
+							<div class="media-left pull-left"><img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" /></div>                        
+							<div class="media-body">      
+								<p class="media-heading">
+								{{if session.forced_language =='de': }}<h5>Neu in Propylaeum–eBOOKS</h5>{{elif session.forced_language =='en': }}<h5>New in Propylaeum–eBOOKS</h5> {{pass}}          
+								</p>
                    
-                  <p class="boxText">
-        {{if session.forced_language =='de': }}        
-Der erste Band der Schriftenreihe <a href="{{=URL('series','info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
-               {{elif session.forced_language =='en': }}      
-                 The first volume of the book series  <a href="{{=URL('series','info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
-                 {{pass}}                                   
-                                      </p>
-                                    </div>
-                                </div>          
-          <div class="media">
-                  <div class="media-left pull-left">
-                       <img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
-                  </div>                        
-                  <div class="media-body">      
-                      <p class="media-heading">
-        {{if session.forced_language =='de': }}  
-            <h5>open-access.net</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>open-access.net</h5>        
-        {{pass}}   
-                      </p>
-                  <p class="boxText">
-{{if session.forced_language =='de': }}
-                  Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
-        {{elif session.forced_language =='en': }}
-Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
-{{pass}}
-            <!--<a href="http://open-access.net/community/open_access_tage/ " target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>-->
-                      </p>
-                  </div>
-              </div>
-                                </div>
-                                <!--<div class="media">
-                                    <div class="media-left pull-left">
-                                        <a href="#">
-                                            <img src="{{=URL('static','images/press/home/cluster.jpg')}}" width="50px"/>
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <p class="media-heading"><strong>DFG-Projekt: Entwicklung eines Geschäftsmodells für Open-Access-Bücher</strong> </p>
-                                        <p>Der Exzellenzcluster „Asien und Europa im globalen Kontext“ der Universität Heidelberg und die Universitätsbibliothek Heidelberg planen die Entwicklung eines innovativen Geschäftsmodells für die frei zugängliche Veröffentlichung wissenschaftlicher Bücher im Internet.
-                                            <a href="http://www.asia-europe.uni-heidelberg.de/en/research/publishing/heidelberg-studies-in-transculturality-an-open-access-book-series.html"  target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>-->
-                                                                <div class="box-bottom">&nbsp;
-   <!--{{if session.forced_language =='de': }}
-                                    <a href="http://heiup.uni-heidelberg.de/#"><span style="color: #EFEFEF;">Mehr</span>
-      {{elif session.forced_language =='en': }}
-                                    <a href="http://heiup.uni-heidelberg.de/#"><span style="color: #EFEFEF;">More</span>
-                                      {{pass}}-->         
-                                </div>
+								<p class="boxText">
+								{{if session.forced_language =='de': }}        
+								Der erste Band der Schriftenreihe <a href="{{=URL('series','info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
+								{{elif session.forced_language =='en': }}      
+								The first volume of the book series  <a href="{{=URL('series','info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
+								{{pass}}                                   
+                                </p>
                             </div>
-                        </div>
+                        </div>          
+						
+						<div class="media">
+							<div class="media-left pull-left"><img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" /></div>                        
+							<div class="media-body">      
+								<p class="media-heading">
+								{{if session.forced_language =='de': }}  
+									<h5>open-access.net</h5>
+								{{elif session.forced_language =='en': }}
+									<h5>open-access.net</h5>        
+								{{pass}}   
+								</p>
+								
+								<p class="boxText">
+								{{if session.forced_language =='de': }}
+								Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
+								{{elif session.forced_language =='en': }}
+								Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
+								{{pass}}
+								</p>
+							</div>
+						</div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-<div class="row">
-                        <div class="col-lg-3">
-                            <div class="box">
-                                <div class="box-gray aligncenter">
-   {{if session.forced_language =='de': }}
-                                    <h4>Archäologische Berichte</h4>
-   {{elif session.forced_language =='en': }}
-   <h4>Archäologische Berichte</h4>
-                                       {{pass}}
-                                    {{=IMG(_src=URL('static','files/presses/3/monographs/22/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-                                </div>
-                                <div class="box-bottom">
-   {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('series','/info/archber'))}}
-      {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('series','info/archber'))}}
-                                      {{pass}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="box">
-                                <div class="box-gray aligncenter">
-                                   {{if session.forced_language =='de': }}
-                                    <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
-                                   {{elif session.forced_language =='en': }}
-                                    <h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>
-                                   {{pass}}
-                                   {{=IMG(_src=URL('static','files/presses/3/series/11-series.png'),_width='145px', _class='bildrahmen')}}
-                                   <p class="boxText">
-                                </div>
-                                <div class="box-bottom">
-                               &nbsp;
-                                {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('series','info/cms'))}}
-      {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('series','info/cms'))}}
-                                {{pass}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" id="boxAktuelles">
-                        <div class="box">
-                        <div class="box-gray">
-                       <h4>Propylaeum–eBOOKS</h4>
-                        <p class="boxText aligncenter">
-{{if session.forced_language =='de': }}
-ist die Open-Access-Publikationsplattform von <a href="http://www.propylaeum.de" title="Homepage Portal Propylaum - Fachinformationsdienst für Altertumswissenschaften">Propylaeum</a> für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
-Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinnen und Altertumswissenschaftler weltweit.<br>
-Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
-        {{elif session.forced_language =='en': }}                
-is the Open Access publication platform by <a href="http://www.propylaeum.de" title="Homepage Propylaeum - Specialized Information Service Classics">Propylaeum </a> for scientific ebooks on Classical Studies.<br>
-We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). The service is free of charge and provides academics from all over the world<br>
-We are using the Open-Source-Software OMP (Open Monograph Press) by the Public Knowledge Project (PKP).
-{{pass}}</p>
-                        </div>
-              <div class="box-bottom">&nbsp;</div>
-                      </div>
-                        </div>
-                        </div>
-                    </div>
+
+					<div class="box-bottom">&nbsp;</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+
+
+<div class="row news-row">
+    <div class="col-lg-12">
+		<div class="row">
+            <div class="col-lg-3">
+                <div class="box">
+                    <div class="box-gray aligncenter">
+					{{if session.forced_language =='de': }}<h4>Archäologische Berichte</h4>{{elif session.forced_language =='en': }}<h4>Archäologische Berichte</h4>{{pass}}
+                    {{=IMG(_src=URL('static','files/presses/3/monographs/22/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+                    </div>
+					
+                    <div class="box-bottom">
+					{{if session.forced_language =='de': }}{{=A(T('More'),_href=URL('series','/info/archber'))}}{{elif session.forced_language =='en': }}{{=A(T('More Information'),_href=URL('series','info/archber'))}}{{pass}}
+                    </div>
+                </div>
+            </div>
+			
+            <div class="col-lg-3">
+                <div class="box">
+                    <div class="box-gray aligncenter">
+					{{if session.forced_language =='de': }}<h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>{{elif session.forced_language =='en': }}<h4 class="titel_zweizeilig">Corpus der minoischen und mykenischen Siegel</h4>{{pass}}
+                    {{=IMG(_src=URL('static','files/presses/3/series/11-series.png'),_width='145px', _class='bildrahmen')}}
+                    </div>
+                    <div class="box-bottom">&nbsp;
+                    {{if session.forced_language =='de': }}{{=A(T('More'),_href=URL('series','info/cms'))}}{{elif session.forced_language =='en': }}{{=A(T('More Information'),_href=URL('series','info/cms'))}}{{pass}}
+                    </div>
+                </div>
+            </div>
+			
+            <div class="col-lg-6" id="boxAktuelles">
+                <div class="box">
+                    <div class="box-gray">
+						<h4>Propylaeum–eBOOKS</h4>
+                        <p class="boxText aligncenter">
+						{{if session.forced_language =='de': }}
+						ist die Open-Access-Publikationsplattform von <a href="http://www.propylaeum.de" title="Homepage Portal Propylaum - Fachinformationsdienst für Altertumswissenschaften">Propylaeum</a> für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
+						Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinnen und Altertumswissenschaftler weltweit.<br>
+						Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
+						{{elif session.forced_language =='en': }}                
+						is the Open Access publication platform by <a href="http://www.propylaeum.de" title="Homepage Propylaeum - Specialized Information Service Classics">Propylaeum </a> for scientific ebooks on Classical Studies.<br>
+						We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). The service is free of charge and provides academics from all over the world<br>
+						We are using the Open-Source-Software OMP (Open Monograph Press) by the Public Knowledge Project (PKP).
+						{{pass}}
+						</p>
+                    </div>
+					<div class="box-bottom">&nbsp;</div>
+				</div>
+            </div>
+        </div>
+    </div>
 </div>

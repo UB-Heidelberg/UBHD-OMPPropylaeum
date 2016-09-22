@@ -64,12 +64,10 @@
     <!-- Navbar ======================================= -->
     <!-- start header -->
 
-    <div id="service-navi" class="container">
-
-        <div class="row">
-
-            <div class="col-lg-12 col-sm-12 col-xs-12">
-
+	<div id="wrapper">
+	   <header>
+	       <div id="service-navi">
+		       <div class="container">
                 <ul class="nav nav-pills pull-right">
                     <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
@@ -84,233 +82,135 @@
                 </ul>
 
             </div>
-
-        </div>
-
-    </div>
-       <div class="container">
-       <div id="headerLogo" class="col-lg-12 print-url">
-         <img id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
-         <img id="heiup-logo-print" class="print" src="{{=URL('static','images/press/schriftzug_header_print.png')}}" />
-       </div> 
-       </div>
-       
-    <div class="container">
-
-        <header>
-            <div class="col-lg-12 ">
-                <div class="navbar navbar-default navbar-static-top" style="width: 100%">
-                    <div class="container">
-                        <div class="navbar-header">
+		   </div>
+ 
+		   <div id="headerLogo">
+			   <div class="container">
+					<img id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
+			   </div>
+           </div>		
+		   
+	       <div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">6
                                 <span class="icon-bar"></span>
-
                             </button>
-                            <a class="navbar-brand" href="index.html">
-
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse pull-left ">
-                            <ul class="nav navbar-nav">
-                                <li><a href="{{=URL('home','index')}}">{{=T('Home')}}</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                       data-delay="0" data-close-others="false">{{=T('About us')}}<b class=" icon-angle-down"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{=URL('about_us', 'profile')}}"> {{=T('Profil')}}</a></li>
-                                        <li><a href="{{=URL('about_us','our_service')}}">{{=T('Our Service')}}</a></li>
-                                        <li><a href="{{=URL('about_us','technology')}}"> {{=T('Technology')}}</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{=URL('catalog','index')}}">{{=T('Books')}}</a></li>
-                                <li><a href="{{=URL('series','index')}}">{{=T('Series')}}</a></li>
-                                <!--<li><a href="{{=URL('journals','index')}}">{{=T('Journals')}}</a></li>-->
-	                        <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                       data-delay="0" data-close-others="false">{{=T('Partner')}}<b class=" icon-angle-down"></b></a>
-                                    <ul class="dropdown-menu">
-                                       <li><a href="{{=URL('partner', 'index/cms')}}">CMS</a></li>
-                                       <li><a href="{{=URL('partner', 'index/dguf')}}"> {{=T('DGUF')}}</a></li>
-                                       <li><a href="{{=URL('partner', 'index/rgzm')}}">RGZM</a></li>
-                                    </ul>
-                                </li>
-
-
-                                <li class="dropdown">
-
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown"
-                                       data-delay="0" data-close-others="false">{{=T('Publishing')}} <b class="icon-angle-down"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{=URL('publishing','for_authors')}}">{{=T('Information for Authors')}} </a></li>
-                                        <!--li><a href="{{=URL('publishing','book_proposal')}}">{{=T('Book Proposal')}}</a></li-->
-                                        <li><a href="{{=URL('publishing','rights_and_licences')}}">{{=T('Rights and Licences')}} </a></li>
-
-                                    </ul>
-                                </li>
-                                <li><a href="{{=URL('propylaeum','index')}}">{{=T('Propylaeum')}}</a></li>
-                                
-
-<!--                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown"
-                                       data-delay="0" data-close-others="false">{{=T('Quality Control')}} <b class=" icon-angle-down"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{=URL('quality_control','peer_review')}}"> {{=T('Peer Review')}}</a></li>
-                                        <li><a href="{{=URL('quality_control','plagiarism')}}"> {{=T('Plagiarism')}}</a></li>
-                                        <li><a href="{{=URL('quality_control','data_privacy')}}">{{=T('Data Privacy')}} </a></li>
-
-
-                                    </ul>
-                                </li>
--->
-
-                            </ul>
-                        </div>
-
-                        <!-- second -->
-                        <div class="navbar-collapse collapse pull-right visible-lg hidden-md">
-                            <ul class="nav navbar-nav">
-
-
-                                <li>
-                                    <a>
-                                    <img id="nav-social-media" src="{{=URL('static','images/press/social-media-icons.png')}}" height="30px"  alt="Planets" usemap="#socialmap">
-
-
-                                    <map name="socialmap">
-					{{if request.url=='/': }}
-					{{request.url=request.url+myconf.take('web.application')}}
-					{{pass}}	
-                                 <area shape="rect" coords="0,0,30,30" alt="fb" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
-                                        <area shape="rect" coords="30,0,60,30" alt="twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
-                                        <area shape="rect" coords="60,0,90,30" alt="twitter" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
-                                        <area shape="rect" coords="90,0,120,30" alt="twitter" href="https://plus.google.com/share?url={{=myconf.take('web.url')+request.url}}">
-
-
-                                    </map>
-
-
-                                </a></li>
-                                <!-- https://www.addthis.com/get/responsive-sharing-buttons -->
-
-
-                            </ul>
-                        </div>
-
-
+                            <a class="navbar-brand" href="index.html"></a>
                     </div>
-                </div>
-            </div>
+
+					<div class="navbar-collapse collapse pull-left ">
+						<ul class="nav navbar-nav">
+							<li><a href="{{=URL('home','index')}}">{{=T('Home')}}</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+								   data-delay="0" data-close-others="false">{{=T('About us')}}<b class=" icon-angle-down"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{=URL('about_us', 'profile')}}"> {{=T('Profil')}}</a></li>
+									<li><a href="{{=URL('about_us','our_service')}}">{{=T('Our Service')}}</a></li>
+									<li><a href="{{=URL('about_us','technology')}}"> {{=T('Technology')}}</a></li>
+								</ul>
+							</li>
+							<li><a href="{{=URL('catalog','index')}}">{{=T('Books')}}</a></li>
+							<li><a href="{{=URL('series','index')}}">{{=T('Series')}}</a></li>
+							<!--<li><a href="{{=URL('journals','index')}}">{{=T('Journals')}}</a></li>-->
+						<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+								   data-delay="0" data-close-others="false">{{=T('Partner')}}<b class=" icon-angle-down"></b></a>
+								<ul class="dropdown-menu">
+								   <li><a href="{{=URL('partner', 'index/cms')}}">CMS</a></li>
+								   <li><a href="{{=URL('partner', 'index/dguf')}}"> {{=T('DGUF')}}</a></li>
+								   <li><a href="{{=URL('partner', 'index/rgzm')}}">RGZM</a></li>
+								</ul>
+							</li>
 
 
-        </header>
+							<li class="dropdown">
+
+								<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown"
+								   data-delay="0" data-close-others="false">{{=T('Publishing')}} <b class="icon-angle-down"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{=URL('publishing','for_authors')}}">{{=T('Information for Authors')}} </a></li>
+									<!--li><a href="{{=URL('publishing','book_proposal')}}">{{=T('Book Proposal')}}</a></li-->
+									<li><a href="{{=URL('publishing','rights_and_licences')}}">{{=T('Rights and Licences')}} </a></li>
+
+								</ul>
+							</li>
+							<li><a href="{{=URL('propylaeum','index')}}">{{=T('Propylaeum')}}</a></li>
+						   
+						</ul>
+					</div>
+
+					<div class="navbar-collapse collapse pull-right visible-lg hidden-md">
+						<ul class="nav navbar-nav">
+										<li class="social_media">
+											<a>
+											<img id="nav-social-media" src="{{=URL('static','images/press/social-media-icons.png')}}" height="30px"  alt="Planets" usemap="#socialmap">
+												<map name="socialmap">
+													{{if request.url=='/': }}
+													{{request.url=request.url+myconf.take('web.application')}}
+													{{pass}}	
+													<area shape="rect" coords="0,0,30,30" alt="fb" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="30,0,60,30" alt="twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="60,0,90,30" alt="twitter" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="90,0,120,30" alt="twitter" href="https://plus.google.com/share?url={{=myconf.take('web.url')+request.url}}">
+												</map>
+											</a>
+										</li>
+						</ul>
+					</div>
+					
+			    </div>
+			</div>
+			
+			<div id="headerBild">
+		       <div class="container">
+				   <img src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" /></li>
+			   </div>
+		   </div>
+		   
+	   </header>
+					
+       <section id="content">	       
+	       <div class="container">
+		         <div class="abstand" style="height:30px;"></div>
+		        {{block center}}
+				{{include}}
+				{{end}}
+				<div class="abstand" style="height:30px;"></div>
+	       </div>
+	   </section>                 
+
+	   <footer>			
+			<div class="container">
+				<div class="row">
+									<div class="col-lg-3">
+
+									  <div id="footer_logo_ub" class="widget"><a href="http://www.ub.uni-heidelberg.de" title="Homepage Universitätsbibliothek Heidelberg"><img alt="Logo - Universitätsbibliothek Heidelberg" src="{{=URL('static','/images/press/footer_logoUBHei.png')}}" /></a></div>
+
+									</div>
 
 
-    </div>
+									<div class="col-lg-3">
+									   <div id="footer_logo_dfg" class="widget"><a href="http://www.dfg.de" title="Deutsche Forschungsgesellschaft"><img alt="Logo - Deutsche Forschungsgesellschaft" src="{{=URL('static','/images/press/footer_logoDFG.png')}}" /></a></div>
+
+									</div>
 
 
-        <!-- end header -->
-    <!-- Masthead ===================================== -->
-    {{block header}}
-    {{end}}
-    <!-- Main ========================================= -->
-    <!-- Begin page content -->
-<script type="text/javascript" charset="utf-8">
-    $(window).load(function() {
-        $('.flexslider').flexslider();
-    });
-</script>
+									<div class="col-lg-3">
+									   <div id="footer_logo_propylaeum" class="widget"><a href="https://www.propylaeum.de" title="Homepage Propylaeum"><img alt="Logo - Propylaeum" src="{{=URL('static','/images/press/footer_logo_propylaeum.png')}}" /></a></div>
+									</div>
 
-
-    <div class="container-fluid">
-            <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-                    <!-- Slider -->
-
-                    <div id="main-slider" class="flexslider">
-
-                        <ul class="slides">
-                            <li>
-                                <img id="hup-logo" src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" />
-                            </li>
-
-                        </ul>
-
-                    </div>
-            </div>
-        </div>
-      </div>
-      
-{{if left_sidebar_enabled:}}
-        <div class="col-md-3 left-sidebar">
-            {{block left_sidebar}}
-            <h3>Left Sidebar</h3>
-            <p></p>
-            {{end}}
-        </div>
-      {{pass}}
-
-      <div class="{{=middle_column}}">
-        {{block center}}
-        {{include}}
-        {{end}}
-      </div>
-
-      {{if right_sidebar_enabled:}}
-        <div class="col-md-3">
-            {{block right_sidebar}}
-            <h3>Right Sidebar</h3>
-            <p></p>
-            {{end}}
-        </div>
-      {{pass}}
-
-    </div>
-
-    {{block footer}} <!-- this is default footer -->
-
-      <div class="container">
-         <footer>
-
-     <div id="sub-footer"  class="screen">
-         <div class="container">
-
- <div class="col-lg-12">
-
-                    <div class="row">
-
-                        <div class="col-lg-3">
-
-                          <div id="footer_logo_ub" class="widget"><a href="http://www.ub.uni-heidelberg.de" title="Homepage Universitätsbibliothek Heidelberg"><img alt="Logo - Universitätsbibliothek Heidelberg" src="{{=URL('static','/images/press/footer_logoUBHei.png')}}" /></a></div>
-
-                        </div>
-
-
-                        <div class="col-lg-3">
-                           <div id="footer_logo_dfg" class="widget"><a href="http://www.dfg.de" title="Deutsche Forschungsgesellschaft"><img alt="Logo - Deutsche Forschungsgesellschaft" src="{{=URL('static','/images/press/footer_logoDFG.png')}}" /></a></div>
-
-                        </div>
-
-
-                        <div class="col-lg-3">
-                           <div id="footer_logo_propylaeum" class="widget"><a href="https://www.propylaeum.de" title="Homepage Propylaeum"><img alt="Logo - Propylaeum" src="{{=URL('static','/images/press/footer_logo_propylaeum.png')}}" /></a></div>
-                        </div>
-
-                        <div class="col-lg-3">
-                          <div id="footer_logo_pkp" class="widget">
-                          <a href="https://pkp.sfu.ca/" title="Homepage PKP - Public Knowledge Project"><img class="" alt="Public Knowledge Project" src="http://books.ub.uni-heidelberg.de/lib/pkp/templates/images/pkp_brand.png"></a>
-                          </div>
-                        </div>
-             </div>
-         </div>
-     </div>
-         </footer>
-  </div>
-    {{end}}
-        <script src="{{=URL('static','js/jquery.flexslider.js')}}"></script>
+									<div class="col-lg-3">
+									  <div id="footer_logo_pkp" class="widget">
+									  <a href="https://pkp.sfu.ca/" title="Homepage PKP - Public Knowledge Project"><img class="" alt="Public Knowledge Project" src="http://books.ub.uni-heidelberg.de/lib/pkp/templates/images/pkp_brand.png"></a>
+									  </div>
+									</div>
+				</div>
+			</div>	
+	   </footer>
+	</div>
+	
     <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
   </body>
 </html>
