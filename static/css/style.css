@@ -338,7 +338,6 @@ ul.nav li.dropdown a {
 
 #content img {
 	max-width:100%;
-	height:auto;
 }
 
 .separator {width:100%;
@@ -1978,6 +1977,7 @@ article img.pull-right, article .align-right{
 		display:none;
 	}
 
+	.news-row {margin:0 -20px !important;}
 
 	.cta-text {
 		margin:0 auto;
@@ -1998,10 +1998,7 @@ article img.pull-right, article .align-right{
         {
            padding:0 !important;
         }
-       #main
-        {
-           padding:2em !important;
-        }
+
        .title_volumes
         {
            margin-left:0.4em;
@@ -2015,19 +2012,12 @@ article img.pull-right, article .align-right{
            width:50%;
            margin-left: 20%;
         }
-       #service-navi
-        {
-           padding-top:1em;
-           padding-right:1.5em;
-        }
+
        #heiup-logo
         {
            width:auto !important;
         }
-       #main-slider
-        {
-           display:none;
-        }
+
        #infoBoxRechts
         {
            width:100%;
@@ -2066,7 +2056,6 @@ article img.pull-right, article .align-right{
 	footer img {margin:0 !important;}
 }
 
-
 @media (min-width: 481px) and (max-width: 1230px) {
        body
         {
@@ -2077,19 +2066,17 @@ article img.pull-right, article .align-right{
         {
            width:100% !important;
         }
-       .col-lg-12, .col-md-12, footer, .container-fluid
-        {
-           padding:0 !important;
-        }
+		
+}
+
 
        #heiup-logo
         {
            width:auto !important;
         }
-       .row
-        {
-           margin: 0 !important;
-        }
+		
+		
+	   .news-row {margin: 10px -20px;}
 
        .title_volumes
         {
