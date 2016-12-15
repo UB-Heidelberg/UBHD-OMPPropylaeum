@@ -1,0 +1,81 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}                
+                Distant Worlds Journal Special Issues  
+                {{elif session.forced_language =='en': }}              
+                Distant Worlds Journal Special Issues
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Seite befindet sich im Aufbau.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+		<!--
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Priv.-Doz. Dr. Frank Siegmund<br />
+                Dr. Werner Schön<br />
+                Diane Scherzler M.A.<br />
+                Dr. Birgit Gehlen<br /><br />
+                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+           </div>
+		 -->
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Die Seite befindet sich im Aufbau.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+		<!--
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Priv.-Doz. Dr. Frank Siegmund<br />
+                Dr. Werner Schön<br />
+                Diane Scherzler M.A.<br />
+                Dr. Birgit Gehlen<br /><br />
+                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+           </div>
+		 -->
+        </div>   
+{{pass}}
+
+</div>
+
+
