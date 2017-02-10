@@ -2415,7 +2415,6 @@ footer .row {margin:0;}
 
 
 #heiup-logo-print {
-  border: 1px solid #B5152B;
   margin: 0 auto;
   padding: 20px;
 }
@@ -2424,7 +2423,7 @@ footer .row {margin:0;}
 
 .print-url::after {
   color: #656565 !important;
-  content: "http://heiup.uni-heidelberg.de";
+  content: "http://books.ub.uni-heidelberg.de/propylaeum";
   float: right;
   font-size: 9pt;
 }
