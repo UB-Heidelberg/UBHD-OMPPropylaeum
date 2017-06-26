@@ -37,11 +37,7 @@
 						</div>
 		                <p>
 							<i class="icon-quote-left"></i>
-							{{if len(series.settings.getLocalizedValue('description', locale)) > 1000:}}
-								{{=XML(html2text(series.settings.getLocalizedValue('description', locale)))[0:999]+'...'}}
-							{{else:}}
 								{{=XML(series.settings.getLocalizedValue('description', locale))}}
-							{{pass}}
 		                </p>
 		                <div class="widget">
 		                    <h5 class="widgetheading"></h5>
