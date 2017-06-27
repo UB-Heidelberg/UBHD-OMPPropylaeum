@@ -1,0 +1,95 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Archäologische Quellen  
+                {{elif session.forced_language =='en': }}
+                Archäologische Quellen
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Archäologischen Quellen (Arch. Quellen) sind die 2017 begründete Monografienreihe der Deutschen Gesellschaft für Ur- und Frühgeschichte e.V. (DGUF) (http://www.dguf.de/index.php), die der Vorlage von “Quellen” dient, d. h. von Grabungsdokumentationen, Grabungsfunden und ähnlichem, ohne dass deren Publikation von tiefgehenden wissenschaftlichen Analysen begleitet sein muss. Die Quellen geben nur knappe Deutungen des Gefundenen, sie bieten das Rohmaterial für vertiefende wissenschaftliche Analysen, die dann in weiteren Publikationen erfolgen können. Die Archäologischen Quellen erscheinen in einer Druckausgabe und  online im Golden Open Access. In die Online-Ausgabe werden bei Bedarf auch Ergänzende Materialien, wie z. B. großformatige Grabungspläne, und Open Data aufgenommen.</p>
+            <p>Ungezählte Grabungen wandern ohne eine weitere Bearbeitung ins Archiv, in der Hoffnung, dass irgendwann einmal z. B. ein Examenskandidat die Mühen der Aufarbeitung und Publikation übernimmt. Da es weitaus mehr Grabungen als Examenskandidaten gibt, verbleiben allzu viele Ausgrabungen ohne eine realistische Aussicht, zeitnah bearbeitet und veröffentlicht zu werden, im Archiv. Ein stetig wachsender Berg, bislang ohne eine Perspektive, in absehbarer Zeit abgetragen zu werden.</p>
+            <p>Wenn wir uns vor Augen führen, wie viel Material über lange Jahre nicht in archäologische Forschung einfließt und diese vorantreiben kann, wird uns bewusst, wie unglücklich die beschriebene Situation ist. Die Endlagerung von Grabungen im Archiv ist sachlich ebenso korrekt wie für unterschiedlichste Interessengruppen völlig unbefriedigend. Wie soll man überdies der Politik, den Investoren und den Bürgerinnen und Bürgern verständlich machen, dass eine professionelle Archäologie zwingend erforderlich ist und auch finanziert werden muss, wenn doch gleichzeitig die Archive überquellen? Wie soll man vermitteln, dass archäologische Funde in Archiven und in Landesbesitz sein müssen, wenn sie über Jahrzehnte nicht einmal ausgewertet werden?</p>
+            <p>Vor diesem Hintergrund ist diese Schriftenreihe entstanden. Wir publizieren mit den "Archäologischen Quellen" die Grabungsberichte in ihrem Ist-Zustand ohne langwierige wissenschaftliche Auswertung. Fachleuten wie auch interessierten Bürgern sind sie im Golden Open Access und mit der Standardlizenz CC BY leicht zugänglich, Anregungen für weitergehende Forschungen gehen von ihnen aus, die Archäologie legt umfassend öffentlich und nachprüfbar Rechenschaft ab über das, was sie alltäglich tut, und die Ausgräber gewinnen sichtbar die wohlverdiente Autorenschaft an ihren Produkten.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/archquell')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archquell_logo.png'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Frank Siegmund & Diane Scherzler<br />
+                DGUF-Verlag<br />
+                An der Lay 4<br />
+                D - 54578 Kerpen-Loogh<br /><br />
+                Tel. +49 (0) 6593 - 989 642<br />
+                Fax +49 (0) 6593 - 989 643<br />
+                verlag[at]dguf.de</p>
+				<p><b>ISSN</b><br>
+				 2566-557X (Print)<br />
+				 2566-5588 (Online)
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Die Archäologischen Quellen (Arch. Quellen) sind die 2017 begründete Monografienreihe der Deutschen Gesellschaft für Ur- und Frühgeschichte e.V. (DGUF) (http://www.dguf.de/index.php), die der Vorlage von “Quellen” dient, d. h. von Grabungsdokumentationen, Grabungsfunden und ähnlichem, ohne dass deren Publikation von tiefgehenden wissenschaftlichen Analysen begleitet sein muss. Die Quellen geben nur knappe Deutungen des Gefundenen, sie bieten das Rohmaterial für vertiefende wissenschaftliche Analysen, die dann in weiteren Publikationen erfolgen können. Die Archäologischen Quellen erscheinen in einer Druckausgabe und  online im Golden Open Access. In die Online-Ausgabe werden bei Bedarf auch Ergänzende Materialien, wie z. B. großformatige Grabungspläne, und Open Data aufgenommen.</p>
+            <p>Ungezählte Grabungen wandern ohne eine weitere Bearbeitung ins Archiv, in der Hoffnung, dass irgendwann einmal z. B. ein Examenskandidat die Mühen der Aufarbeitung und Publikation übernimmt. Da es weitaus mehr Grabungen als Examenskandidaten gibt, verbleiben allzu viele Ausgrabungen ohne eine realistische Aussicht, zeitnah bearbeitet und veröffentlicht zu werden, im Archiv. Ein stetig wachsender Berg, bislang ohne eine Perspektive, in absehbarer Zeit abgetragen zu werden.</p>
+            <p>Wenn wir uns vor Augen führen, wie viel Material über lange Jahre nicht in archäologische Forschung einfließt und diese vorantreiben kann, wird uns bewusst, wie unglücklich die beschriebene Situation ist. Die Endlagerung von Grabungen im Archiv ist sachlich ebenso korrekt wie für unterschiedlichste Interessengruppen völlig unbefriedigend. Wie soll man überdies der Politik, den Investoren und den Bürgerinnen und Bürgern verständlich machen, dass eine professionelle Archäologie zwingend erforderlich ist und auch finanziert werden muss, wenn doch gleichzeitig die Archive überquellen? Wie soll man vermitteln, dass archäologische Funde in Archiven und in Landesbesitz sein müssen, wenn sie über Jahrzehnte nicht einmal ausgewertet werden?</p>
+            <p>Vor diesem Hintergrund ist diese Schriftenreihe entstanden. Wir publizieren mit den "Archäologischen Quellen" die Grabungsberichte in ihrem Ist-Zustand ohne langwierige wissenschaftliche Auswertung. Fachleuten wie auch interessierten Bürgern sind sie im Golden Open Access und mit der Standardlizenz CC BY leicht zugänglich, Anregungen für weitergehende Forschungen gehen von ihnen aus, die Archäologie legt umfassend öffentlich und nachprüfbar Rechenschaft ab über das, was sie alltäglich tut, und die Ausgräber gewinnen sichtbar die wohlverdiente Autorenschaft an ihren Produkten.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/archquell')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archquell_logo.png'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Frank Siegmund & Diane Scherzler<br />
+                DGUF-Verlag<br />
+                An der Lay 4<br />
+                D - 54578 Kerpen-Loogh<br /><br />
+                Tel. +49 (0) 6593 - 989 642<br />
+                Fax +49 (0) 6593 - 989 643<br />
+                verlag[at]dguf.de</p>
+				<p><b>ISSN</b><br>
+				 2566-557X (Print)<br />
+				 2566-5588 (Online)
+				 </p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
