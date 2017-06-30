@@ -48,9 +48,9 @@
 
                      {{elif session.forced_language =='en': }}
 		<div class="col-lg-9">
-		    <p>Die Reihe <b>Digital Classics Books</b> wird als Monographienreihe im Open Access erscheinen und soll sowohl für Qualifikationsschriften offenstehen, die im Kontext von Digital Humanities-Projekten entstehen sowie für einzelne umfangreichere Beiträge bzw. mehrere, inhaltlich zusammenhängende Aufsätze, die als Sammelband erscheinen können.</p>
-            <p><b>Digital Classics Books</b> soll eine Reihe werden, die Arbeiten aus den Altertumswissenschaften und angrenzenden Gebieten in Verbindung mit der Anwendung oder Entwicklung von Methoden aus den Digital Humanities veröffentlicht. Die eBooks werden für die Nutzer frei zum Download bereitgestellt und die weitergehenden Möglichkeiten des ePublishing sollen mit dieser Publikationsform ebenfalls realisiert werden. Die Reihe wird daher sowohl die Integration von Forschungsdaten direkt im Buch als auch online in einem Datenrepositorium ermöglichen. So sollen Leser nicht nur exemplarische Ergebnisse im Anhang, sondern die exportierten und aufbereiteten Gesamtergebnisse in Form von Tabellen im Datenrepositorium zu ihrer Verfügung haben.</p>
-            <p>Elektronische und gedruckte Publikationen sollen sich in der Reihe ergänzen, da gleichzeitig Print on Demand angeboten wird: Die Publikation der Werke erfolgt daher parallel in mehreren Versionen - sowohl in kostenfreier, digitaler Form (als PDF- und HTML-Datei) wie auch als gedrucktes Buch (Hard- oder Softcover), das im Sortiments- und im Online-Buchhandel kostengünstig erhältlich sein wird. Wir möchten damit für Autorinnen und Autoren zusätzlich zu unserem eJournal <b><a href="http://journals.ub.uni-heidelberg.de/index.php/dco/index" title="Link zur Zeitschrift">Digital Classics Online</a></b> einen weiteren interessanten Publikationsort anbieten, der auch den Bedürfnissen der traditionellen Buchwissenschaften nach Verlagspublikation als gedruckter Monographie nachkommt und für Autoren entsprechend unseren Vorstellungen von Open Access ohne Gebühren zur Verfügung gestellt wird.</p>
+		    <p><b>Digital Classics Books</b> is a series of Open Access monographs which is open for contributions such as documents written as part of an academic qualification, produced in the context of a Digital Humanities project. Also eligible are more comprehensive individual works, e.g. collected volumes containing several contributions based around a common subject or theme.</p>
+            <p><b>Digital Classics Books</b>  publishes works on Classical Studies and related areas that apply or develop methods from the Digital Humanities.E-books are freely available for download by users. Futher reaching possibilities of electronic publishing can be realised with this form of publication, as this series allows research data to be integrated directly into the book or placed within a data repository.This provides readers not only with limited results in appendices, but with access to exported and edited versions of the complete results of research in the form of tables in the data repository.</p>
+            <p>This series allows electronic and printed publications to complement each other, as all titles are also offered as print-on-demand.Published works therefore appear simultaneously in various versions: as free digital copies (PDF or HTML versions), or as a printed book (hardback or paperback), available at a reasonable price from bookshops or online suppliers.The intention is to offer authors an interesting place to publish in addition to our e-journal <b><a href="http://journals.ub.uni-heidelberg.de/index.php/dco/index" title="Journal Digital Classics Online">Digital Classics Online</a></b> which combines the requirement of the traditionally book-oriented disciplines for printed books from a publisher, with publication in a no-cost Open Access forum that conforms to our expectations</p>
 		</div>
 		
 		<div class="col-lg-3">
@@ -64,7 +64,7 @@
                 Prof. Dr. Charlotte Schubert<br />
                 </p>
                 <p>
-                <b>Kontakt</b><br />
+                <b>{{=T('Contact')}}</b><br />
                 Prof. Dr. Charlotte Schubert<br />
 
                 Lehrstuhl für Alte Geschichte<br />
@@ -86,12 +86,21 @@
                 <div class="row">
                 <div class="col-lg-2">{{=IMG(_src=URL('static','images/series/cover_protreptikos.png'),_width='80px', _class='bildrahmen')}}
                 </div>
+{{if session.forced_language =='de': }}                
                 <div class="col-lg-10">
                 <p><b>Als erster Band in der Reihe erscheint am 18. Juli 2017</b></p>
                 <b>Sven-Philipp Brandt/Charlotte Schubert (Hg.)</b><br>                 
                 Rekonstruktion, Refragmentarisierung und Kontextualisierung mit Textmining: Der Protreptikos des Iamblich<br>
                 ISBN: 978-3-946654-64-3 (PDF), 978-3-946654-70-4 (Softcover), 978-3-946654-71-1 (Hardcover), 444 Seiten, 13 Farbabbildungen<br>
                 </div>
+{{elif session.forced_language =='en': }}
+                <div class="col-lg-10">
+                <p><b>The first volume in this series will be published on 18th July 2017</b></p>
+                <b>Sven-Philipp Brandt/Charlotte Schubert (Eds.)</b><br>                 
+                Rekonstruktion, Refragmentarisierung und Kontextualisierung mit Textmining: Der Protreptikos des Iamblich<br>
+                ISBN: 978-3-946654-64-3 (PDF), 978-3-946654-70-4 (softcover), 978-3-946654-71-1 (hardcover), 444 pages, 13 colour figures <br>
+                </div>                       
+{{pass}}
                 </div>          
     </div>
 </div>
