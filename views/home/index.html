@@ -52,6 +52,26 @@
                       <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
                     </div>
 					<div class="media-body">
+                      <p class="media-heading">30.06.2017<br>
+                      {{if session.forced_language =='de': }} <h5>Neue Reihe in Propylaeum-eBOOKS </h5>{{elif session.forced_language =='en': }} <h5>Neue Reihe in Propylaeum-eBOOKS</h5>{{pass}}</p> 
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+Der erste Band der <a href="{{=URL('series','/info/archquell')}}">&bdquo;Archälogischen Quellen&rdquo;</a> ist online. Die &bdquo;Archäologischen Quellen&rdquo; werden von der Deutschen Gesellschaft für Ur- Und Frühgeschichte e.V. (DGUF) herausgeben und werden in erster Linie
+Grabungsdokumentationen, Grabungsfunde und ähnliche zum Inhalt haben. Als erster Band erschien der Titel <a href="{{=URL('catalog','book/276')}}">&bdquo;Die eisenzeitliche und römische Siedlung von Tönisvorst-Vorst (Kreis Viersen)&rdquo;</a> von Melanie Eigen. 
+                      {{elif session.forced_language =='en': }}                     
+Der erste Band der <a href="{{=URL('series','/info/archquell')}}">&bdquo;Archälogischen Quellen&rdquo;</a> ist online. Die &bdquo;Archäologischen Quellen&rdquo; werden von der Deutschen Gesellschaft für Ur- Und Frühgeschichte e.V. (DGUF) herausgeben und werden in erster Linie
+Grabungsdokumentationen, Grabungsfunde und ähnliche zum Inhalt haben. Als erster Band erschien der Titel <a href="{{=URL('catalog','book/276')}}">&bdquo;Die eisenzeitliche und römische Siedlung von Tönisvorst-Vorst (Kreis Viersen)&rdquo;</a> von Melanie Eigen. 
+                      </p>
+            {{pass}}          
+                    </div>
+			        </div> 
+              
+
+					<div class="media">
+                    <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+                    </div>
+					<div class="media-body">
                       <p class="media-heading">21.04.2017<br>
                       {{if session.forced_language =='de': }} <h5>Neu: "Gerechte Götter? Vorstellungen von göttlicher Vergeltung im Mythos und Kult des archaischen und klassischen Griechenlands" von Irene Berti</h5>{{elif session.forced_language =='en': }} <h5>Neu: "Gerechte Götter? Vorstellungen von göttlicher Vergeltung im Mythos und Kult des archaischen und klassischen Griechenlands" von Irene Berti</h5>{{pass}}</p> 
 
