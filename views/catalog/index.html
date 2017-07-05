@@ -2,6 +2,27 @@
 {{import re, os}}
 {{from ompformat import formatContributors, coverImageLink}}
 
+  <div class="row">
+            <div class="col-lg-3">
+
+            </div>
+            <div class="col-lg-9">
+
+
+            {{=b.filter_select}}
+            {{try:
+            del b.sort_select[1][4]
+            except:
+            pass
+
+            }}
+            {{=b.sort_select}}
+
+
+
+            </div>
+        </div>
+
 
 {{for submission in submissions:}}
 	<div class="row">
@@ -44,3 +65,13 @@
 		</div>		
 	</div>
 {{pass}}
+<div class="container">
+            <div class="row">
+            <div class="col-lg-3">
+            </div>
+             <div class="col-lg-9">
+                {{=b.navigation_list}}
+             {{=b.navigation_select}}
+             </div>   
+            </div>
+     </div>

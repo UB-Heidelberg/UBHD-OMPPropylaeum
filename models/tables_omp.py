@@ -35,6 +35,28 @@ db.define_table("author_settings",
                 migrate=False
                 )
 
+db.define_table("categories",
+                Field("category_id", "integer"),
+                Field("press_id", "integer"),
+                Field("parent_id", "integer"),
+                Field("path","string"),
+                Field("image","text"),
+                Field("seq", "integer"),
+                primarykey=['category_id'],
+                migrate=False
+                )
+
+db.define_table("category_settings",
+                Field("category_id", "integer"),
+                Field("locale", "string"),
+                Field("setting_name", "string"),
+                Field("setting_value", "string"),
+                Field("setting_type", "string"),
+                primarykey=['category_id', 'locale', 'setting_name'],
+                migrate=False
+                )
+
+
 db.define_table("event_log",
                 Field("log_id", "integer"), 
                 Field("assoc_type", "integer"), 
@@ -48,6 +70,7 @@ db.define_table("event_log",
                 primarykey=['log_id'],
                 migrate=False
                 )
+
 
 db.define_table("event_log_settings",
                 Field("log_id", "integer"), 
@@ -193,7 +216,7 @@ db.define_table("series_editors",
                 Field("user_id", "integer"),
                 Field("can_edit", "boolean"),
                 Field("can_review", "boolean"),
-                primarykey=['press_id', 'series_id', 'user_id'],
+                primarykey=['series_id', 'press_id', 'user_id'],
                 migrate=False
                 )
 
@@ -258,6 +281,13 @@ db.define_table("submission_settings",
                 Field("setting_name", "string"),
                 Field("setting_value", "string"),
                 Field("setting_type", "string"),
+                primarykey=['submission_id'],
+                migrate=False
+                )
+
+db.define_table("submission_categories",
+                Field("submission_id", "integer"),
+                Field("category_id", "integer"),
                 primarykey=['submission_id'],
                 migrate=False
                 )
@@ -396,4 +426,13 @@ db.define_table('t_usage_statistics',
                     default=request.env.http_accept_language),
                 Field('description', 'text'),
                 migrate=False,
+                )
+
+db.define_table('t_license_settings',
+                Field( "license_id", "integer"),
+                Field("locale", "string", length=6),
+                Field("setting_name", "string",length=48),
+                Field("setting_value", "string"),
+                migrate = False,
+                primarykey=["license_id" ,"locale", "setting_name"],
                 )
