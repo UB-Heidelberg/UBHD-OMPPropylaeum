@@ -7,9 +7,13 @@
 
             </div>
             <div class="col-lg-9">
+					{{try:
+            del b.sort_select[1][4]
+            except:
+            pass
 
+            }}
             {{=b.sort_select}}
-
 
             </div>
         </div>
