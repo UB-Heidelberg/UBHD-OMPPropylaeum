@@ -108,6 +108,7 @@
 'Client IP': 'Client IP',
 'Close': 'Schließen',
 'Coming Soon': 'Demnächst',
+'Comment': 'Kommentieren',
 'Community': 'Community',
 'Components and Plugins': 'Komponenten und Plugins',
 'Contact': 'Kontakt',
