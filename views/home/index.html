@@ -54,6 +54,26 @@
                     </div>
 					<div class="media-body">
                       <p class="media-heading">28.09.2017<br>
+                      {{if session.forced_language =='de': }} <h5>Neu in Propylaeum-eBOOKS </h5>
+                      {{elif session.forced_language =='en': }} <h5>New in Propylaeum-eBOOKS</h5>
+                      {{pass}}</p> 
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+Georg Kortings Untersuchung zur Varusschlacht <a href="{{=URL('catalog','book/305')}}" title="Informationen zur Neuerscheinung „VARUS’ UNTERGANG. Textkritische Anmerkungen zu Florus 2,30,34 b“ von Georg Korting'">„VARUS’ UNTERGANG. Textkritische Anmerkungen zu Florus 2,30,34 b“</a> ist e-only erschienen und steht zum freien Download bereit. Die textkritische Analyse befasst sich mit dem Text des römischen Historikers und Dichters Florus zum Überfall des Arminius auf Varus im Jahr 9. 
+                      {{elif session.forced_language =='en': }}                     
+Georg Kortings Untersuchung zur Varusschlacht <a href="{{=URL('catalog','book/305')}}" title="Informationen zur Neuerscheinung „VARUS’ UNTERGANG. Textkritische Anmerkungen zu Florus 2,30,34 b“ von Georg Korting'">„VARUS’ UNTERGANG. Textkritische Anmerkungen zu Florus 2,30,34 b“</a> ist e-only erschienen und steht zum freien Download bereit. Die textkritische Analyse befasst sich mit dem Text des römischen Historikers und Dichters Florus zum Überfall des Arminius auf Varus im Jahr 9. 
+                     </p>
+            {{pass}}          
+                    </div>
+			        </div>
+
+
+          <div class="media">
+                    <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+                    </div>
+					<div class="media-body">
+                      <p class="media-heading">28.09.2017<br>
                       {{if session.forced_language =='de': }} <h5>Neue Reihe in Propylaeum-eBOOKS </h5>{{elif session.forced_language =='en': }} <h5>Neue Reihe in Propylaeum-eBOOKS</h5>{{pass}}</p> 
 
                       <p class="boxText">{{if session.forced_language =='de': }}
