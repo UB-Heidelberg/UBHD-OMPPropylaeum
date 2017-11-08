@@ -9,6 +9,24 @@
     <div class="col-lg-12">
 		<div class="row">
             <div class="col-lg-3">
+				<div class="box">
+					{{if session.forced_language =='de': }}
+                                <div class="box-gray aligncenter">
+                                    <h4>Neuerscheinung</h4>
+                                    {{=IMG(_src=URL('static','files/presses/3/monographs/77/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+                                </div>
+                                <div class="box-bottom">{{=A(T('More'),_href=URL('catalog','book/77'))}}</div>
+                    {{elif session.forced_language =='en': }}
+								<div class="box-gray aligncenter">
+										<h4>New Titles</h4>
+										   {{=IMG(_src=URL('static','files/presses/3/monographs/77/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+								</div>
+								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/77'))}}</div>
+					{{pass}}
+				</div>
+			</div>
+			
+            <div class="col-lg-3">
                 <div class="box">
                     {{if session.forced_language =='de': }}
                                 <div class="box-gray aligncenter">
@@ -22,23 +40,6 @@
 										   {{=IMG(_src=URL('static','files/presses/3/monographs/305/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
 								</div>
 								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/305'))}}</div>
-					{{pass}}
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="box">
-					{{if session.forced_language =='de': }}
-                                <div class="box-gray aligncenter">
-                                    <h4>Neuerscheinung</h4>
-                                    {{=IMG(_src=URL('static','files/presses/3/monographs/297/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-                                </div>
-                                <div class="box-bottom">{{=A(T('More'),_href=URL('catalog','book/297'))}}</div>
-                    {{elif session.forced_language =='en': }}
-								<div class="box-gray aligncenter">
-										<h4>New Titles</h4>
-										   {{=IMG(_src=URL('static','files/presses/3/monographs/297/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-								</div>
-								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/297'))}}</div>
 					{{pass}}
 				</div>
 			</div>
@@ -219,20 +220,20 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
 <div class="row news-row">
     <div class="col-lg-12">
 		<div class="row">
-            <div class="col-lg-3">
+			<div class="col-lg-3">
 				<div class="box">
 					{{if session.forced_language =='de': }}
                                 <div class="box-gray aligncenter">
                                     <h4>Neuerscheinung</h4>
-                                    {{=IMG(_src=URL('static','files/presses/3/monographs/77/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+                                    {{=IMG(_src=URL('static','files/presses/3/monographs/297/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
                                 </div>
-                                <div class="box-bottom">{{=A(T('More'),_href=URL('catalog','book/77'))}}</div>
+                                <div class="box-bottom">{{=A(T('More'),_href=URL('catalog','book/297'))}}</div>
                     {{elif session.forced_language =='en': }}
 								<div class="box-gray aligncenter">
 										<h4>New Titles</h4>
-										   {{=IMG(_src=URL('static','files/presses/3/monographs/77/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+										   {{=IMG(_src=URL('static','files/presses/3/monographs/297/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
 								</div>
-								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/77'))}}</div>
+								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/297'))}}</div>
 					{{pass}}
 				</div>
 			</div>
