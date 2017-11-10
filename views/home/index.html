@@ -12,7 +12,7 @@
 			         	<div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-                       {{=IMG(_src=URL('static','files/presses/3/monographs/306/simple/cover.jpg'),_width='145px', _class='bildrahmen', _alt='')}}
+                       {{=IMG(_src=URL('static','files/presses/3/monographs/306/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                    </div>
                   <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/306'))}}</div>
 				      </div>
@@ -22,7 +22,7 @@
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-                    {{=IMG(_src=URL('static','files/presses/3/monographs/77/simple/cover.jpg'),_width='145px', _class='bildrahmen', _alt='')}}
+                    {{=IMG(_src=URL('static','files/presses/3/monographs/77/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                  </div>
                   <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/77'))}}</div>
 				      </div>
@@ -31,7 +31,22 @@
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box">
 					<div class="box-gray aligncenter" style="overflow-y: scroll">
-						{{if session.forced_language =='de': }}<h4>Aktuelles</h4>{{elif session.forced_language =='en': }}<h4>News</h4>{{pass}}
+          <h4>{{=T('News')}}</h4>
+          <div class="media">
+                    <div class="media-left pull-left"> 
+                      <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+                    </div>
+					<div class="media-body">
+                      <p class="media-heading">08.11.2017</p>
+                      <h5>{{=T('New in Propylaeum-eBOOKS')}}</h5>
+                      <p class="boxText">{{if session.forced_language =='de': }}
+                      Band 3 der Reihe <a href="{{=URL('series','info/byzanzoo')}}" title="Informationen zur Reihe Byzanz zwischen Orient und Okzident">„Byzanz zwischen Orient und Okzident“</a> mit dem Titel <a href="{{=URL('catalog','book/306')}}" title="Informationen zur Neuerscheinung 'Hinter den Mauern und auf dem offenen Land. Leben im Byzantinischen Reich'">„Hinter den Mauern und auf dem offenen Land. Leben im Byzantinischen Reich“</a> behandelt in zahlreichen Beiträgen das Alltagsleben der Menschen im Byzantinischen Reich. 
+                      {{elif session.forced_language =='en': }} 
+                      Volume 3 of the series <a href="{{=URL('series','info/byzanzoo')}}" title="Informationen zur Reihe Byzanz zwischen Orient und Okzident">„Byzanz zwischen Orient und Okzident“</a> entitled  <a href="{{=URL('catalog','book/306')}}" title="Informationen zur Neuerscheinung 'Hinter den Mauern und auf dem offenen Land. Leben im Byzantinischen Reich'">„Hinter den Mauern und auf dem offenen Land. Leben im Byzantinischen Reich“</a> includes numerous articles discussing everyday life in the Byzantine Empire.                    
+                      {{pass}}                      
+                      </p>
+          </div>
+			    </div>
 
           <div class="media">
                     <div class="media-left pull-left">
@@ -47,7 +62,7 @@ Das Repertorium ist e-only erschienen und steht zum freien Download bereit. Zuge
 Francisca Feraudi-Gruénais' study <a href="{{=URL('catalog','book/77')}}" title="Information on new release '&hellip; ubique naufragium &hellip;? Aspekte und Bedeutungen von Schiffsdarstellungen im Grab II.' by Francisca Feraudi-Gruénais'"> &hellip; ubique naufragium &hellip;? Aspekte und Bedeutungen von Schiffsdarstellungen im Grab II. Repertorium der Schiffsdarstellungen auf Grabdenkmälern der hellenistischen und römischen Zeit unter besonderer Berücksichtigung der Inschriften</a>  is the basis of her work entitled <a href="http://katalog.ub.uni-heidelberg.de/titel/68082332" title="Homepage UB Heidelberg, Online-Katalog, Eintrag zu Schiffe und ihr Kontext. Darstellungen, Modelle, Bestandteile - von der Bronzezeit bis zum Ende des Byzantinischen Reiches">&bdquo;Schiffe und ihr Kontext. Darstellungen, Modelle, Bestandteile – von der Bronzezeit bis zum Ende des Byzantinischen Reiches : internationales Kolloquium 24.–25. Mai 2013 in Mainz, Mainz 2017&rdquo;</a>, released in 2017. This finding aid has been published online only and can be downloaded for free. Related research data can be found on  <a href="https://doi.org/10.11588/data/OOC0ZI" title="Homepage heiDATA Propylaeum, research data related to '&hellip; ubique naufragium &hellip? Aspekte und Bedeutungen von Schiffsdarstellungen im Grab. II. Repertorium der Schiffsdarstellungen auf Grabdenkmälern der hellenistischen und römischen Zeit unter besonderer Berücksichtigung der Inschriften'">heiDATA Propylaeum</a>.                     </p>
             {{pass}}          
                     </div>
-			        </div>
+			    </div>
 
 					
           <div class="media">
@@ -91,7 +106,6 @@ Mit Band 32  <a href="http://books.ub.uni-heidelberg.de/propylaeum/catalog/book/
 					<div class="media-body">
                       <p class="media-heading">30.06.2017</p>
                       {{if session.forced_language =='de': }} <h5>Neue Reihe in Propylaeum-eBOOKS </h5>{{elif session.forced_language =='en': }} <h5>Neue Reihe in Propylaeum-eBOOKS</h5>{{pass}} 
-
                       <p class="boxText">{{if session.forced_language =='de': }}
 Der erste Band der <a href="{{=URL('series','/info/archquell')}}">&bdquo;Archäologischen Quellen&rdquo;</a> ist online. Die &bdquo;Archäologischen Quellen&rdquo; werden von der Deutschen Gesellschaft für Ur- Und Frühgeschichte e.V. (DGUF) herausgeben und werden in erster Linie
 Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erster Band erschien der Titel <a href="{{=URL('catalog','book/276')}}">&bdquo;Die eisenzeitliche und römische Siedlung von Tönisvorst-Vorst (Kreis Viersen)&rdquo;</a> von Melanie Eigen. 
@@ -108,12 +122,13 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                     <div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
                     </div>
-					<div class="media-body">
+					  
+             <div class="media-body">
                       <p class="media-heading">21.04.2017</p>
                       {{if session.forced_language =='de': }} <h5>Neu: "Gerechte Götter? Vorstellungen von göttlicher Vergeltung im Mythos und Kult des archaischen und klassischen Griechenlands" von Irene Berti</h5>{{elif session.forced_language =='en': }} <h5>Neu: "Gerechte Götter? Vorstellungen von göttlicher Vergeltung im Mythos und Kult des archaischen und klassischen Griechenlands" von Irene Berti</h5>{{pass}}
 
                       <p class="boxText">{{if session.forced_language =='de': }}
-					  Irene Bertis <a href="{{=URL('catalog','book/242')}}">Publikation</a> zur Vorstellung der Menschen über das "gerechte Handeln" der Götter im antiken Griechenland ist sowohl als e-Book verfügbar als auch im Buchhandel als Druckausgabe lieferbar. 
+					             Irene Bertis <a href="{{=URL('catalog','book/242')}}">Publikation</a> zur Vorstellung der Menschen über das "gerechte Handeln" der Götter im antiken Griechenland ist sowohl als e-Book verfügbar als auch im Buchhandel als Druckausgabe lieferbar. 
                       {{elif session.forced_language =='en': }}                     
                       Irene Bertis <a href="{{=URL('catalog','book/242')}}">Publikation</a> zur Vorstellung der Menschen über das "gerechte Handeln" der Götter im antiken Griechenland ist sowohl als e-Book verfügbar als auch im Buchhandel als Druckausgabe lieferbar.{{pass}}
                       </p>
@@ -135,11 +150,12 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                       </p>
                     </div>
 			        </div> 
+
 						<div class="media">
                     <div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
                     </div>
-					<div class="media-body">
+				          	<div class="media-body">
                       <p class="media-heading">24.10.2016</p>
                       {{if session.forced_language =='de': }} <h5>Veranstaltungsreihe Open Access am Mittag: Publizieren an der Universität Heidelberg</h5>{{elif session.forced_language =='en': }} <h5>Series of events Open Access at noon: Publishing with the Heidelberg University</h5>{{pass}} 
 
@@ -150,8 +166,11 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                       </p>
                     </div>
 			        </div> 
+              
 						<div class="media">
-							<div class="media-left pull-left"><img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" /></div>                        
+							<div class="media-left pull-left">
+              <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+              </div>                        
 							<div class="media-body">
 								<p class="media-heading">24.08.16</p>
                 <h5>{{=T('New in Propylaeum-eBOOKS')}}</h5>                
@@ -167,28 +186,27 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
 						</div>  
 						
 						<div class="media">
-							<div class="media-left pull-left"><img src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" /></div>                        
+							<div class="media-left pull-left">
+              <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+              </div>                        
 							<div class="media-body">      
 								<h5>{{=T('New in Propylaeum-eBOOKS')}}</h5>                   
 								<p class="boxText">
 								{{if session.forced_language =='de': }}        
-								Der erste Band der Schriftenreihe <a href="{{=URL('series','info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
+								Der erste Band der Schriftenreihe <a href="{{=URL('series','/info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
 								{{elif session.forced_language =='en': }}      
-								The first volume of the book series  <a href="{{=URL('series','info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
+								The first volume of the book series  <a href="{{=URL('series','/info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
 								{{pass}}                                   
-                                </p>
-                            </div>
-                        </div>          
+                </p>
+              </div>
+            </div>          
 						
 						<div class="media">
-							<div class="media-left pull-left"><img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" /></div>                        
+							<div class="media-left pull-left">
+              <img alt="" src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
+              </div>                        
 							<div class="media-body">      
-								{{if session.forced_language =='de': }}  
-									<h5>open-access.net</h5>
-								{{elif session.forced_language =='en': }}
-									<h5>open-access.net</h5>        
-								{{pass}}   
-								
+								<h5>open-access.net</h5>						
 								<p class="boxText">
 								{{if session.forced_language =='de': }}
 								Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
@@ -198,6 +216,7 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
 								</p>
 							</div>
 						</div>
+            
            </div>
 
 					<div class="box-bottom">&nbsp;</div>
@@ -215,7 +234,7 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-					          {{=IMG(_src=URL('static','files/presses/3/monographs/305/simple/cover.jpg'),_width='145px', _class='bildrahmen', _alt='')}}
+					          {{=IMG(_src=URL('static','files/presses/3/monographs/305/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                  </div>
 								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/305'))}}</div>
 				</div>
@@ -225,7 +244,7 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('Coming Soon')}}</h4>
-                    {{=IMG(_src=URL('static','images/series/cover_protreptikos.png'),_width='145px', _class='bildrahmen', _alt='')}}
+                    {{=IMG(_src=URL('static','images/series/cover_protreptikos.png'),_alt='',_style='width:145px', _class='bildrahmen')}}
                     </div>
                    	<div class="box-bottom">{{=A(T('More Information'),_href=URL('series','info/dcb'))}}</div>
                 </div>
@@ -234,21 +253,21 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
             <div class="col-lg-6 boxAktuelles">
                 <div class="box">
                     <div class="box-gray">
-						<h4>Propylaeum–eBOOKS</h4>
-                        <p class="boxText aligncenter">
-						{{if session.forced_language =='de': }}
-						ist die Open-Access-Publikationsplattform von <a href="http://www.propylaeum.de" title="Homepage Portal Propylaum - Fachinformationsdienst für Altertumswissenschaften">Propylaeum</a> für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
-						Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinnen und Altertumswissenschaftler weltweit.<br>
-						Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
-						{{elif session.forced_language =='en': }}                
-						is the Open Access publication platform by <a href="http://www.propylaeum.de" title="Homepage Propylaeum - Specialized Information Service Classics">Propylaeum </a> for scientific ebooks on Classical Studies.<br>
-						We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). The service is free of charge and aimed at academics from all over the world.<br>
-						We are using the Open-Source-Software OMP (Open Monograph Press) by the Public Knowledge Project (PKP).
-						{{pass}}
-						</p>
+          						<h4>Propylaeum–eBOOKS</h4>
+                       <p class="boxText aligncenter">
+          						{{if session.forced_language =='de': }}
+          						ist die Open-Access-Publikationsplattform von <a href="http://www.propylaeum.de" title="Homepage Portal Propylaum - Fachinformationsdienst für Altertumswissenschaften">Propylaeum</a> für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
+          						Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinnen und Altertumswissenschaftler weltweit.<br>
+          						Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
+          						{{elif session.forced_language =='en': }}                
+          						is the Open Access publication platform by <a href="http://www.propylaeum.de" title="Homepage Propylaeum - Specialized Information Service Classics">Propylaeum </a> for scientific ebooks on Classical Studies.<br>
+          						We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). The service is free of charge and aimed at academics from all over the world.<br>
+          						We are using the Open-Source-Software OMP (Open Monograph Press) by the Public Knowledge Project (PKP).
+          						{{pass}}
+          						</p>
                     </div>
-					<div class="box-bottom">&nbsp;</div>
-				</div>
+					       <div class="box-bottom">&nbsp;</div>
+				      </div>
             </div>
         </div>
     </div>
