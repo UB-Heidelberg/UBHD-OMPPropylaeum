@@ -76,7 +76,7 @@
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//www.ub.uni-heidelberg.de/piwik/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+<noscript><img src="//www.ub.uni-heidelberg.de/piwik/piwik.php?idsite=5" style="border:0;" alt="" /></noscript>
 <!-- End Piwik Code -->
 
 
@@ -84,14 +84,9 @@
       pass
     except BaseException:
       raise HTTP(404,"statistik plugin not defined : add piwik_plugin=1  or 0 in appconfig.ini")
-
     }}
-
-
-
-
-
   </head>
+
   <body>
     <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
@@ -120,7 +115,7 @@
  
 		   <div id="headerLogo" class="print-url">
 			   <div class="container">
-					<img id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
+					<img alt="" id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
 					<img alt="" id="heiup-logo-print" class="print" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
 			   </div>
            </div>		
@@ -200,7 +195,7 @@
 			
 			<div id="headerBild">
 		       <div class="container">
-				   <img src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" /></li>
+				   <img alt="" src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" />
 			   </div>
 		   </div>
 		   
