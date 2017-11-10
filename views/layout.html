@@ -100,8 +100,7 @@
                 <ul class="nav nav-pills pull-right">
                     <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
-                    </li>
-         <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
+                    <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
                     <!--<li><a href="faq.html">FAQ |</a></li>-->
                      {{if session.forced_language=='en':}}
                     <li><a href="{{=request.url}}?lang=de" style="padding-left: 10px;">DE</a></li>
@@ -174,18 +173,16 @@
 					<div class="navbar-collapse collapse pull-right visible-lg hidden-md">
 						<ul class="nav navbar-nav">
 										<li class="social_media">
-											<a>
-											<img id="nav-social-media" src="{{=URL('static','images/press/social-media-icons.png')}}" height="30px"  alt="Planets" usemap="#socialmap">
+											<img alt="Social Media Icons" id="nav-social-media" src="{{=URL('static','images/press/social-media-icons.png')}}" usemap="#socialmap">
 												<map name="socialmap">
 													{{if request.url=='/': }}
 													{{request.url=request.url+myconf.take('web.application')}}
 													{{pass}}	
-													<area shape="rect" coords="0,0,30,30" alt="fb" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
-													<area shape="rect" coords="30,0,60,30" alt="twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
-													<area shape="rect" coords="60,0,90,30" alt="twitter" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
-													<area shape="rect" coords="90,0,120,30" alt="twitter" href="https://plus.google.com/share?url={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="0,0,30,30" alt="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="30,0,60,30" alt="Twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="60,0,90,30" alt="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="90,0,120,30" alt="Google Plus" href="https://plus.google.com/share?url={{=myconf.take('web.url')+request.url}}">
 												</map>
-											</a>
 										</li>
 						</ul>
 					</div>
