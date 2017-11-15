@@ -3,10 +3,6 @@
   <head>
     <meta charset="utf-8">
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
-    <!-- Always force latest IE rendering engine
-         (even in intranet) & Chrome Frame
-         Remove this if you use the .htaccess -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge{{=not request.is_local and ',chrome=1' or ''}}">
     <!--  Mobile Viewport Fix
           j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
           device-width: Occupy full width of the screen in its current orientation
@@ -76,7 +72,7 @@
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//www.ub.uni-heidelberg.de/piwik/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+<noscript><img src="//www.ub.uni-heidelberg.de/piwik/piwik.php?idsite=5" style="border:0;" alt="" /></noscript>
 <!-- End Piwik Code -->
 
 
@@ -84,14 +80,9 @@
       pass
     except BaseException:
       raise HTTP(404,"statistik plugin not defined : add piwik_plugin=1  or 0 in appconfig.ini")
-
     }}
-
-
-
-
-
   </head>
+
   <body>
     <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
@@ -105,8 +96,7 @@
                 <ul class="nav nav-pills pull-right">
                     <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
-                    </li>
-         <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
+                    <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
                     <!--<li><a href="faq.html">FAQ |</a></li>-->
                      {{if session.forced_language=='en':}}
                     <li><a href="{{=request.url}}?lang=de" style="padding-left: 10px;">DE</a></li>
@@ -120,7 +110,7 @@
  
 		   <div id="headerLogo" class="print-url">
 			   <div class="container">
-					<img id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
+					<img alt="" id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
 					<img alt="" id="heiup-logo-print" class="print" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
 			   </div>
            </div>		
@@ -179,18 +169,16 @@
 					<div class="navbar-collapse collapse pull-right visible-lg hidden-md">
 						<ul class="nav navbar-nav">
 										<li class="social_media">
-											<a>
-											<img id="nav-social-media" src="{{=URL('static','images/press/social-media-icons.png')}}" height="30px"  alt="Planets" usemap="#socialmap">
+											<img alt="Social Media Icons" id="nav-social-media" src="{{=URL('static','images/press/social-media-icons.png')}}" usemap="#socialmap">
 												<map name="socialmap">
 													{{if request.url=='/': }}
 													{{request.url=request.url+myconf.take('web.application')}}
 													{{pass}}	
-													<area shape="rect" coords="0,0,30,30" alt="fb" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
-													<area shape="rect" coords="30,0,60,30" alt="twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
-													<area shape="rect" coords="60,0,90,30" alt="twitter" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
-													<area shape="rect" coords="90,0,120,30" alt="twitter" href="https://plus.google.com/share?url={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="0,0,30,30" alt="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="30,0,60,30" alt="Twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="60,0,90,30" alt="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
+													<area shape="rect" coords="90,0,120,30" alt="Google Plus" href="https://plus.google.com/share?url={{=myconf.take('web.url')+request.url}}">
 												</map>
-											</a>
 										</li>
 						</ul>
 					</div>
@@ -200,7 +188,7 @@
 			
 			<div id="headerBild">
 		       <div class="container">
-				   <img src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" /></li>
+				   <img alt="" src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" />
 			   </div>
 		   </div>
 		   
