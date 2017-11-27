@@ -1535,6 +1535,9 @@ body.loading .spinner-wrapper {
 
 /** Layout Daten-Tabelle Issue Nr. 58 **/
 
+.lens-article .content-node.html-table > .content {
+  padding-left: 0;
+}
 
 .lens-article .content-node.html-table .daten-tabelle {
   border: 1px solid #f8f8f8;
