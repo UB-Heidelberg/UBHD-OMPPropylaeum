@@ -1552,7 +1552,7 @@ body.loading .spinner-wrapper {
   background-color: #f8f8f8;
 }
 
-.lens-article .content-node.html-table .daten-tabelle tr:nth-child(odd) > td:empty {
+.lens-article .content-node.html-table .daten-tabelle tr:nth-child(odd) td:empty {
   background-color: #f8f8f8;
 }
 
