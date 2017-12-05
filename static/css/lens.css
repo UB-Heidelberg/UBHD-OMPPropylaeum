@@ -1604,5 +1604,6 @@ ol.content.ordered {
 }
 
 .lens-article .content-node.html-table table td {
-font-size: 0.8em;
+font-size: 0.75em;
+line-height: 1.7em;
 }
