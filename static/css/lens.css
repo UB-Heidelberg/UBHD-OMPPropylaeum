@@ -824,8 +824,9 @@ span.annotation.formula_reference, span.publication_reference {
   font-style: italic; }
 
 .article span.superscript, .article sup {
-  vertical-align: super;
-  font-size: 12px; }
+  vertical-align: super; 
+  font-size: 12px;   
+}
 
 .article span.subscript, .article sub {
   vertical-align: sub;
@@ -928,13 +929,31 @@ span.annotation.formula_reference, span.publication_reference {
 
 .content-node .footnote_reference {
   background: rgba(11, 157, 217, 0);
-  color: #900;
   border-bottom: 1px solid rgba(11, 157, 217, 0);
+  color: #900;
   cursor: pointer;
+  font-size: smaller;   
   padding-right: 3px;
   padding-left: 3px;
-  vertical-align: super;
-  font-size: smaller; }
+  vertical-align: super; 
+}
+
+/** Issue Nr. 102: Korrektur Zeilenhöhe und Vereinheitlichung der Größe Fußnoten-Ziffern - 24.11.17 voe **/
+.content-node .footnote_reference {
+  font-size: 12px;
+  line-height: 0; 
+}
+
+.footnote_reference > span.superscript {
+ font-size: 12px;
+ vertical-align: baseline;
+}
+
+.content-node.text .content {
+	line-height: 1em;
+}
+
+/**************************************************************/
 
 .content-node .cross_reference {
   background: rgba(0, 0, 0, 0.05);
@@ -1196,6 +1215,14 @@ TOC
 
 .resource-view.toc .heading-ref:hover {
   color: black; }
+
+.resource-view.toc .heading-ref.level-2 .authors .author{
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
 
 /* Scrollbar
 --------------------------------------- */
@@ -1533,39 +1560,6 @@ body.loading .spinner-wrapper {
   padding-bottom: 0 !important;
 }
 
-/** Layout Daten-Tabelle Issue Nr. 58 **/
-
-.lens-article .content-node.html-table > .content {
-  padding-left: 0;
-}
-
-.lens-article .content-node.html-table .daten-tabelle {
-  border: 1px solid #f8f8f8;
-  overflow-x: scroll;
-}
-
-.lens-article .content-node.html-table .daten-tabelle tr {
-  vertical-align: top;
-}
-
-.lens-article .content-node.html-table .daten-tabelle tr:nth-child(odd) { 
-  background-color: #f8f8f8;
-}
-
-.lens-article .content-node.html-table .daten-tabelle tr:nth-child(odd) td:empty {
-  background-color: #f8f8f8;
-}
-
-
-.lens-article .content-node.html-table .daten-tabelle td {
-  border-right: 1px solid #f8f8f8;
-  padding: 10px;
-}
-
-
-
-
-
 /** Listen **/
 
 .content.simple {
@@ -1604,6 +1598,5 @@ ol.content.ordered {
 }
 
 .lens-article .content-node.html-table table td {
-font-size: 0.75em;
-line-height: 1.7em;
+font-size: 0.8em;
 }
