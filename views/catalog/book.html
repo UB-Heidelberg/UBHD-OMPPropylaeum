@@ -1,6 +1,9 @@
 {{extend 'layout.html'}}
 {{from ompformat import formatCitation, formatContributors, formatName, dateFromRow, dateToStr, formatONIXDate, formatONIXDateWithText, coverImageLink, downloadLink, haveMultipleAuthors}}
 {{from ompdal import OMPDAL}}
+{{from datetime import datetime}}
+
+
 {{file_ids=[]}}
 <div class="row">
   <div class="col-lg-3">
@@ -89,7 +92,7 @@ pass
 								{{full_epub_file  = pf.associated_items.get('full_epub_file')}}
 									{{if full_epub_file:}}
 									{{f_size=full_epub_file.attributes.get('file_size')/(1024*1024)}}
-          <li role="presentation"><a role="menuitem" tabindex="0" href="{{=downloadLink(request, full_epub_file.attributes, myconf.take('web.url'), full_epub_file.settings.getLocalizedValue("vgWortPublic", ""))}}">{{='{} ({} MB)'.format(format_name,f_size)}}</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="0" href="{{=downloadLink(request, full_epub_file.attributes, myconf.take('web.url'), full_epub_file.settings.getLocalizedValue("vgWortPublic", ""))}}">{{='{} ({} MB)'.format(format_name,f_size)}}</a></li>
 									{{pass}}
 								{{full_file = pf.associated_items.get('full_file')}}
 
@@ -97,28 +100,28 @@ pass
 									{{f_size=full_file.attributes.get('file_size')/(1024*1024)}}
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="{{=downloadLink(request, full_file.attributes, myconf.take('web.url'), full_file.settings.getLocalizedValue("vgWortPublic", ""))}}">
 									{{='{} ({} MB)'.format(format_name,f_size)}}</a></li>
-        
-        {{pass}}
-        {{pass}}
-      </ul>
+
+
+								{{pass}}
+								{{pass}}
+									</ul>
 							</div>
-      {{pass}}
+							{{pass}}
 
-      <div class="btn-group" role="group" aria-label="2">
-        {{if representatives:}}
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-          {{=T('Purchase')}}
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          {{for i in representatives:}}
-          <li role="presentation"><a role="menuitem"  href="{{=i.url}}" target='_blank'>{{=i.name}}</a></li>
-          {{pass}}
-        </ul>
-        {{pass}}
-      </div>
-
-<div class="btn-group" role="group" aria-label="2">
+							<div class="btn-group" role="group" aria-label="2">
+								{{if representatives:}}
+								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									{{=T('Purchase')}}
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+									{{for i in representatives:}}
+									<li role="presentation"><a role="menuitem"  href="{{=i.url}}" target='_blank'>{{=i.name}}</a></li>
+									{{pass}}
+								</ul>
+								{{pass}}
+							</div>
+							<div class="btn-group" role="group" aria-label="2">
       							{{
 							if 'emails' in myconf:
 							if 'notification' in myconf['emails']:
@@ -132,114 +135,127 @@ pass
 							}}
 							 
 							</div>
-
-              <div class="btn-group" role="group" aria-label="3">
-                <button class="btn btn-default" id="anno-btn">
-                  <span class="fa fa-comment">&nbsp;</span>{{=T("Comment")}} (<span class="anno-number">...</span>)
-                </button>
-              </div>
+							<div class="btn-group" role="group" aria-label="3">
+								<button class="btn btn-default" id="anno-btn">
+									<span class="fa fa-comment">&nbsp;</span>{{=T("Comment")}} (<span class="anno-number">...</span>)
+								</button>
+							</div>
               <div id="anno-block"> </div>
+
 							<div class="post-heading">
-        <br/>
-        <h5>
-          {{if editors:}}
-          {{=formatContributors(editors, max_contributors=4)}}
-          {{if len(editors) > 1:}}
-          {{=T("(Eds.)")}}
-          {{else:}}
-          {{=T("(Ed.)")}}
-          {{pass}}
-          {{else:}}
-          {{=formatContributors(authors, max_contributors=4)}}
-          {{pass}}
-        </h5>
-      </div>
-      <h3>{{=XML(cleanTitle)}}</h3>
-      <h4>{{=subtitle}}</h4>
-      <p>
-        <i class="icon-quote-left"></i>
-        {{=XML(abstract)}}
-      </p>
-      <!-- reviews begin -->
-	{{include '../static/omp-resources/views/catalog/reviews.html' }}
-      <!-- reviews end -->
-      {{bios = [(formatName(e.attributes), e.settings.getLocalizedValue('biography', locale)) for e in editors]}}
-      {{bios_role = "editor"}}
-      {{if bios == []:}}
-      {{bios = [(formatName(a.attributes), a.settings.getLocalizedValue('biography', locale)) for a in authors]}}
-      {{bios_role = "author"}}
-      {{pass}}
-      {{if bios:}}
-      {{num_bios = len([b for b in bios if b[1] != ""])}}
-      {{if bios_role != "author" or num_bios < 5:}}
-      {{if num_bios != 0:}}
-      <div class="separator"></div>
-      <div class="autor_biografie">
-        <p>
-          {{for contributor, bio in bios:}}
-          {{if bio:}}
-          {{=XML(bio)}}
-          {{pass}}
-          {{pass}}
-        </p>
-      </div>
-      {{pass}}
-      {{pass}}
-      {{pass}}
-    </div>
+								<br />
+								<h5>
+									{{if editors:}}
+									{{=formatContributors(editors, max_contributors=4)}}
+									{{if len(editors) > 1:}}
+									{{=T("(Eds.)")}}
+									{{else:}}
+									{{=T("(Ed.)")}}
+									{{pass}}
+									{{else:}}
+									{{=formatContributors(authors, max_contributors=4)}}
+									{{pass}}
+								</h5>
+							</div>
+							<h3>{{=XML(cleanTitle)}}</h3>
+							<h4>{{=subtitle}}</h4>
+							{{if series:}}
+							<i>{{=A(series_name,_href=URL('series','/info/{}'.format(series.attributes.get('path'))))}}</i>
+							{{pass}}
+							<p>
+								<i class="icon-quote-left"></i>
+								{{=XML(abstract)}}
+							</p>
+  
+							<!-- reviews begin -->
+							{{include '../static/omp-resources/views/catalog/reviews.html' }}
+							<!-- reviews end -->
+							{{bios = [(formatName(e.attributes), e.settings.getLocalizedValue('biography', locale)) for e in editors]}}
+							{{bios_role = "editor"}}
+							{{if bios == []:}}
+							{{bios = [(formatName(a.attributes), a.settings.getLocalizedValue('biography', locale)) for a in authors]}}
+							{{bios_role = "author"}}
+							{{pass}}
+							{{if bios:}}
+							{{num_bios = len([b for b in bios if b[1] != ""])}}
+							{{if bios_role != "author" or num_bios < 5:}}
+							{{if num_bios != 0:}}
+							
+							<div class="separator"></div>
+							<div class="autor_biografie">
+								<p>
+									{{for contributor, bio in bios:}}
+									{{if bio:}}
+									{{=XML(bio)}}
+									{{pass}}
+									{{pass}}
+								</p>
+							</div>
+							{{pass}}
+							{{pass}}
+							{{pass}}
+						</div>
 
-    <div class="widget">
-      {{if len(chapters) > 0:}}
-      <div id="downloadTable">
-        <div class="chapter_row table_head">
-          <div class="chapter_cell">{{=T('Contents')}}</div>
-          {{for pf in digital_publication_formats:}}
-          <div class="chapter_cell">{{=TD(pf.settings.getLocalizedValue('name', locale))}}</div>
-          {{pass}}
-        </div>
-        {{display_authors=haveMultipleAuthors(chapters)}}
-        {{for c in chapters:}}
-        {{c_title = c.settings.getLocalizedValue('title', locale)}}
-        {{c_subtitle = c.settings.getLocalizedValue('subtitle', locale)}}
-        {{c_authors = c.associated_items.get('authors', [])}}
-        {{c_files = c.associated_items.get('files', [])}}
-        <div class="chapter_row">
-          <div class="chapter_cell">
-            {{if c_authors and display_authors:}}
-            <div class="chapter_author">{{=", ".join([formatName(a.attributes) for a in c_authors])}}</div>
-            {{pass}}
-            <div class="chapter_title">{{=c_title}}</div>
-            {{if c_subtitle:}}
-            <div class="chapter_subtitle">{{=c_subtitle}}</div>
-            {{pass}}
-          </div>
-          {{for pf in digital_publication_formats:}}
-          <div class="chapter_cell">
-            {{if c_files:}}
-            {{c_file = c_files.get(pf.attributes.publication_format_id)}}
-            {{if c_file:}}
-            {{if "xml" in c_file.attributes.file_type or "html" in c_file.attributes.file_type:}}
-            {{css_class="fa fa-html5"}}
-            {{else:}}
-            {{css_class="fa fa-file-text-o"}}
-            {{pass}}
-            <div class="chapter_file">
-              {{=A(I(_class=css_class), _href=downloadLink(request, c_file.attributes, myconf.take('web.url'), c_file.settings.getLocalizedValue('vgWortPublic', '')))}}
-            </div>
-            {{pass}}
-            {{pass}}
-          </div>
-          {{pass}}
-        </div>
-        {{pass}}
-      </div>
-      {{pass}}
-    </div>
-    </article>
-  </div>
+						<div class="widget">
+							{{if len(chapters) > 0:}}
+							<div id="downloadTable">
+								<div class="chapter_row table_head">
+									<div class="chapter_cell">{{=T('Contents')}}</div>
+									{{for pf in digital_publication_formats:}}
+									{{format_name=pf.settings.getLocalizedValue('name', locale)}}
+									{{if format_name != 'EPUB':}}
+									<div class="chapter_cell">{{=TD(format_name)}}</div>
+									{{pass}}
+									{{pass}}
+								</div>
+								{{display_authors=haveMultipleAuthors(chapters)}}
+								{{for c in chapters:}}
+								{{c_title = c.settings.getLocalizedValue('title', locale)}}
+								{{c_subtitle = c.settings.getLocalizedValue('subtitle', locale)}}
+								{{c_authors = c.associated_items.get('authors', [])}}
+								{{c_files = c.associated_items.get('files', [])}}
+								<div class="chapter_row">
+									<div class="chapter_cell">
+										{{if c_authors and display_authors:}}
+										<div class="chapter_author">{{=", ".join([formatName(a.attributes) for a in c_authors])}}</div>
+										{{pass}}
+										<div class="chapter_title">{{=c_title}}</div>
+										{{if c_subtitle:}}
+										<div class="chapter_subtitle">{{=c_subtitle}}</div>
+										{{pass}}
+									</div>
+									{{for pf in digital_publication_formats:}}
+									{{format_name=pf.settings.getLocalizedValue('name', locale)}}
+									{{if format_name != 'EPUB':}}
+									<div class="chapter_cell">
+										{{if c_files:}}
+										{{c_file = c_files.get(pf.attributes.publication_format_id)}}
+										{{if c_file:}}
+										{{if "xml" in c_file.attributes.file_type or "html" in c_file.attributes.file_type:}}
+										{{css_class="fa fa-html5"}}
+										{{else:}}
+										{{css_class="fa fa-file-text-o"}}
+										{{pass}}
+										<div class="chapter_file">
+											{{=A(I(_class=css_class), _href=downloadLink(request, c_file.attributes, myconf.take('web.url'), c_file.settings.getLocalizedValue('vgWortPublic', '')))}}
+										</div>
+										{{pass}}
+										{{pass}}
+									</div>
+									{{pass}}
+									{{pass}}
+								</div>
+								{{pass}}
+							</div>
+							{{pass}}
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="vgwpixel"></div>
 </div>
-
-<div id="vgwpixel"></div>
 
 {{ cdn = 'https://www.ub.uni-heidelberg.de/cdn' }}
 <script src="{{= cdn }}/jquery-ui/1.12.1/jquery-ui.js"></script>
