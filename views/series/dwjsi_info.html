@@ -1,81 +1,54 @@
 {{extend 'layout.html'}}
-
 <div class="row">
-		<div class="col-lg-12 contentbox-12">
-            <h3>  {{if session.forced_language =='de': }}                
-                Distant Worlds Journal Special Issues  
-                {{elif session.forced_language =='en': }}              
-                Distant Worlds Journal Special Issues
-            {{pass}}
-            </h3>
-		</div>	
+  <div class="col-lg-12">
+    <h3>Distant Worlds Journal Special Issues</h3>
+  </div>
 </div>
 
-<div class="row">
-        {{if session.forced_language =='de': }}
-				
-		<div class="col-lg-9">		
-		    <p>Die Seite befindet sich im Aufbau.</p>
-                    <div class="widget">
-                        <ul class="tags">
-             
-                            <li>
-                              
-                               <p><a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a></p>
-
-                            </li>
-                              
-                        </ul>
-                    </div>
-		</div>
-		
-		<div class="col-lg-3">
-		<!--
-           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
-
-                <p><b>Herausgeber</b><br>
-                Priv.-Doz. Dr. Frank Siegmund<br />
-                Dr. Werner Schön<br />
-                Diane Scherzler M.A.<br />
-                Dr. Birgit Gehlen<br /><br />
-                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
-           </div>
-		 -->
-        </div>   
-
-
-                     {{elif session.forced_language =='en': }}
-
-		<div class="col-lg-9">		
-		    <p>Die Seite befindet sich im Aufbau.</p>
-                    <div class="widget">
-                        <ul class="tags">
-             
-                            <li>
-                              
-                               <p><a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a></p>
-
-                            </li>
-                              
-                        </ul>
-                    </div>
-		</div>
-		
-		<div class="col-lg-3">
-		<!--
-           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
-
-                <p><b>Herausgeber</b><br>
-                Priv.-Doz. Dr. Frank Siegmund<br />
-                Dr. Werner Schön<br />
-                Diane Scherzler M.A.<br />
-                Dr. Birgit Gehlen<br /><br />
-                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
-           </div>
-		 -->
-        </div>   
-{{pass}}
-
-</div>
-
-
+<div class="row"> {{if session.forced_language =='de': }}
+  <div class="col-lg-9">
+    <p>Die <strong>DWJ Special Issues</strong> sind Sonderhefte des <strong><a href="http://journals.ub.uni-heidelberg.de/index.php/dwj/index" title="Online-Zeitschrift Distant Worlds Journal (DWJ)">Distant Worlds Journal (DWJ)</a></strong>. Das Distant Worlds Journal (DWJ) selbst ist eine elektronische peer review-Zeitschrift, die DoktorandInnen und PostdoktorandInnen der Altertumswissenschaften eine Plattform zur Veröffentlichung ihrer Ideen und Ergebnisse bieten soll. Jede Ausgabe der Zeitschrift widmet sich einem übergeordneten Thema, das mit Bezug auf verschiedene antike Kulturen und von unterschiedlichen Perspektiven aus betrachtet werden kann.
+    </p>
+    <p>Distant Worlds bringt WissenschaftlerInnen verschiedener Fachrichtungen zusammen, um antike Gesellschaften und ihre materiellen Hinterlassenschaften in übergreifenden Fragestellungen zu diskutieren. Die <strong>DWJ Special Issues</strong> dienen dabei als mögliches Publikationsorgan für Workshops, Tagungen und Konferenzen, die von (ehemaligen) Mitgliedern der Graduate School for Ancient Studies Distant Worlds der Ludwig-Maximilians-Universität München abgehalten wurden. Es soll in diesem Sinne ebenfalls als ein interdisziplinäres Diskussionsforum dienen und allen dort teilnehmenden NachwuchswissenschaftlerInnen eine Stimme auf internationaler Ebene geben.
+    </p>
+    <div class="widget">
+      <ul class="tags"> 
+        <li>
+        <p>
+          <a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a>
+        </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div id="infoBoxRechts">
+      <!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+      <p><b>Kontakt</b><br /> Albert Dietz, M. A.<br />Ludwig-Maximilians-Universität<br /> Distant Worlds: Munich Graduate School for Ancient Studies<br /> Doctoral Fellow<br /> Schellingstr. 3<br /> 80799 München<br /> E-Mail: dw-journal@mzaw.lmu.de
+      </p>
+    </div>
+   </div> 
+    {{elif session.forced_language =='en': }}
+    <div class="col-lg-9">
+      <p>Die <strong>DWJ Special Issues</strong> sind Sonderhefte des Distant Worlds Journal (DWJ). Das <strong>Distant Worlds Journal (DWJ)</strong> selbst ist eine elektronische peer review-Zeitschrift, die DoktorandInnen und PostdoktorandInnen der Altertumswissenschaften eine Plattform zur Veröffentlichung ihrer Ideen und Ergebnisse bieten soll. Jede Ausgabe der Zeitschrift widmet sich einem übergeordneten Thema, das mit Bezug auf verschiedene antike Kulturen und von unterschiedlichen Perspektiven aus betrachtet werden kann.
+      </p>
+      <p>Distant Worlds bringt WissenschaftlerInnen verschiedener Fachrichtungen zusammen, um antike Gesellschaften und ihre materiellen Hinterlassenschaften in übergreifenden Fragestellungen zu diskutieren. Die <strong>DWJ Special Issues</strong> dienen dabei als mögliches Publikationsorgan für Workshops, Tagungen und Konferenzen, die von (ehemaligen) Mitgliedern der Graduate School for Ancient Studies Distant Worlds der Ludwig-Maximilians-Universität München abgehalten wurden. Es soll in diesem Sinne ebenfalls als ein interdisziplinäres Diskussionsforum dienen und allen dort teilnehmenden NachwuchswissenschaftlerInnen eine Stimme auf internationaler Ebene geben.
+      </p>
+      <div class="widget">
+        <ul class="tags"> 
+          <li>
+          <p>
+            <a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a>
+          </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div id="infoBoxRechts">
+        <!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+        <p><b>Kontakt</b><br /> Albert Dietz, M. A.<br />Ludwig-Maximilians-Universität<br /> Distant Worlds: Munich Graduate School for Ancient Studies<br /> Doctoral Fellow<br /> Schellingstr. 3<br /> 80799 München<br /> E-Mail: dw-journal@mzaw.lmu.de
+        </p>
+      </div>
+    </div> {{pass}}
+  </div>
