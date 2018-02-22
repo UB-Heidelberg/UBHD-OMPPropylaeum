@@ -1927,6 +1927,7 @@ article img.pull-right, article .align-right{
 	.navbar-collapse.collapse  {
 		border: none;
 		overflow: hidden;
+		max-height:100%;
 	}
 
 	
