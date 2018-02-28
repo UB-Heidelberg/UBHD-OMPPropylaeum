@@ -2,7 +2,11 @@
 
 <div class="row">
 		<div class="col-lg-12 contentbox-12">
+		{{if session.forced_language =='de': }}
             <h3>LWL-Archäologie für Westfalen</h3>
+			{{elif session.forced_language =='en': }}
+			<h3>LWL-Archäologie für Westfalen (Archeology for Westphalia)</h3>
+			{{pass}}
 		</div>
 </div>
 
@@ -30,7 +34,8 @@
 			 
 		{{elif session.forced_language =='en': }}
 			<div class="col-lg-9">                
-					<p>More information coming soon</p>  
+					<p>Under the umbrella of the Landschaftsverband Westfalen-Lippe (LWL) <a href="https://www.lwl-archaeologie.de/de/" title="Link to the Homepage">LWL-Archäologie für Westfalen</a>, according to the heritage protection law of North Rine-Westphalia, is an independent office responsible for archeological monument conservation. Hence, LWL-Archäologie is representing the common interest regarding the historical testimonies and artefacts of our past. As a trustee of public interest it works closely with the monuments offices of local communities, districts and the federal state of North Rine-Westphalia. The manifold tasks of der LWL-Archäologie für Westfalen include finding, documenting, researching, protecting and maintaining the remains of past eras and conveying recent knowledge and finds.</p>  
+					<p>To make the research results available to a wide audience LWL-Archäologie publishes several publications, ranging from popular scientific brochures to dissertations comprising several volumes. It also publishes several publication series and journals which are available in Open Access in collaboration with Propylaeum. The journals <a href="http://journals.ub.uni-heidelberg.de/index.php/aiw" title="Link to the journal">Archäologie in Westfalen-Lippe</a> and <a href="http://journals.ub.uni-heidelberg.de/index.php/afwl" title="Link to the journal">Ausgrabungen und Funde in Westfalen-Lippe</a> are already available as Propylaeum-eJournals. The series <a href="{{=URL('series', 'info/baw')}}">Bodenaltertümer Westfalens</a> and Denkmalpflege und Forschung in Westfalen are soon to follow and will be made available as Propylaeum-eBooks in the course of the expansion of the Open Access range.</p>
 			</div>
 			
 			<div class="col-lg-3">
