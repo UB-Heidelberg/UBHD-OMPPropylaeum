@@ -1,0 +1,79 @@
+{{extend 'layout.html'}}
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Vorschau 
+                {{elif session.forced_language =='en': }}
+                Preview
+            {{pass}}
+            </h3>
+        </div>   
+	</div>
+
+<section id="content">
+    <div style="height: 20px"></div>
+	
+
+		<div class="container" id="knaus" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Dietrich Klaus Hartmann<br />
+							Archäologisch – baugeschichtliche Studie zu den Dorfkirchen im ehemaligen Bistum Konstanz</b><br />
+							<i><a href="{{=URL('series','info/archber')}}" title="Informationen über die Reihe Archäologische Berichte">Archäologische Berichte</a>, Band 30</i>
+						</div>
+						<p><i class="icon-quote-left"></i></p>
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint Mai 2018
+							{{elif session.forced_language =='en': }}
+							Coming May 2018
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="roth" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Lucie Siftar<br />
+							Das Phänomen der unvollständigen Gestalt in der griechischen Kunst.<br />
+							Unterschiedliche Facetten eines besonderen Darstellungsmittels</b><br>
+							<i><a href="{{=URL('series','info/daidalos')}}" title="Informationen über die Reihe Daidalos. Heidelberger Abschlussarbeiten zur Klassischen Archäologie">Daidalos. Heidelberger Abschlussarbeiten zur Klassischen Archäologie</a>, Band 8</i>
+						</div>	
+						<p><i class="icon-quote-left"></i></p>						
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint Sommer 2018
+							{{elif session.forced_language =='en': }}
+							Coming Summer 2018
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+				
+    </div>
+    
+</section>

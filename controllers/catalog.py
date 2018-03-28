@@ -236,3 +236,6 @@ def book():
     #stats = OMPStats(myconf, db, locale)
 
     return locals()
+
+def preview():
+    return dict()   
