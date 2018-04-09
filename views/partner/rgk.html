@@ -1,0 +1,81 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+		     {{if session.forced_language =='de': }}
+             <h3>Die Römisch-Germanische Kommission </h3> 
+			 {{elif session.forced_language =='en': }}
+			 <h3>The Romano-Germanic Commission</h3>
+			 {{pass}}
+        </div>
+</div>
+
+<div class="row">		
+                {{if session.forced_language =='de': }}
+        <div class="col-lg-9">  
+             <p>Die Römisch-Germanische Kommission (<a href="https://www.dainst.org/standort/rgk-frankfurt" title="Link zur Homepage">RGK</a>) des Deutschen Archäologischen Institutes (<a href="https://www.dainst.org" title="Link zur Homepage">DAI</a>), 1902 gegründet, ist eine international tätige wissenschaftliche Einrichtung mit Sitz in Frankfurt am Main. Der Schwerpunkt ihrer Forschungen liegt im Bereich der Vor- und Frühgeschichte und der Provinzialrömischen Archäologie, wobei sie derzeit vor allem in Nordwest-, Mittel- und Südosteuropa Fragen der Raumerschließung und -nutzung sowie der Grenzziehung und -überschreitung vom Neolithikum bis in die Spätantike hinein untersucht. Hier kommt ihr eine besondere Rolle in der Vernetzung, Förderung und Vermittlung archäologischer Forschung zu.</p>
+			 <p>Der Erfüllung dieser Aufgabe dienen u.a. die beiden international angesehenen Zeitschriften, der seit 1905 herausgegebene „<a href="https://www.dainst.org/publikationen/zeitschriften/alphabetisch/detailseite/-/asset_publisher/s3z2ID0FREyw/content/bericht-der-romisch-germanischen-kommission" title="Weitere Informationen">Bericht der Römisch-Germanischen Kommission</a>“ und die seit 1917 erscheinende „<a href="https://www.dainst.org/publikationen/zeitschriften/alphabetisch/detailseite/-/asset_publisher/s3z2ID0FREyw/content/germania" title="Weitere Informationen">Germania</a>“; die Aufsätze beider Zeitschriften werden in deutscher, englischer oder französischer Sprache gedruckt und unterliegen einem Peer Review-Verfahren. Ferner veröffentlicht die RGK Monographien und Sammelbände in verschiedenen Reihen, u. a. die  „Römisch-Germanische Forschungen“ (RGF).</p>
+			 <p>In einer Kooperation mit Propylaeum werden die Bände der folgenden Zeitschriften und Reihen online im Open Access verfügbar gemacht:
+			    <ul>
+				   <li><a href="http://journals.ub.uni-heidelberg.de/index.php/berrgk" title="Link zur Zeitschrift">Bericht der Römisch-Germanischen Kommission</a></li>
+				   <li>Germania, inkl. Rezensionen in <a href="https://propylaeum.de/recensio-antiquitatis/front-page" title="Link zur Homepage">recension.antiquitatis</a></li>
+				   <li>Römisch-Germanische Forschungen</li>
+				   <li>Materialien zur römisch-germanischen Keramik</li>
+				</ul>
+			 </p>
+			 <p>Publikationen der DirektorInnen und MitarbeiterInnen der RGK werden in Zukunft bevorzugt auf dem Volltextserver des Fachinformationsdienstes Altertumswissenschaft, propylaeum-DOK, bereitgestellt.</p>
+			 <p>Die RGK besitzt mit über 190.000 Bänden und ca. 3.000 Zeitschriften die größte Spezialbibliothek zur Vor- und Frühgeschichte Europas. Ihr Bestand ist über iDAI.bibliography (Zenon) in <a href="https://www.propylaeum.de/suche/" title="Link zu Propylaeum.de">propylaeumSEARCH</a> abgebildet.</p>
+             <p>Ferner engagiert sich die RGK mit ihrem Archiv, das neben Dokumenten zur RGK, wissenschaftliche Nachlässe und Korrespondenzen in- und ausländischer Gelehrter sowie die Akten der Reichs-Limeskommission umfasst, für das gemeinsam mit anderen Forschungseinrichtungen entwickelte biographischen Informationssystem <a href="https://www.propylaeum.de/themen/propylaeum-vitae/" title="Link zu Propylaeum.de">propylaeum-VITAE</a>.</p>
+			 
+        </div>
+		 
+		<div class="col-lg-3">
+           <div id="infoBoxRechts">
+                <p><b>Kontakt</b><br />
+                Die Römisch-Germanische Kommission<br />   
+				Palmengartenstraße 10-12<br />
+				60325 Frankfurt am Main<br /><br />
+
+             
+                Tel.: +49 69 975818 0<br />
+                Fax: +49 69 975818 38</p>
+           </div>
+		</div>
+
+
+{{elif session.forced_language =='en': }}
+
+        <div class="col-lg-9">  
+             <p>The Romano-Germanic Commission (<a href="https://www.dainst.org/standort/rgk-frankfurt" title="Link to the Homepage">RGK</a>) of the German Archaeological Institute (<a href="https://www.dainst.org" title="Link to the Homepage">DAI</a>) was founded in 1902. A scholarly organisation domiciled in Frankfurt a. M., it promotes and undertakes research in the field of Pre- and Protohistory, and the Archaeology of the Roman Provinces. Currently its main focus is on settlement and land use, as well as the construction and crossing of frontiers from the Neolithic to Late Antiquity in North-West, Central and South-East Europe. It also plays a particular role in the integration, advancement and promotion of archaeological research.</p>
+			 <p>To achieve these goals the RGK publishes two highly rated international journals, since 1905 the „<a href="https://www.dainst.org/publikationen/zeitschriften/alphabetisch/detailseite/-/asset_publisher/s3z2ID0FREyw/content/bericht-der-romisch-germanischen-kommission" title="More Information">Bericht der Römisch-Germanischen Kommission</a>“ and since 1917 the „<a href="https://www.dainst.org/publikationen/zeitschriften/alphabetisch/detailseite/-/asset_publisher/s3z2ID0FREyw/content/germania" title="More Information">Germania</a>“. Both are peer-reviewed and present articles in English, German and French. In addition, it also publishes monographs and volumes of collected papers, including „Römisch-Germanische Forschungen“ (RGF).</p>
+			 <p>In close cooperation with Propylaeum, the volumes of the following journals and series are at present being made available as Open Access publications::
+			    <ul>
+				   <li><a href="http://journals.ub.uni-heidelberg.de/index.php/berrgk" title="Link to the journal">Bericht der Römisch-Germanischen Kommission</a></li>
+				   <li>Germania, inkl. Rezensionen in <a href="https://propylaeum.de/recensio-antiquitatis/front-page" title="Link to the homepage">recension.antiquitatis</a></li>
+				   <li>Römisch-Germanische Forschungen</li>
+				   <li>Materialien zur römisch-germanischen Keramik</li>
+				</ul>
+			 </p>
+			 <p>In future, the publications of the directors and employees of the RGK will generally rule be made available on the full-text server of the Fachinformationsdienst Altertumswissenschaft, propylaeum-DOK.</p>
+			 <p>The RGK's library contains 190,000 volumes and some 3,000 journals, making it the largest specialist library for Pre- and Protohistory in Europe. Its holdings are accessible in <a href="https://www.propylaeum.de/suche/" title="Link to Propylaeum.de">propylaeumSEARCH</a> via iDAI.bibliography (Zenon).</p>
+             <p>In addition, through its archives, which include not just documents on the RGK, but also the academic estates and correspondence of German and foreign scholars, the RGK is actively involved in the biographical information system <a href="https://www.propylaeum.de/themen/propylaeum-vitae/" title="Link to Propylaeum.de">propylaeum-VITAE</a>, which it has developed together with other research institutes.</p>
+			 
+        </div>
+		 
+		<div class="col-lg-3">
+           <div id="infoBoxRechts">
+                <p><b>Contact</b><br />
+                Die Römisch-Germanische Kommission<br />   
+				Palmengartenstraße 10-12<br />
+				60325 Frankfurt am Main<br /><br />
+
+             
+                Tel.: +49 69 975818 0<br />
+                Fax: +49 69 975818 38</p>
+           </div>
+		</div>
+                {{pass}}
+
+</div>
+
+ 
