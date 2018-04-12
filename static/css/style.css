@@ -82,11 +82,13 @@ h4.titel_zweizeilig {margin-top:-0.2em;}
 	margin:15px -20px 15px -20px;
 }
 
-
 .row .row,.row-fluid .row-fluid, .row.nomargin,.row-fluid.nomargin {
 	margin-bottom:0px;
 }
 
+.series-preview-row {
+	margin-bottom:15px !important;
+}
 
 
 /* ===================================
