@@ -1,0 +1,83 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Freiburger Studien zur Archäologie und visuellen Kultur  
+                {{elif session.forced_language =='en': }}
+                Freiburger Studien zur Archäologie und visuellen Kultur
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Weitere Informationen folgen!</p>
+             <!--
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/favis')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+			 -->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Herausgeber</b><br>
+                Prof. Dr. Ralf von den Hoff<br />
+				Institut für Archäologische Wissenschaften der Universität Freiburg i. Br.<br /><br />
+				
+				Tel. +49 (0) 761 - 203 30 72 (-3)<br />
+				Fax +49 (0) 761 - 203 31 13
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+		<div class="col-lg-9">		
+		    <p>More information coming soon!</p>
+             <!--
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/favis')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+			 -->
+		</div>
+
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Editors</b><br>
+                Prof. Dr. Ralf von den Hoff<br />
+				Institut für Archäologische Wissenschaften der Universität Freiburg i. Br.<br /><br />
+				
+				Tel. +49 (0) 761 - 203 30 72 (-3)<br />
+				Fax +49 (0) 761 - 203 31 13
+				 </p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
