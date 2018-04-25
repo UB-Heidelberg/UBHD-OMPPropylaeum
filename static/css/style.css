@@ -2361,21 +2361,11 @@ footer .row {margin:0;}
 #footer_logo_ub img {
   width:157.5px;
   padding-right: 0px;
-  filter:alpha(opacity=50); 
-  opacity:0.5;
-  -moz-opacity:0.5; 
-  -khtml-opacity:0.5; 
-  -opera-opacity:0.5;
 }
 
 #footer_logo_dfg img {
   width:210px;
   padding-right: 0px;
-  filter:alpha(opacity=50); 
-  opacity:0.5;
-  -moz-opacity:0.5; 
-  -khtml-opacity:0.5; 
-  -opera-opacity:0.5;
   margin-top:35px;
 }
 
@@ -2383,20 +2373,13 @@ footer .row {margin:0;}
 #footer_logo_propylaeum img {
   width:157.5px;
   padding-right: 0px;
-  filter:alpha(opacity=50);
-  opacity:0.5;
-  -moz-opacity:0.5;
-  -khtml-opacity:0.5;
-  -opera-opacity:0.5;
-  margin-top:20px;
+  margin-top:25px;
+  margin-left:15px;
 }
 
 #footer_logo_pkp img {
   width:210px;
   padding-right: 0px;
-  -moz-opacity:0.5; 
-  -khtml-opacity:0.5; 
-  -opera-opacity:0.5;
   margin-top:35px;
 }
 
