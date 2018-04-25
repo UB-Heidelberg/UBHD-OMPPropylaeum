@@ -1,5 +1,6 @@
 {{extend 'layout.html'}}
 
+<div class="container-fluid">
 <div class="row">
 		<div class="col-lg-12 contentbox-12">
             <h3>  {{if session.forced_language =='de': }}                
@@ -15,13 +16,14 @@
         {{if session.forced_language =='de': }}
 				
 		<div class="col-lg-9">		
-		    <p>Die Seite befindet sich im Aufbau.</p>
+		    <p>In den Bänden dieser Reihe werden aktuelle Beiträge von wissenschaftlichen Tagungen oder Workshops publiziert, die das RGZM veranstaltet oder an denen das RGZM beteiligt ist. Für einige Bände ist das Erscheinen im Open Access parallel zum gedruckten Buch vorgesehen.</p>
+		
                     <div class="widget">
                         <ul class="tags">
              
                             <li>
                               
-                               <p><a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/rgzmtagung')}}">{{=T('Volumes')}}</a></p>
 
                             </li>
                               
@@ -47,13 +49,14 @@
                      {{elif session.forced_language =='en': }}
 
 		<div class="col-lg-9">		
-		    <p>Die Seite befindet sich im Aufbau.</p>
+		    <p>In den Bänden dieser Reihe werden aktuelle Beiträge von wissenschaftlichen Tagungen oder Workshops publiziert, die das RGZM veranstaltet oder an denen das RGZM beteiligt ist. Für einige Bände ist das Erscheinen im Open Access parallel zum gedruckten Buch vorgesehen.</p>
+			<p>Eine Übersicht der erschienenen Tagungsbände erhalten Sie in unserem <a href="https://shop.rgzm.de/de/tagungen" title="Homepage Römisch-Germanisches Zentralmuseum; Online-Shop">Online-Shop</a>.</p>
                     <div class="widget">
                         <ul class="tags">
              
                             <li>
                               
-                               <p><a href="{{=URL('catalog', 'series/dwjsi')}}">{{=T('Volumes')}}</a></p>
+                               <p><a href="{{=URL('catalog', 'series/rgzmtagung')}}">{{=T('Volumes')}}</a></p>
 
                             </li>
                               
@@ -78,4 +81,27 @@
 
 </div>
 
+<div class="row news-row">
+        <div class="col-md-12">
+		<h4>Publikationen des Römisch-Germanischen Nationalmuseums</h4> 
+		</div>
+        <div class="col-lg-1">
+		<a href="http://web.rgzm.de/publikationen/rgzm-open-access/open-access-publikationen/monographie-bazzano-ein-graeberfeld-bei-laquila-abruzzen-italienische-uebersetzung-online-mainz-2014/" title="Homepage Römisch-Germanisches Nationalmuseum, 'Bazzano – ein Gräberfeld bei L’Aquila (Abruzzen) ...'">{{=IMG(_src=URL('static','images/series/rgzmtagung_weidig.jpg'),_width='80px', _class='bildrahmen')}}</a>
+	    </div>
+        <div class="col-lg-9">
+		<p>Italienische Übersetzung der Texte aus:<br />
+			<a href="http://web.rgzm.de/publikationen/rgzm-open-access/open-access-publikationen/monographie-bazzano-ein-graeberfeld-bei-laquila-abruzzen-italienische-uebersetzung-online-mainz-2014/" title="Homepage Römisch-Germanisches Nationalmuseum, 'Bazzano – ein Gräberfeld bei L’Aquila (Abruzzen) ...'">Joachim Weidig, Bazzano – ein Gräberfeld bei L’Aquila (Abruzzen). Die Bestattungen des 8.-5. Jahrhunderts v.Chr., Monographien des RGZM, Band 112 (Mainz 2014)</a></p>
+		</div>	
+		
+</div>
+<div class="row news-row">
+        <div class="col-lg-1"><a href="http://web.rgzm.de/publikationen/rgzm-open-access/open-access-publikationen/monographie-das-kaiserzeitliche-graeberfeld-von-halbturn-mainz-2014/" title="Homepage Römisch-Germanisches Nationalmuseum, 'Das kaiserzeitliche Gräberfeld von Halbturn, Burgenland'">{{=IMG(_src=URL('static','images/series/rgzmtagung_doneus.jpg'),_width='80px', _class='bildrahmen')}}</a>
+	    </div>
+		<div class="col-lg-9">
+		<p><a href="http://web.rgzm.de/publikationen/rgzm-open-access/open-access-publikationen/monographie-das-kaiserzeitliche-graeberfeld-von-halbturn-mainz-2014/" title="Homepage Römisch-Germanisches Nationalmuseum, 'Das kaiserzeitliche Gräberfeld von Halbturn, Burgenland'">Nives Doneus (Hrsg.), Das kaiserzeitliche Gräberfeld von Halbturn, Burgenland. Monographien des RGZM, Band 122 (Mainz 2014). 4 Bände</a></p>
+	    </div>
+        
+</div>
 
+
+</div>
