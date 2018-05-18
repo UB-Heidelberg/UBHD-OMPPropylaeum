@@ -13,9 +13,9 @@
 			         	<div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-                       {{=IMG(_src=URL('static','files/presses/3/monographs/367/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
+                       {{=IMG(_src=URL('static','files/presses/3/monographs/362/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                    </div>
-                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/367'))}}</div>
+                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/362'))}}</div>
 				      </div>
 			     </div>
 				 
@@ -23,9 +23,9 @@
 			         	<div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-                       {{=IMG(_src=URL('static','files/presses/3/monographs/356/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
+                       {{=IMG(_src=URL('static','files/presses/3/monographs/367/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                    </div>
-                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/356'))}}</div>
+                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/367'))}}</div>
 				      </div>
 			     </div>
 			
@@ -36,6 +36,24 @@
           <h4>{{=T('News')}}</h4>
 		  
       
+      <div class="media">
+                    <div class="media-left pull-left"> 
+                      <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
+                    </div>
+					<div class="media-body">
+                      <p class="media-heading">18.05.2018</p>
+                      <h5>{{=T('New in Propylaeum-eBOOKS')}}</h5>
+                      <p class="boxText">{{if session.forced_language =='de': }}
+                      Mit den  <a href="{{=URL('catalog','book/362')}}" title="&bdquo;Untersuchungen zu den Reichsstraßen in den westlichen Provinzen des Imperium Romanum&ldquo;">&bdquo;Untersuchungen zu den Reichsstraßen in den westlichen Provinzen des Imperium Romanum&ldquo;</a> von Michael Rathmann steht ein erstes Beiheft der Bonner Jahrbücher auf Propylaeum-eBOOKS zum Download zur Verfügung. Die Definition, Verwaltung und Finanzierung der Reichsstraßen außerhalb Italiens im Römischen Reich bilden die zentralen Aspekte der Untersuchung.
+
+                      {{elif session.forced_language =='en': }}                     
+					  The first supplement of the Bonner Jahrbücher can now be downloaded on Propylaeum-eBOOKS: Michael Rathmann's work  <a href="{{=URL('catalog','book/362')}}" title="&bdquo;Untersuchungen zu den Reichsstraßen in den westlichen Provinzen des Imperium Romanum&ldquo;">&bdquo;Untersuchungen zu den Reichsstraßen in den westlichen Provinzen des Imperium Romanum&ldquo;</a> concentrates on the definition, administration and financing of the imperial roads (Via Imperii) outside of Italy.
+                      {{pass}}                      
+                      </p>
+                    </div>
+		  </div>
+
+
       <div class="media">
                     <div class="media-left pull-left"> 
                       <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
@@ -280,71 +298,7 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                     </div>
 			        </div> 
 
-						<!--<div class="media">
-                    <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
-                    </div>
-				          	<div class="media-body">
-                      <p class="media-heading">24.10.2016</p>
-                      {{if session.forced_language =='de': }} <h5>Veranstaltungsreihe Open Access am Mittag: Publizieren an der Universität Heidelberg</h5>{{elif session.forced_language =='en': }} <h5>Series of events Open Access at noon: Publishing with the Heidelberg University</h5>{{pass}} 
 
-                      <p class="boxText">{{if session.forced_language =='de': }}Anlässlich der Open-Access-Woche 2016 vom 24.10. bis 30.10. lädt die UB Sie in Ihrer Mittagspause dazu ein, sich über die <a href="http://www.ub.uni-heidelberg.de/service/openaccess/Welcome.html" title="Informationen über die Publikationsmöglichkeiten im Open Access an der Universität Heidelberg">vielfältigen Publikationsmöglichkeiten im Open Access</a>, die die Uni Heidelberg bereitstellt, zu informieren. Beginn: 13 Uhr im <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&zweig=&sprache=de" title="Lageplan: Handschriftenlesesaal der UB Heidelberg">Handschriftenlesesaal (Rundzimmer)</a> der UB. [<a href="http://www.ub.uni-heidelberg.de/bilder/oa/oa-woche_plakat_A4.pdf">&rsaquo;&rsaquo;Veranstaltungsübersicht</a>]
-                      {{elif session.forced_language =='en': }}                     
-                      On occasion of the open acces week, 24-30 October 2016, the University Library invites you in your lunch break to inform you about the <a href="http://www.ub.uni-heidelberg.de/Englisch/service/openaccess/Welcome.html" title="Information on Open Access publishing options at Heidelberg University">various publishing options</a> Heidelberg University offers. Start: 1 pm in the <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&zweig=altstadt&sprache=en" title="site plan manuscript reading room of Heidelberg University Library">manuscript reading room (round chamber)</a> of the library.           
-                      {{pass}}
-                      </p>
-                    </div>
-			        </div> 
-              
-						<div class="media">
-							<div class="media-left pull-left">
-              <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
-              </div>                        
-							<div class="media-body">
-								<p class="media-heading">24.08.16</p>
-                <h5>{{=T('New in Propylaeum-eBOOKS')}}</h5>                
-					 
-								<p class="boxText">
-								{{if session.forced_language =='de': }}
-								Die fast 3.000 Seiten umfassende <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> erfasst alle wissenschaftlichen Rezensionen aus dem Zeitraum von 1855 bis 1939 zu Veröffentlichungen zu lateinischen Texten bzw. übergreifenden Themen, in denen lateinische Texte angemessen berücksichtigt sind. Damit wird dieses reiche Material, das den zeitgenössischen Forschungsdiskurs unmittelbar widerspiegelt, erstmals umfassend dokumentiert und erschlossen. 
-								{{elif session.forced_language =='en': }}      
-								At almost 3,000 pages, the <a href="{{=URL('catalog','book/150')}}">&bdquo;Rezensionen-Bibliographie zur lateinischen Literaturgeschichte der Antike (1855-1939)&rdquo;</a> (Review Bibliography of Latin Literary History of the Antiquity (1855-1939)) includes all academic reviews of publications concerned with Latin texts, or on general topics in which Latin texts are included, that were published between 1855 and 1939. Thus, this resource provides the first ever comprehensive documentation and cataloging of this rich source of information about scholarly discourse on Latin texts from this era.
-								{{pass}}  
-								</p>
-							</div>
-						</div>  
-						
-						<div class="media">
-							<div class="media-left pull-left">
-              <img alt="" src="{{=URL('static','images/home/propylaeum_logo_klein.png')}}" style="width: 50px;" />
-              </div>                        
-							<div class="media-body">      
-								<h5>{{=T('New in Propylaeum-eBOOKS')}}</h5>                   
-								<p class="boxText">
-								{{if session.forced_language =='de': }}        
-								Der erste Band der Schriftenreihe <a href="{{=URL('series','/info/byzanzoo')}}">"Byzanz zwischen Orient und Okzident"</a>  des Leibniz-WissenschaftsCampusMainz  ist ab sofort auch online verfügbar. Der Tagungsband unter dem Titel <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> legt die Ergebnisse einer interdisziplinären Tagung vor, die vom 1. bis  zum 3. Oktober 2010 im Römisch-Germanischen Zentralmuseum Mainz stattfand.
-								{{elif session.forced_language =='en': }}      
-								The first volume of the book series  <a href="{{=URL('series','/info/byzanzoo')}}">"Byzantium between Orient and Occident"</a> of the LeibnizScienceCampus Mainz is now also available online. The volume with the title <a href="{{=URL('catalog','book/53')}}">"Der Doppeladler. Byzanz und die Seldschuken in Anatolien vom späten 11. bis zum 13. Jahrhundert"</a> presents the proceedings of an interdisciplinary conference which took place from 1st to 3rd October 2010 in the Römisch-Germanische Zentralmuseum Mainz.          
-								{{pass}}                                   
-                </p>
-              </div>
-            </div>          
-						
-						<div class="media">
-							<div class="media-left pull-left">
-              <img alt="" src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
-              </div>                        
-							<div class="media-body">      
-								<h5>open-access.net</h5>						
-								<p class="boxText">
-								{{if session.forced_language =='de': }}
-								Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
-								{{elif session.forced_language =='en': }}
-								Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
-								{{pass}}
-								</p>
-							</div>
-						</div>  -->
             
            </div>
 
@@ -363,9 +317,9 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-                    {{=IMG(_src=URL('static','files/presses/3/monographs/343/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
+                    {{=IMG(_src=URL('static','files/presses/3/monographs/356/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                  </div>
-                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/343'))}}</div>
+                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/356'))}}</div>
 				      </div>
 			     </div>
 		
@@ -373,9 +327,9 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-					          {{=IMG(_src=URL('static','files/presses/3/monographs/330/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
+					          {{=IMG(_src=URL('static','files/presses/3/monographs/343/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                  </div>
-								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/330'))}}</div>
+								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/343'))}}</div>
 				</div>
 			</div>
 						
@@ -409,9 +363,9 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-                    {{=IMG(_src=URL('static','files/presses/3/monographs/295/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
+                    {{=IMG(_src=URL('static','files/presses/3/monographs/230/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                     </div>
-                   	<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/295'))}}</div>
+                   	<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/330'))}}</div>
                 </div>
             </div>
 		
@@ -419,9 +373,9 @@ Grabungsdokumentationen, Grabungsfunde und ähnliches zum Inhalt haben. Als erst
                 <div class="box">
                    <div class="box-gray aligncenter">
                       <h4>{{=T('New Titles')}}</h4>
-					          {{=IMG(_src=URL('static','files/presses/3/monographs/319/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
+					          {{=IMG(_src=URL('static','files/presses/3/monographs/295/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
                  </div>
-								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/319'))}}</div>
+								<div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/295'))}}</div>
 				</div>
 			</div>
 			
