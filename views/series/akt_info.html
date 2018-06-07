@@ -1,0 +1,87 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Archäologie – Kultur – Theorie. Heidelberger Beiträge zur klassischen Archäologie.
+                {{elif session.forced_language =='en': }}
+                Archäologie – Kultur – Theorie. Heidelberger Beiträge zur klassischen Archäologie.
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Heidelberger Reihe Archäologie – Kultur – Theorie (AKT) soll eine Plattform bieten für Publikationen, denen es daran gelegen ist, die Potenziale der Klassische Archäologie als Methode der Kulturanalyse jenseits rein fachwissenschaftlichen Erkenntnisgewinns auszuloten. Die leitende Frage, auf welche Publikationen in der AKT-Reihe Antworten liefern sollen, lautet folglich, worin der spezifische heuristische Wert der für Archäologie konstitutiven Konzentration der Analysearbeit auf materielle Erscheinungsformen von Kultur liegen kann.</p>
+			<p>Der Gegenstandsbereich der Klassischen Archäologie wird dabei in seiner weiten Definition verstanden, welche die materielle und visuelle Kultur der griechisch-römischen Antike von der ägäischen Bronzezeit bis in die Spätantike umfasst. Wiewohl nahsichtige Materialstudien hochwillkommen sind, ist es Voraussetzung für die Aufnahme eines Manuskripts in die Reihe, dass mit den verfolgten Fragestellungen auch ein theoretischer Anspruch verbunden sei. Damit möchte die AKT-Reihe Position beziehen gegen das Auseinanderdriften materialorientierter und ‚theorieaffiner‘ Ansätze in der gegenwärtigen Klassischen Archäologie.</p>
+			<p>Zugesandte Manuskripte durchlaufen ein peer-review-Verfahren, auf dessen Grundlage die Herausgeber über die Aufnahme entscheiden.</p>
+                    <!--<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/akt')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/akt_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Herausgeber</b><br>
+                Nikolaus Dietrich,<br />
+				Caterina Maderna, <br />
+				Diamantis Panagiotopoulos
+                <!--Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)-->
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Die Heidelberger Reihe Archäologie – Kultur – Theorie (AKT) soll eine Plattform bieten für Publikationen, denen es daran gelegen ist, die Potenziale der Klassische Archäologie als Methode der Kulturanalyse jenseits rein fachwissenschaftlichen Erkenntnisgewinns auszuloten. Die leitende Frage, auf welche Publikationen in der AKT-Reihe Antworten liefern sollen, lautet folglich, worin der spezifische heuristische Wert der für Archäologie konstitutiven Konzentration der Analysearbeit auf materielle Erscheinungsformen von Kultur liegen kann.</p>
+			<p>Der Gegenstandsbereich der Klassischen Archäologie wird dabei in seiner weiten Definition verstanden, welche die materielle und visuelle Kultur der griechisch-römischen Antike von der ägäischen Bronzezeit bis in die Spätantike umfasst. Wiewohl nahsichtige Materialstudien hochwillkommen sind, ist es Voraussetzung für die Aufnahme eines Manuskripts in die Reihe, dass mit den verfolgten Fragestellungen auch ein theoretischer Anspruch verbunden sei. Damit möchte die AKT-Reihe Position beziehen gegen das Auseinanderdriften materialorientierter und ‚theorieaffiner‘ Ansätze in der gegenwärtigen Klassischen Archäologie.</p>
+			<p>Zugesandte Manuskripte durchlaufen ein peer-review-Verfahren, auf dessen Grundlage die Herausgeber über die Aufnahme entscheiden.</p>
+                    <!--<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/akt')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/akt_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Editors</b><br>
+                Nikolaus Dietrich,<br />
+				Caterina Maderna, <br />
+				Diamantis Panagiotopoulos
+                <!--Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)-->
+				 </p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
