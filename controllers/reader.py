@@ -46,7 +46,7 @@ def index():
     else:
         path = os.path.join(request.folder, 'static/files/presses', myconf.take('omp.press_id'), 'monographs',
                             submission_id, 'submission/', file_id)
-        return response.stream(path, chunk_size=1048576)
+        return response.stream(path, chunk_size=65536)
 
 def home():
     return dict()
@@ -66,7 +66,7 @@ def download():
         'Content-Disposition'] = "attachment; filename=" + submission_file
     db.t_usage_statistics.insert()
     db.commit()
-    return response.stream(path, chunk_size=1048576)
+    return response.stream(path, chunk_size=65536)
 
 def download_image():
     submission_id = request.args[0]
