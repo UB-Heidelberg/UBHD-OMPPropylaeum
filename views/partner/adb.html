@@ -1,0 +1,55 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Archäologischer Dienst des Kantons Bern 
+                {{elif session.forced_language =='en': }}
+                Archäologischer Dienst des Kantons Bern 
+            {{pass}}
+            </h3>
+		</div>
+</div>
+
+<div class="row">
+		{{if session.forced_language =='de': }}
+			<div class="col-lg-9">                
+					<p>Weitere Informationen folgen!</p>
+			</div>
+
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+						<!--<p>{{=IMG(_src=URL('static','images/partner/dguf_logo.jpg'),_width='145px')}}</p>-->
+					   
+						<p><b>Kontakt</b><br>
+						Erziehungsdirektion des Kantons Bern<br />
+						Amt für Kultur / Archäologischer Dienst des Kantons Bern<br />
+						Brünnenstrasse 66, Postfach, CH-3001 Bern <br /><br />
+						Tel.: +41 31 633 98 00<br /><br />
+						Internet: <a href="https://www.be.ch/archaeologie" title="Homepage des Archäologischen Dienstes des Kantons Bern">Homepage</a></p>						
+				</div>                
+			</div>		
+			 
+		{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">                
+					<p>More information coming soon!</p>  
+			</div>
+			
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+						<!--<p>{{=IMG(_src=URL('static','images/partner/dguf_logo.jpg'),_width='145px')}}</p>-->
+							   
+						<p><b>Contact</b><br>
+						Erziehungsdirektion des Kantons Bern<br />
+						Amt für Kultur / Archäologischer Dienst des Kantons Bern<br />
+						Brünnenstrasse 66, Postfach, CH-3001 Bern <br /><br />
+						Tel.: +41 31 633 98 00<br /><br />
+						Internet: <a href="https://www.be.ch/archaeologie" title="Homepage of the Archäologischen Dienstes des Kantons Bern">Homepage</a></p>	
+				</div>                
+			</div>
+	  
+		{{pass}}
+
+</div>
+
+ 
