@@ -1,0 +1,91 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            {{if session.forced_language =='de': }}
+                <h3>Archäologie und Geschichte</h3>
+				
+				<h4>Freiburger Forschungen zum ersten Jahrtausend in Südwestdeutschland</h4>
+                {{elif session.forced_language =='en': }}
+                <h3>Archäologie und Geschichte</h3>
+				
+				<h4>Freiburger Forschungen zum ersten Jahrtausend in Südwestdeutschland</h4>
+            {{pass}}
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Unter diesem Titel erscheinen seit 1986 Monographien und Sammelbände des Forschungsverbunds „Archäologie und Geschichte des ersten Jahrtausends in Südwestdeutschland“. Er wurde 1984 gegründet und umfasst heute die Fächer Urgeschichtliche Archäologie, die Provinzialrömische Archäologie sowie die Frühgeschichtliche Archäologie und die Archäologie des Mittelalters, die Mittelalterliche Geschichte und die Landesgeschichte (https://www.fvag.uni-freiburg.de). </p>
+            <p>Das Ziel des Forschungsverbunds ist es, mit interdisziplinärem Ansatz wesentliche Verhältnisse und Veränderungen im ersten nachchristlichen Jahrtausend zu erforschen, wobei von einem „langen“ Jahrtausend ausgegangen wird: es reicht von der vorrömischen Eisenzeit der Kelten über Römerzeit und Frühmittelalter bis zu den hochmittelalterlichen Stadtgründungen. Das Spektrum der Forschungsprojekte erstreckt sich von römischen Villen bis zu spätantiken Höhenstationen, von spätrömischen Grenzbefestigungen bis zu spätmittelalterlichen Burgen, von frühmittelalterlichen Sozialstrukturen bis zu hochmittelalterlichen Adelsgruppierungen, von gesellschaftlichen Identitäten bis zur Montanarchäologie.</p>
+			<p>In den Bänden sind einerseits Monographien publiziert, bei denen es sich meist um herausragende Dissertationsschriften handelt. Andererseits liegen Sammelbände vor, die die Beiträge zahlreicher Tagungen bündeln. Außerdem gehört in diese Reihe das auf vier Bände angelegte Handbuch „Die Burgen im mittelalterlichen Breisgau“.</p>
+			 
+			 <!--
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/aug')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+			 -->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Derzeitige Herausgeber</b><br>
+				Prof. Dr. Sebastian Brather<br>
+                Prof. Dr. Jürgen Dendorfer<br>
+                Prof. Dr. Alexander Heising<br>
+                Prof. Dr. Christoph Huth<br>
+
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+		<div class="col-lg-9">		
+		    <p>Unter diesem Titel erscheinen seit 1986 Monographien und Sammelbände des Forschungsverbunds „Archäologie und Geschichte des ersten Jahrtausends in Südwestdeutschland“. Er wurde 1984 gegründet und umfasst heute die Fächer Urgeschichtliche Archäologie, die Provinzialrömische Archäologie sowie die Frühgeschichtliche Archäologie und die Archäologie des Mittelalters, die Mittelalterliche Geschichte und die Landesgeschichte (https://www.fvag.uni-freiburg.de). </p>
+            <p>Das Ziel des Forschungsverbunds ist es, mit interdisziplinärem Ansatz wesentliche Verhältnisse und Veränderungen im ersten nachchristlichen Jahrtausend zu erforschen, wobei von einem „langen“ Jahrtausend ausgegangen wird: es reicht von der vorrömischen Eisenzeit der Kelten über Römerzeit und Frühmittelalter bis zu den hochmittelalterlichen Stadtgründungen. Das Spektrum der Forschungsprojekte erstreckt sich von römischen Villen bis zu spätantiken Höhenstationen, von spätrömischen Grenzbefestigungen bis zu spätmittelalterlichen Burgen, von frühmittelalterlichen Sozialstrukturen bis zu hochmittelalterlichen Adelsgruppierungen, von gesellschaftlichen Identitäten bis zur Montanarchäologie.</p>
+			<p>In den Bänden sind einerseits Monographien publiziert, bei denen es sich meist um herausragende Dissertationsschriften handelt. Andererseits liegen Sammelbände vor, die die Beiträge zahlreicher Tagungen bündeln. Außerdem gehört in diese Reihe das auf vier Bände angelegte Handbuch „Die Burgen im mittelalterlichen Breisgau“.</p>
+		
+             <!--
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/favis')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+			 -->
+		</div>
+
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Current editors</b><br>
+				Prof. Dr. Sebastian Brather<br>
+                Prof. Dr. Jürgen Dendorfer<br>
+                Prof. Dr. Alexander Heising<br>
+                Prof. Dr. Christoph Huth<br>
+				 </p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
