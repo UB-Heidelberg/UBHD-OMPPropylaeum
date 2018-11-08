@@ -1539,15 +1539,6 @@ ol.content.ordered {
 .content.greek-upper {
   list-style-type: upper-greek; }
 
-.content.dash {
-  list-style-type: none;
-}
-  
-.content.dash li::before {
-  content: "\002014"; 
-  padding-right: 6px;
-}     
-
 /*
   Typography / Basics
 ---------------------------------------------*/
