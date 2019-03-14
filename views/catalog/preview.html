@@ -13,6 +13,34 @@
 
 
     <div style="height: 20px"></div>
+    
+		<div class="container" id="decabo" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Eva María Mateo Decabo</b><br />
+							<b>Politik der kleinen Form. Paraklausithyron und Recusatio bei Properz, Tibull, Horaz und Ovid</b><br />
+
+						</div>	
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint im Frühjahr 2019
+							{{elif session.forced_language =='en': }}
+							Coming Spring 2019
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>    
 	
     <div class="container" id="valiakos" height="400px">
 			<div class="row">
