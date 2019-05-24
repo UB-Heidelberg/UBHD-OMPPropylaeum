@@ -1,0 +1,79 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            {{if session.forced_language =='de': }}
+                <h3>Archäologie und Geschichte</h3>
+				
+				<h4>Forschungen und Berichte zur Archäologie in Baden-Württemberg</h4>
+                {{elif session.forced_language =='en': }}
+                <h3>Archäologie und Geschichte</h3>
+				
+				<h4>Forschungen und Berichte zur Archäologie in Baden-Württemberg</h4>
+            {{pass}}
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-12">		
+		    <p>In der Reihe „Forschungen und Berichte zur Archäologie in Baden-Württemberg“ erscheinen Monographien und Sammelbände zu Themen aller Zeitstufen der Vor- und Frühgeschichte, der Provinzialrömischen Archäologie und des Mittelalters bis hin zur frühen Neuzeit. Sie präsentieren in der Regel die Ergebnisse von Ausgrabungen der baden-württembergischen Landesarchäologie, die im Rahmen von akademischen Abschlussarbeiten oder Forschungsprojekten ausgewertet wurden.</p>
+        <p>Die Reihe wird vom Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart herausgegeben und löste 2016 die drei älteren, parallel bestehenden Reihen „Forschungen und Berichte zur Vor- und Frühgeschichte in Baden-Württemberg“, „Forschungen und Berichte der Archäologie des Mittelalters in Baden-Württemberg“ und die „Materialhefte zur Archäologie in Baden-Württemberg“ ab. Die Bände werden zwei Jahre nach Erscheinen des gedruckten Buches im Open Access veröffentlicht.</p>
+                    <div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/fbarchbw')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>
+
+		</div>
+		
+		<!--<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Derzeitige Herausgeber</b><br>
+				Prof. Dr. Sebastian Brather<br>
+                Prof. Dr. Jürgen Dendorfer<br>
+                Prof. Dr. Alexander Heising<br>
+                Prof. Dr. Christoph Huth<br><br>
+				Internet: <a href="https://www.fvag.uni-freiburg.de" title="Link zur Albert-Ludwig-Universität Freiburg">https://www.fvag.uni-freiburg.de</a>
+
+				 </p>
+           </div>
+        </div>-->   
+
+
+        {{elif session.forced_language =='en': }}
+		  <div class="col-lg-12">		
+        <p>The book series „Forschungen und Berichte zur Archäologie in Baden-Württemberg“ contains monographs and collected volumes on the full time span of prehistory, protohistory, the archaeology of the roman provinces and of the middle ages to early modern times. The books feature excavation results which have been achieved by federal state archaeology in Baden-Wuerttemberg and compiled in university theses or analysed by research projects.</p>
+        <p>The series is edited by the State Office for Cultural Heritage Preservation of the Regional Administrative Authority of Stuttgart. In 2016, it replaced and pooled the former three parallel series “Forschungen und Berichte zur Vor- und Frühgeschichte in Baden-Württemberg“, „Forschungen und Berichte der Archäologie des Mittelalters in Baden-Württemberg“ and „Materialhefte zur Archäologie in Baden-Württemberg“. The volumes will be published in open access two years after the release of the print edition.</p>
+                    <div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/fbarchbw')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>
+
+		</div>
+
+		
+		<!--<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Current editors</b><br>
+				Prof. Dr. Sebastian Brather<br>
+                Prof. Dr. Jürgen Dendorfer<br>
+                Prof. Dr. Alexander Heising<br>
+                Prof. Dr. Christoph Huth<br><br>
+				Internet: <a href="https://www.fvag.uni-freiburg.de" title="Link to the Albert-Ludwig-University Freiburg">https://www.fvag.uni-freiburg.de</a>
+				 </p>
+           </div>
+        </div>-->  
+{{pass}}
+
+</div>
+
+

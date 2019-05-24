@@ -12,14 +12,7 @@
 	</div>
 
 
-    <div style="height: 20px"></div>
-    
-   
-	
-
-
-
-		<div class="container" id="knaus" height="400px">
+		<div class="container" id="hartmann" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
 					<article>
@@ -78,19 +71,6 @@
 		</div>    
 
 			     
-
-    			
-
-	
-	
-		</div>
-		
-
-	
-		
-
-
-
 		<div class="row">
 			<div  id="vorschau_reihen" class="col-lg-12">
 				<h4>  {{if session.forced_language =='de': }}
@@ -102,7 +82,7 @@
 			</div>   
 		</div>	
 		
-			<div class="container" id="akt" height="400px">
+			<div class="container" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
 					<article>
@@ -130,7 +110,7 @@
 			</div>
 		</div>
 		
-		<div class="container" id="akt" height="400px">
+		<div class="container" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
 					<article>
@@ -157,7 +137,31 @@
 			</div>
 		</div>
 
+		<div class="container" id="fbarchbw" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <p><b>Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart ({{=T('Eds.')}})</b><br />
+							<b><a href="{{=URL('series','info/fbarchbw')}}" title="Informationen über die Reihe 'Forschungen und Berichte zur Archäologie in Baden-Württemberg'">Forschungen und Berichte zur Archäologie in Baden-Württemberg</a></b></p>
+						</div>	
+						<!--<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint Ende 2018
+							{{elif session.forced_language =='en': }}
+							Coming end of 2018
+							{{pass}}
+						</p>-->
+					</article>
+				</div>
+			</div>
+		</div>
 	
-	
-    </div>
-    
+		</div>
