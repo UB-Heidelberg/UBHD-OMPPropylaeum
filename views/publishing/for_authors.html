@@ -1,32 +1,53 @@
 {{extend 'layout.html'}}
 
 <div class="row">
-		<div class="col-lg-12 contentbox-12">
+		<div class="col-lg-12">
             <h3>  {{if session.forced_language =='de': }}
                 Informationen für Autoren
                 {{elif session.forced_language =='en': }}
                 Information for Authors
             {{pass}}
             </h3>
-	
-
-
+    </div>
+            
+</div>
             {{if session.forced_language =='de': }}
+<div class="row">
+	  <div class="col-lg-9">            
+      <p>Sie haben Interesse, Ihre <strong>Monographie</strong>, Ihr <strong>Sammelwerk</strong> oder auch Ihre <strong>Schriftenreihe</strong> als Erstveröffentlichung („Goldener Weg“ des Open Access) oder auch als Zweitveröffentlichung „Grüner Weg“ des Open Access) auf <strong>Propylaeum-eBOOKS</strong> zu veröffentlichen?</p>
+      <p>Dann senden Sie uns Ihre Anfrage mit dem Exposé der geplanten Veröffentlichung und, wenn bereits vorhanden, einem Probekapitel. Bitte nutzen dafür unser Buchformular.</p>
+      <p>Dissertationen werden für die Veröffentlichung angenommen, wenn sie mit „Summa cum laude“ oder „Magna cum laude“ bewertet wurden. Bitte senden Sie uns bei Dissertationen auch die Gutachten der Betreuer und einen Nachweis, dass das Imprimatur erteilt wurde.</p>
+      <p>Gerne vereinbaren wir auch einen Termin für ein <strong><a href="{{=URL('contact','index')}}">Informationsgespräch</a></strong>!</p>
 
-				<p>Wenn Sie Interesse daran haben, Ihre <b>Monographie</b> / Ihr <b>Sammelwerk</b> / Ihre <b>Schriftenreihe</b> als <b>Primärpublikation</b> („goldener Weg“) oder auch als <b>Sekundärpublikation</b> („grüner Weg“) auf <b>Propylaeum-eBOOKS</b> zu veröffentlichen, senden Sie uns bitte Ihren Buchvorschlag zu. Gerne vereinbaren wir auch einen Termin für ein Informationsgespräch (<a href="{{=URL('contact','index')}}" style="padding-right: 0;">Kontaktinformationen</a>)</p>
-
-				<h4>Unser Angebot für Sie:</h4>
-
-				<ul class="standard">
-				<li>Die Publikation des Werkes erfolgt parallel in mehreren Versionen: sowohl in <b>digitaler Form</b> (als PDF- und ggf. HTML-Datei) sowie auf Wunsch als auch als <b>gedrucktes Buch</b> (Hard- oder Softcover), erhältlich im Sortiments- wie auch im Online-Buchhandel.</li>
-				<li>Um eine maximale <b>Sichtbarkeit</b> der Publikationen zu gewährleisten und den leichten Zugang digitaler wie auch der gedruckten Medien zu ermöglichen, vergeben wir für alle Veröffentlichungen in jeglicher Publikationsform (PDF, gedrucktes Buch) eine eigene <b>ISBN</b>. Buchreihen werden mit einer ISSN ausgestattet, Onlinepublikationen erhalten eine <b>DOI</b> (Digital Object Identifier). Durch die formale und inhaltliche Erschließung bis auf Beitragsebene sorgen wir für eine optimale Auffindbarkeit in Datenbanken, (wissenschaftlichen) <b>Suchmaschinen</b> und <b>nationalen wie internationalen Bibliothekskatalogen</b> (unter anderem <a href="http://katalog.ub.uni-heidelberg.de/cgi-bin/search.cgi" title="HEIDI und heiBIB">HEIDI/HeiBIB</a>, <a href="http://swb.bsz-bw.de/DB=2.1//START_WELCOME" title="SWB">SWB</a>, <a href="http://kvk.bibliothek.kit.edu/" title="KVK">KVK</a>, <a href="https://scholar.google.de/" title="Google Scholar">Google Scholar</a>, <a href="http://www.doabooks.org/" title="DOAB">DOAB</a>, <a href="https://openlibrary.org/" title="Open Library">Open Library</a>, <a href="https://www.worldcat.org/" title="Worldcat">Worldcat</a>). Die Bücher, für die auch eine gedruckte Version gewünscht ist,  sind in den nationalen wie internationalen <b>Buchhandelsverzeichnissen</b> (VLB, KNOE, Buchhandel.de, Amazon u.a.) aufgeführt und können sowohl im Sortimentsbuchhandel als auch online bestellt werden. Zudem unterstützt <b>Propylaeum-eBOOKS</b> die Autoren bei dem erforderlichen Nachweis für die Tantiemenausschüttung der <b>VGWort</b>.</li>
-				<li>Sie haben die Möglichkeit, auch die zugehörigen <b>Forschungsdaten</b> dauerhaft archivieren zu lassen. Diese können direkt mit Online-Publikationen auf <b>Propylaeum-eBOOKS</b> verknüpft werden. Alle Forschungsdaten - seien es Bilder, Videos, Audio-Dateien, Tabellen, Graphiken etc. - erhalten einen DOI (Digital Object Indentifier) und sind somit dauerhaft zitierfähig und als eigenständige wissenschaftliche Leistungen sichtbar und gezielt verlinkbar.</li>
-				<li>Bitte beachten Sie, dass <b>Propylaeum-eBOOKS</b> eine <b>Open-Access-Plattform</b> ist. Werke, die auf <b>Propylaeum-eBOOKS</b> veröffentlicht werden, stehen im Regelfall unter einer <b>Creative-Commons-Lizenz</b> (bevorzugt CC-BY oder CC-BY-SA). Die Urheberrechte an dem Werk verbleiben bei Ihnen als Autor/-in, <b>Propylaeum-eBOOKS erhält nur ein einfaches Nutzungsrecht</b>.</li>
-				<li><b>Wichtig: Autoren sind auch für alle Inhalte, die sie nicht selbst produzieren, verantwortlich</b>. Solche Inhalte können Bilder, Videos, Daten, Audio-Dateien oder Diagramme sein. Jedes Material, das nicht eine alleinige Schöpfung des Autors ist, darf nur mit entsprechender Genehmigung verwendet werden. <b>Propylaeum-eBOOKS</b> übernimmt keine Haftung bei der Verwendung fremder Inhalte.</li>
-				</ul>
-
-            {{elif session.forced_language =='en': }}
-
+<h4>Unser Angebot für Sie umfasst:</h4>
+<ul>
+  <li>Die Publikation erfolgt parallel in mehreren Versionen: <strong>in digitaler Form Open Access als PDF und ggf. auch in HTML</strong> sowie – wenn gewünscht - als <strong>gedrucktes Buch</strong> in einer Hard- oder Softcover-Ausgabe, die kostenpflichtig im Sortiments- und Online-Buchhandel erhältlich ist. </li>
+  <li><strong>Im Regelfall erwarten wir von Ihnen ein druckfertiges PDF des Manuskripts.</strong> Wir beraten Sie hierbei gerne und stellen Ihnen ggf. auch ein Word- oder Indesign-Template zur Verfügung. Besonders wenn eine Printausgabe gewünscht ist, sollten im Vorfeld Absprachen erfolgen. Falls Sie mehr Unterstützung bei Satz und Layout benötigen, ist vielleicht unser neues Angebot <strong>„PublizierenPlus“</strong> für Sie von Interesse.</li>
+  <li>Wir übernehmen für Sie auf Wunsch und auf der Grundlage Ihrer Vorschläge die <strong>Covergestaltung</strong> für Ihre Publikation. </li>
+  <li>Um eine maximale Sichtbarkeit der Publikationen zu gewährleisten, vergeben wir für alle Veröffentlichungen in jeglicher Publikationsform (PDF, gedrucktes Buch) eine eigene <strong>ISBN</strong>. Buchreihen werden mit einer ISSN ausgestattet, Onlinepublikationen erhalten zusätzlich zur ISBN auch einen <strong>DOI</strong> (Digital Object Identifier). Durch die <strong>formale und inhaltliche Erschließung bis auf Beitragsebene</strong> sorgen wir für eine optimale Auffindbarkeit in Datenbanken, (wissenschaftlichen) Suchmaschinen und nationalen wie internationalen Bibliothekskatalogen (unter anderem  <a href="https://katalog.ub.uni-heidelberg.de/cgi-bin/search.cgi" title="HEIDI und heiBIB">HEIDI/HeiBIB</a>, <a href="http://swb.bsz-bw.de/DB=2.1//START_WELCOME" title="SWB">SWB</a>, <a href="http://kvk.bibliothek.kit.edu/" title="KVK">KVK</a>, <a href="https://scholar.google.de/" title="Google Scholar">Google Scholar</a>, <a href="https://openlibrary.org/" title="Open Library">Open Library</a>, <a href="https://www.worldcat.org/" title="Worldcat">Worldcat</a>. Die Bücher, für die auch eine gedruckte Version gewünscht ist, sind in den nationalen wie internationalen Buchhandelsverzeichnissen (VLB, KNOE, Buchhandel.de, Amazon u.a.) aufgeführt und können sowohl im Sortimentsbuchhandel als auch online bestellt werden. Zudem unterstützt Propylaeum-eBooks die Autoren bei dem erforderlichen Nachweis für die Tantiemenausschüttung der <strong>VGWort</strong>. </li>
+  <li>Für zu den Publikationen zugehörige <strong>Forschungsdaten</strong> bieten wir die dauerhafte Archivierung auf dem <a href="https://www.propylaeum.de/de/publizieren/forschungsdaten/" title="Portal Propylaeum, Informationen über das Heidelberger Forschungsdatenrepositorium heiDATA">Heidelberger Forschungsdatenrepositorium heiDATA</a>. Diese können direkt mit den Online-Publikationen auf Propylaeum-eBooks verknüpft werden. Alle Forschungsdaten - seien es Bilder, Videos, Audio-Dateien, Tabellen, Graphiken etc. - erhalten einen DOI (Digital Object Indentifier) und sind somit dauerhaft zitierfähig und als eigenständige wissenschaftliche Leistungen sichtbar und gezielt verlinkbar. </li>
+  <li>Bitte beachten Sie, dass Propylaeum-eBOOKS eine <strong>Open-Access-Plattform</strong> ist. Werke, die bei uns veröffentlicht werden, stehen im Regelfall unter einer <strong>Creative-Commons-Lizenz</strong> (bevorzugt CC-BY oder CC-BY-SA). Wir verfolgen eine autorenfreundliche Rechtepolitik: Die Urheberrechte an dem Werk verbleiben bei Ihnen. Propylaeum-eBOOKS erhält nur ein <strong>einfaches Nutzungsrecht</strong>. Nähere Informationen finden Sie unter <a href="{{=URL('publishing', 'rights_and_licences')}}">„Rechte und Lizenzen“</a>.</li>
+  <li><strong>Wichtig</strong>: Autoren sind auch für alle Inhalte, die sie nicht selbst produzieren, verantwortlich. Solche Inhalte können Bilder, Videos, Daten, Audio-Dateien oder Diagramme sein. Jedes Material, das nicht eine alleinige Schöpfung des Autors ist, darf nur mit entsprechender Genehmigung verwendet werden. Propylaeum-eBooks übernimmt keine Haftung bei der Verwendung fremder Inhalte.</li>
+  <li><strong>Die Veröffentlichung bei Propylaeum-eBooks ist unter den oben beschriebenen Bedingungen für Sie kostenfrei.</strong> Gedruckte Freiexemplare können wir nicht zur Verfügung stellen. Sie können die Printausgaben jedoch zum reduzierten Preis über Propylaeum-eBooks bestellen. Die Pflichtexemplare für die National- und Landesbibliotheken werden von Propylaeum-eBooks automatisch ausgeliefert. </li>
+</ul>
+</div>
+    <div class="col-lg-3">
+      <div id="infoBoxRechts">
+        <p><strong>PublizierenPlus</strong></p>
+          <p>Wenn Sie einen professionellen Satz und Layout für Ihre Publikation benötigen, können Sie  sich für unser neues Angebot „PublizierenPlus“ bewerben.</p>
+          <p>Die Voraussetzungen hierfür sind:</p>
+              <ul>
+              <li>Bewerben können sich Wissenschaftlerinnen und Wissenschaftler weltweit. Die Publikationssprachen sind in der Regel deutsch oder englisch.</li>
+              <li>Bitte reichen Sie zusammen mit unserem Buchformular einen kurzen tabellarischen Lebenslauf, ein Exposé zur geplanten Veröffentlichung und – wenn möglich – ein Probekapitel oder das ganza Manuskript ein. </li>
+              <li>Bewerbungen zur Publikation von Dissertationen sind bei einer Bewertung  von „Summa cum laude“ oder „Magna cum laude“ möglich, das Imprimatur muss von den Gutachtern erteilt sein.</li>
+              <li>Ihre Bewerbung wird dem <a href="https://www.propylaeum.de/ueber-uns/wissenschaftlicher-beirat" title="Portal Propylaeum, Informationen zum wissenschaftlichen Beirat">Propylaeum-Beirat</a> und ggf. externen Gutachtern zur Prüfung und Entscheidung vorgelegt.</li>
+              </ul>
+      </div>
+    </div>
+</div>    
+           {{elif session.forced_language =='en': }}
+<div class="row">
+  <div class="col-lg-12">
 				<p>If you are interested in publishing your <b>monograph</b> /  your <b>collected works</b> / your <b>book series</b> as <b>primary publications</b> (“gold”) or <b>secondary publications</b> (“green”) with <b>Propylaeum-eBOOKS</b>, please send us a book proposal. We will gladly arrange a consultation date (<a href="{{=URL('contact','index')}}" style="padding-right: 0;">contact details</a>).</p>
 				<h4>Services We Provide:</h4>
 				<ul class="standard">
@@ -35,10 +56,9 @@
 				<li>It is also possible to store additional <b>research data</b> permanently. This can then be directly linked to online-publications on <b>Propylaeum-eBOOKS</b>. All research data – i.e. images, videos, audio files, tables, charts etc. – have their own DOI (Digital Object Identifier) and are therefore permanently citable. They are visible and linkable as independent research achievements.</li>
 				<li>Please note that, since <b>Propylaeum-eBOOKS</b> is an <b>Open Access publisher</b>, works published by <b>Propylaeum-eBOOKS</b> fall under a <b>Creative Commons license</b> (preferably CC-BY or CC-BY-SA). The copyright of the work shall remain with you as the author, with <b>the publisher retaining only very simple rights</b>.</li>
 				<li><b>Important information for authors: Authors are responsible for obtaining permission to use all content that they do not produce themselves</b>. Such content can include images, videos, data, audio files, or charts. Any material that is not the sole creation of the author may be used only with the express permission of the copyright holder. <b>Propylaeum-eBOOKS</b> assumes no liability for the use of third-party content.</li>
-
+        </ul>
+    </div>
+</div>
             {{pass}}
 
-		</div>
-</div>
-
-
+		
