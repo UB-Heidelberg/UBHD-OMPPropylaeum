@@ -247,4 +247,30 @@
 				</div>
 			</div>
 		</div>
+    		<div class="container" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','files/presses/3/series/27-series.jpg'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <p><b>Römisch-Germanisches Zentralmuseum</b><br />
+							<b><a href="{{=URL('series','info/rgzmmono')}}" title="Informationen über die Reihe Monographien des RGZM">Monographien des RGZM </a></b></p>
+						</div>	
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint in Kürze
+							{{elif session.forced_language =='en': }}
+							Coming soon
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
 		</div>
