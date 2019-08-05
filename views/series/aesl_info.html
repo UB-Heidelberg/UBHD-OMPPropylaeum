@@ -1,0 +1,75 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Ägyptologische Studien Leipzig
+                {{elif session.forced_language =='en': }}
+                Ägyptologische Studien Leipzig
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>In der Reihe ÄSL erscheinen seit 2019 Monografien, die sich mit dem pharaonischen Ägypten beschäftigen und alle Teildisziplinen der Ägyptologie wie Archäologie, Religion, Kunst, Sprache und Literatur abdecken. Aufgenommen werden sowohl Erst- als auch Zweitpublikationen.</p>
+			<p>Die Reihe soll insbesondere als Publikationsplattform für überdurchschnittliche Abschlussarbeiten aus dem Bereich der Ägyptologie dienen und den Autorinnen und Autoren die Möglichkeit eröffnen, ihre Arbeiten im Open Access und als Print-on-Demand-Ausgabe zu veröffentlichen. </p>
+
+                    <!--<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/aesl')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">
+		<!--
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/akt_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Nikolaus Dietrich,<br />
+				Caterina Maderna, <br />
+				Diamantis Panagiotopoulos
+                <!--Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)
+				 </p>
+           </div>-->
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>In der Reihe ÄSL erscheinen seit 2019 Monografien, die sich mit dem pharaonischen Ägypten beschäftigen und alle Teildisziplinen der Ägyptologie wie Archäologie, Religion, Kunst, Sprache und Literatur abdecken. Aufgenommen werden sowohl Erst- als auch Zweitpublikationen.</p>
+			<p>Die Reihe soll insbesondere als Publikationsplattform für überdurchschnittliche Abschlussarbeiten aus dem Bereich der Ägyptologie dienen und den Autorinnen und Autoren die Möglichkeit eröffnen, ihre Arbeiten im Open Access und als Print-on-Demand-Ausgabe zu veröffentlichen. </p>
+                    <!--<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/aesl')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">
+        </div>  
+{{pass}}
+
+</div>
+
+
