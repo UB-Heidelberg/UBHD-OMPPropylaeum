@@ -7,6 +7,16 @@ LICENSE.md
 
 from ompdal import OMPDAL, OMPSettings, OMPItem
 from os.path import exists
+ompdal = OMPDAL(db, myconf)
+cur_locale = __import__("locale")
+
+if session.forced_language == 'en':
+    lang = 'en_US'
+elif session.forced_language == 'de':
+    lang = 'de_DE'
+else:
+    lang = ''
+cur_locale.setlocale(cur_locale.LC_ALL, 'de_DE.utf-8')
 
 def info():
     if request.args == []:
@@ -21,14 +31,9 @@ def info():
     return locals()
 
 def index():
-    if session.forced_language == 'en':
-        locale = 'en_US'
-    elif session.forced_language == 'de':
-        locale = 'de_DE'
-    else:
-        locale = ''
+
         
-    ompdal = OMPDAL(db, myconf)
+
     
     # Load press info from config
     press = ompdal.getPress(myconf.take('omp.press_id'))
@@ -41,6 +46,6 @@ def index():
             {'series_editors': [OMPItem(u, OMPSettings(ompdal.getUserSettings(u.user_id))) 
                                 for u in ompdal.getSeriesEditors(press.press_id, row.series_id)]}))
         
-    all_series.sort(key=lambda s: s.settings.getLocalizedValue('title', locale))
+    all_series.sort(key=lambda s: cur_locale.strxfrm(s.settings.getLocalizedValue('title', lang)))
     
     return locals()
