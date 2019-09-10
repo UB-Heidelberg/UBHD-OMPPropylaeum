@@ -315,7 +315,6 @@ header ul.nav li ul li ul {
   border-right: none;
   border-bottom: none;
   border-left: none;
-  border-bottom-color: none;
   content:none;
 }
 
@@ -709,7 +708,7 @@ ul.portfolio-categ li{
 
 ul.portfolio-categ li a{
 	display:block;
-	padding:35x 0 35x 0;
+	padding:35px 0 35px 0;
 	color:#353535;
 }
 
@@ -1251,7 +1250,6 @@ ul.meta-post li a{
 }
 .stats_chapter_row {
 	display: table-row;
-	font-size:
 }
 .stats_chapter_cell {
 	display: table-cell;
@@ -1563,7 +1561,6 @@ ul.time-post li.time{
 }
 
 .post-meta strong{
-	font-weight:200px;
 	color:#c7c7c7;
 }
 
@@ -2118,7 +2115,7 @@ body {
 .container,  
 .col-lg-9,  
 .boxAktuelles,
-#boxAktuelles, {
+#boxAktuelles {
 	width: 100% !important;
 }
 }
@@ -2137,7 +2134,7 @@ body {
 .box {
 	margin-bottom: 1em;
 }
-}
+
 
 
 .flex-caption {
