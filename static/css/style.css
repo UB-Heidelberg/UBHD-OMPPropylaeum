@@ -2088,6 +2088,9 @@ article img.pull-right, article .align-right{
  height: 30px;
  margin-right: 15px;
 }
+li.show {
+  display: list-item !important;
+}
 
 .bildrahmen, .post-image img {
 	border: 1px solid #cdcbcc
