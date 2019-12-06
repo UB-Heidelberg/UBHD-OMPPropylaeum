@@ -1,0 +1,94 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Archaeology and Economy in the Ancient World – Proceedings of the 19. International Congress of Classical Archaeology, Cologne/Bonn 2018
+                {{elif session.forced_language =='en': }}
+                Archaeology and Economy in the Ancient World – Proceedings of the 19. International Congress of Classical Archaeology, Cologne/Bonn 2018
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		  <p>Die vorliegenden Bände bilden die Abschlusspublikation des 19. Internationalen Kongresses für Klassische Archäologie, der vom 22. bis 26. Mai 2018 unter der Ägide der ‘Associazione Internazionale di Archaeologica Classica (AIAC)’ in Köln und Bonn abgehalten wurde. Unter dem Titel ‘Archaeology and Economy in the Ancient World’ beschäftigten sich mehr als 900 Einzelvorträge, gegliedert in 11 Sektionen und 128 Panels mit unterschiedlichsten Fragen zur antiken Wirtschaftsgeschichte.</p> 
+<p>Tatsächlich durchdringen wirtschaftliche Aspekte alle Bereiche des öffentlichen und privaten Lebens in alten Gesellschaften, sei es in der Stadtentwicklung, der Religion, der Kunst, dem Wohnen oder dem Tod. Die Erforschung der antiken Wirtschaft spielt seit langem eine wichtige Rolle in der Alten Geschichte. In den letzten Jahrzehnten ist aber auch in der Archäologie zunehmend das Bewusstsein gewachsen, dass die materielle Kultur alter Gesellschaften ausgezeichnete Möglichkeiten bietet, die Struktur, Leistung und Dynamik alter Wirtschaftssysteme und Wirtschaftsprozesse zu untersuchen. Hauptziel dieses Kongresses war es daher, die Ökonomie als ein zentrales Element der klassischen Gesellschaften zu verstehen und ihre Wechselwirkung mit ökologischen, politischen, sozialen, religiösen und kulturellen Hintergründen zu analysieren. Das Thema des Kongresses richtete sich an alle Disziplinen, die sich mit der griechisch-römischen Zivilisation und ihren Nachbarkulturen von der ägäischen Bronzezeit bis zum Ende der Spätantike befassen.
+</p>
+          <p>In der vorliegenden Reihe werden schrittweise 52 dieser Panels als eigenständige Themenbände vorgelegt. Am Ende des Publikationsprozesses soll zudem eine gebündelte Fassung aller Beiträge verfügbar gemacht werden.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/aiac2018')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/aiac2018_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Prof. Dr. Martin Bentz<br>
+                Institut für Archäologie und Kulturanthropologie<br> 
+                Universität Bonn<br /><br />
+                Prof. Dr. Michael Heinzelmann<br>
+                Archäologisches Institut<br>
+                Universität zu Köln<br><br>
+
+                Internet: <a href="https://www.aiac2018.de/" title="Homepage AIAC 2018">Homepage 19th International Congress of Classical Archaeology
+Cologne/Bonn, 22–26 May 2018</a><br>
+				E-Mail: <a href="mailto:congress@aiac2018.de">congress@aiac2018.de</a>
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>These volumes form the final publication of the 19th International Congress of Classical Archaeology, which was held from 22 to 26 May 2018 in Cologne and Bonn on behalf of the 'Associazione Internazionale di Archaeologica Classica (AIAC)'. Under the title 'Archaeology and Economy in the Ancient World' more than 900 presentations, divided into 11 sections and 128 panels, dealt with various aspects of ancient economic history.</p> 
+<p>In fact, economic aspects permeate all areas of public and private life in ancient societies, whether in urban development, religion, art, housing, or in death. Research on ancient economies has long played a significant role in ancient history. Increasingly in the last decades, awareness has grown in archaeology that the material culture of ancient societies offers excellent opportunities for studying the structure, performance, and dynamics of ancient economic systems and economic processes. Therefore, the main objective of this congress was to understand economy as a central element of classical societies and to analyse its interaction with ecological, political, social, religious, and cultural backgrounds. The theme of the congress was addressed to all disciplines that deal with Greco-Roman civilization and their neighbouring cultures from the Aegean Bronze Age to the end of Late Antiquity.</p>
+<p>In the present series, 52 of these panels are presented step by step as independent thematic volumes. At the end of the publication process, a bundled version of all contributions will be made available.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/aiac2018')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/aiac2018_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Editors</b><br>
+                Prof. Dr. Martin Bentz<br>
+                Institut für Archäologie und Kulturanthropologie<br> 
+                Universität Bonn<br /><br />
+                Prof. Dr. Michael Heinzelmann<br>
+                Archäologisches Institut<br>
+                Universität zu Köln<br><br>
+
+                Internet: <a href="https://www.aiac2018.de/" title="Homepage AIAC 2018">Homepage 19th International Congress of Classical Archaeology
+Cologne/Bonn, 22–26 May 2018</a><br>
+				Email: <a href="mailto:congress@aiac2018.de">congress@aiac2018.de</a>
+				 </p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
