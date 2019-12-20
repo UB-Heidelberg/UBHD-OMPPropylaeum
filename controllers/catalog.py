@@ -271,9 +271,12 @@ def index():
     current = int(request.vars.get('page_nr', 1)) - 1
 
     b = Browser(submissions, current, locale, session.get('per_page'), session.get('sort_by'), session.get('filters'))
-    submissions = b.process_submissions(b.submissions)
+    submissions = b.process_submissions(submissions)
 
     return locals()
+
+
+
 
 def preview():
     return locals()
