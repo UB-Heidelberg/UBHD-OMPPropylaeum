@@ -1,0 +1,87 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Acta Didactica Classica
+                {{elif session.forced_language =='en': }}
+                Acta Didactica Classica
+            {{pass}}
+            </h3>
+			<h4> {{if session.forced_language =='de': }}
+                Bielefelder Beiträge zur Didaktik der Alten Sprachen in Schule und Universität
+                {{elif session.forced_language =='en': }}
+                Bielefelder Beiträge zur Didaktik der Alten Sprachen in Schule und Universität
+            {{pass}}
+			</h4>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Reihe ‚Acta Didactica Classica. Bielefelder Beiträge zur Didaktik der Alten Sprachen in Schule und Universität‘ ist an der Schnittstelle zwischen Fachwissenschaft und Fachdidaktik der Alten Sprachen (Latein und Griechisch) verortet. Ein zentrales Ziel der Reihe ist es, die Forschungsdiskurse der Klassischen Philologie und ihrer Nachbardisziplinen mit fachdidaktischen Diskursen in einen Dialog treten zu lassen. Publiziert werden vorrangig Beiträge einschlägiger Tagungen, die zu einem schulrelevanten Thema mit Experten aus Schule und Universität ausgerichtet werden.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/adclass')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+
+           <div id="infoBoxRechts">
+
+                <p><b>Herausgeber</b><br>
+                  Prof. Dr. Lore Benz (Universität Bielefeld)<br />
+                  Dr. Dorit Funke (Universität Bielefeld)<br />
+                  Dr. Jochen Sauer (Universität Bielefeld)<br />
+				 </p>
+				<!--<p><b>ISSN</b><br>
+                2699-5751   (Online)
+				 </p>-->                 
+           </div>
+
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>The series ‚Acta Didactica Classica. Bielefelder Beiträge zur Didaktik der Alten Sprachen in Schule und Universität‘ is placed at the intersection of the academic discourse and the teaching methodology of the classical languages Latin and Greek. The series aims at having the academic and the teaching community of Classics and its related disciplines enter into a fruitful dialog. Primarily articles are published from conferences that deal with topics relevant to school and that are hosted by experts from school and the academic community.</p>
+
+			<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/adclass')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+
+           <div id="infoBoxRechts">
+                <p><b>Editors</b><br />
+                  Prof. Dr. Lore Benz (Universität Bielefeld)<br />
+                  Dr. Dorit Funke (Universität Bielefeld)<br />
+                  Dr. Jochen Sauer (Universität Bielefeld)<br />
+				 </p>
+				<!--<p><b>ISSN</b><br>
+                2699-5751   (Online)
+				</p>-->  
+           </div>
+
+        </div>   
+{{pass}}
+
+</div>
+
+
