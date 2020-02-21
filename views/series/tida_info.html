@@ -1,0 +1,95 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Theoriedenken in der Archäologie (TidA)
+                {{elif session.forced_language =='en': }}
+                Theoriedenken in der Archäologie (TidA)
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Reihe „Theoriedenken in der Archäologie“ (TidA) erscheint ab 2021 im Gold Open Access und Print on Demand. Sie wird von der <a href="http://www.agtida.de/" title="Homepage der AG Theorien in der Archäologie">AG Theorien in der Archäologie</a> herausgegeben und löst die bisher disparaten Publikationen der AG ab. Ziel der Reihe ist es, sowohl Sammelbände, als auch im Einzelfall Monographien zu publizieren, die in der Regel auf Veranstaltungen oder Initiativen der AG zurückgehen. Die Qualität der Bände wird jeweils durch die Herausgeber*innen und durch ein Peer-Review-Verfahren gesichert; Publikationssprachen sind je nach Band deutsch und englisch.</p>
+			<p>Inhaltlich steht die Reihe für eine reflektierte und kritische Wissenschaft und Forschung im Bereich von Theorien und Methoden besonders in der deutschsprachigen, aber auch der internationalen Archäologie und angrenzender Wissenschaften. Der Schwerpunkt liegt dabei auf der wissenschaftlichen Reflexion der theoretisch-methodischen Grundlagen archäologischer Forschung sowie ihrer gesellschaftlichen Bezüge.</p>
+			<!--
+            <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/tida')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+            </div>
+			-->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Herausgeber</b><br>
+                Martin Renger<br />
+                Sophie-Marie Rotermund<br />
+                Stefan Schreiber<br />
+                Alexander Veling<br /><br />
+				<!--
+                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)
+				 -->
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Die Reihe „Theoriedenken in der Archäologie“ (TidA) erscheint ab 2021 im Gold Open Access und Print on Demand. Sie wird von der <a href="http://www.agtida.de/" title="Homepage der AG Theorien in der Archäologie">AG Theorien in der Archäologie</a> herausgegeben und löst die bisher disparaten Publikationen der AG ab. Ziel der Reihe ist es, sowohl Sammelbände, als auch im Einzelfall Monographien zu publizieren, die in der Regel auf Veranstaltungen oder Initiativen der AG zurückgehen. Die Qualität der Bände wird jeweils durch die Herausgeber*innen und durch ein Peer-Review-Verfahren gesichert; Publikationssprachen sind je nach Band deutsch und englisch.</p>
+			<p>Inhaltlich steht die Reihe für eine reflektierte und kritische Wissenschaft und Forschung im Bereich von Theorien und Methoden besonders in der deutschsprachigen, aber auch der internationalen Archäologie und angrenzender Wissenschaften. Der Schwerpunkt liegt dabei auf der wissenschaftlichen Reflexion der theoretisch-methodischen Grundlagen archäologischer Forschung sowie ihrer gesellschaftlichen Bezüge.</p>
+			<!--
+            <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/tida')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+            </div>
+			-->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <p><b>Herausgeber</b><br>
+                Martin Renger<br />
+                Sophie-Marie Rotermund<br />
+                Stefan Schreiber<br />
+                Alexander Veling<br /><br />
+				<!--
+                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)
+				 -->
+				 </p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
