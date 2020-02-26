@@ -1,0 +1,93 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Archäologische Informationen aus Baden-Württemberg  
+                {{elif session.forced_language =='en': }}
+                Archäologische Informationen aus Baden-Württemberg
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Schriftenreihe „Archäologische Informationen aus Baden-Württemberg“ wird vom Landesamt für Denkmalpflege Baden-Württemberg im Eigenverlag herausgegeben und besteht seit 1987. In der Reihe erscheinen in unregelmäßigem Abstand Hefte in einem kompakten Format und mit einem Umfang von zumeist 100–200 Seiten. Sie widmen sich regionalen Themen der archäologischen Denkmalpflege und sind vorwiegend populärwissenschaftlich ausgerichtet. Hinzu treten Begleitbände zu Ausstellungen sowie stärker fachlich orientierte Veröffentlichungen wie Berichte zu wissenschaftlichen Tagungen. Das thematische Spektrum umfasst die gesamte Bandbreite der Archäologie von der Altsteinzeit bis zur Frühen Neuzeit und schließt auch die naturwissenschaftlichen Nachbardisziplinen mit ein.</p>
+            
+            <p>Die „Archäologische Informationen aus Baden-Württemberg“ auf der Internetseite des Landesamts für Denkmalpflege im Regierungspräsidium Stuttgart:
+(´<a href="https://www.denkmalpflege-bw.de/publikationen/reihen/archaeologische-informationen-aus-baden-wuerttemberg/">https://www.denkmalpflege-bw.de/publikationen/reihen/archaeologische-informationen-aus-baden-wuerttemberg/</a>) </p>
+            
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/archber')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+<!--		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+                Priv.-Doz. Dr. Frank Siegmund<br />
+                Dr. Werner Schön<br />
+                Diane Scherzler M.A.<br />
+                Dr. Birgit Gehlen<br /><br />
+                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)
+				 </p>
+           </div>
+        </div>   
+-->
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>The series “Archäologische Informationen aus Baden-Württemberg” (Archaeological Information from Baden-Wuerttemberg) is self-published by the State Office for Cultural Heritage Preservation of Baden-Wuerttemberg since 1987. Issues appear at irregular intervals and have compact size and format with a typical length of 100–200 pages. The series has a focus on regional topics of archaeological heritage conservation and a predominantly popular scientific orientation. It is complemented by companion volumes for exhibitions as well as more specialized publications such as reports on scientific conferences. The thematic spectrum covers the entire range of archeology from the Paleolithic to the Early Modern Era, including related natural sciences.</p>
+            
+            <p>The series “Archäologische Informationen aus Baden-Württemberg” on the internet site of the State Office for Cultural Heritage Preservation:
+(<a href="https://www.denkmalpflege-bw.de/publikationen/reihen/archaeologische-informationen-aus-baden-wuerttemberg/">https://www.denkmalpflege-bw.de/publikationen/reihen/archaeologische-informationen-aus-baden-wuerttemberg/</a>)</p>
+
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                              
+                               <p><a href="{{=URL('catalog', 'series/archber')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+<!--		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>
+
+                <p><b>Editors</b><br>
+                Priv.-Doz. Dr. Frank Siegmund<br />
+                Dr. Werner Schön<br />
+                Diane Scherzler M.A.<br />
+                Dr. Birgit Gehlen<br /><br />
+                Internet: <a href="http://www.dguf.de/index.php?id=354" title="Redaktionswebsite">Redaktionswebsite</a></p>
+				<p><b>ISSN</b><br>
+				 2566-5340 (Print)<br />
+				 2566-5359 (Online)
+				 </p>
+           </div>
+        </div>     -->
+{{pass}}
+
+</div>
+
+
