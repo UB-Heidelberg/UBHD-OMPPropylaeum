@@ -774,6 +774,11 @@ blockquote cite a:visited 				{ color:#555; }
 	color: #eee;
 }
 
+#dropdownMenu1 {
+  background: #0060aa;
+  color: white;
+}
+
 /* --- list style --- */
 
 ul.general {
