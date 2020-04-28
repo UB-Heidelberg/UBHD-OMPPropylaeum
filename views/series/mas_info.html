@@ -1,0 +1,126 @@
+{{extend 'layout.html'}}
+
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Mainzer Althistorische Studien 
+                {{elif session.forced_language =='en': }}
+                Mainzer Althistorische Studien
+            {{pass}}
+            </h3>
+		</div>	
+    
+       <div class="col-lg-3">
+                <article>
+                    <div class="post-image">
+		 	                {{=IMG(_src=URL('static','files/presses/3/series/63-series.jpg'),_width='300px')}}
+                  </div>
+                 </article>
+          </div> 
+		
+		
+       {{if session.forced_language =='de': }}
+
+		<div class="col-lg-6">
+		    <p>Die Schriftenreihe <b>Mainzer Althistorische Studien</b> wird seit 1998 vom Arbeitsbereich Alte Geschichte der Johannes Gutenberg-Universität Mainz herausgegeben. In ihr erscheinen altertumswissenschaftliche Monographien, deren thematisches Spektrum sich von der Religions-, Kultur- und Sozialgeschichte, über die Literatur- und Sprachgeschichte bis hin zur Wirtschaftsgeschichte der griechisch-römischen Antike erstreckt. Publiziert werden vorrangig herausragende, an der Johannes-Gutenberg-Universität Mainz entstandene Qualifikationsschriften. Die Reihe erscheint unregelmäßig und wird seit Band 9 (2020) in Kooperation mit der Universitätsbibliothek Heidelberg im Print-on-Demand-Verfahren erscheinen sowie zeitgleich auch im Open Access frei zum Download bereitgestellt. Die Bände 7 und 8 können als Print-on-Demand-Ausgabe über den Verlag Dr. Kovač bezogen werden. Parallel hierzu werden die älteren Bände digitalisiert und nach Einholung der Nutzungsrechte ebenfalls schrittweise über Propylaeum eBooks online bereitgestellt.</p>
+        <!--
+		<div class="widget">
+          <ul class="tags"> 
+            <li>
+            <p>
+              <a href="{{=URL('catalog', 'series/dcb')}}">{{=T('Volumes')}}</a>
+            </p>
+            </li>
+          </ul>
+        </div>	
+-->		
+	
+    </div>    
+		
+		<div class="col-lg-3">
+		<!--
+              <div id="infoBoxRechts">
+                <p>{{=IMG(_src=URL('static','images/series/dcb_logo.png'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>                
+                Dr. Roxana Kath<br />  
+                Dr. Michaela Rücker<br />
+                Prof. Dr. Reinhold Scholl<br /> 
+                Prof. Dr. Charlotte Schubert<br />
+                </p>
+                <p>
+                <b>Kontakt</b><br />
+                Prof. Dr. Charlotte Schubert<br />
+
+                Lehrstuhl für Alte Geschichte<br />
+                Historisches Seminar<br />
+                Universität Leipzig<br />
+                Beethovenstr. 15<br />
+                D-04107 Leipzig<br />
+                E-Mail: schubert@rz.uni-leipzig.de<br />
+                Internet: <a href="http://www.gko.uni-leipzig.de/historisches-seminar/seminar/alte-geschichte/professur.html" title="Homepage Universität Leipzig, Prof. Charlotte Schubert">Homepage</a>
+                </p>
+				        <p><b>ISSN</b><br>
+				        2566-7890 (Print) <br>
+                2627-5988 (Online)
+				        </p>
+              </div>
+			  -->
+		</div>	  
+
+                     {{elif session.forced_language =='en': }}
+		<div class="col-lg-6">
+		<p>Die Schriftenreihe <b>Mainzer Althistorische Studien</b> wird seit 1998 vom Arbeitsbereich Alte Geschichte der Johannes Gutenberg-Universität Mainz herausgegeben. In ihr erscheinen altertumswissenschaftliche Monographien, deren thematisches Spektrum sich von der Religions-, Kultur- und Sozialgeschichte, über die Literatur- und Sprachgeschichte bis hin zur Wirtschaftsgeschichte der griechisch-römischen Antike erstreckt. Publiziert werden vorrangig herausragende, an der Johannes-Gutenberg-Universität Mainz entstandene Qualifikationsschriften. Die Reihe erscheint unregelmäßig und wird seit Band 9 (2020) in Kooperation mit der Universitätsbibliothek Heidelberg im Print-on-Demand-Verfahren erscheinen sowie zeitgleich auch im Open Access frei zum Download bereitgestellt. Die Bände 7 und 8 können als Print-on-Demand-Ausgabe über den Verlag Dr. Kovač bezogen werden. Parallel hierzu werden die älteren Bände digitalisiert und nach Einholung der Nutzungsrechte ebenfalls schrittweise über Propylaeum eBooks online bereitgestellt.</p>
+        <!--
+		<div class="widget">
+          <ul class="tags"> 
+            <li>
+            <p>
+              <a href="{{=URL('catalog', 'series/dcb')}}">{{=T('Volumes')}}</a>
+            </p>
+            </li>
+          </ul>
+        </div>
+		-->
+		 
+    </div>
+		
+   <div class="col-lg-3">
+   <!--
+              <div id="infoBoxRechts">
+                <p>{{=IMG(_src=URL('static','images/series/dcb_logo.png'),_width='230px')}}</p>
+
+                <p><b>Editors</b><br>                
+                Dr. Roxana Kath<br />  
+                Dr. Michaela Rücker<br />
+                Prof. Dr. Reinhold Scholl<br /> 
+                Prof. Dr. Charlotte Schubert<br />
+                </p>
+                <p>
+                <b>{{=T('Contact')}}</b><br />
+                Prof. Dr. Charlotte Schubert<br />
+
+                Lehrstuhl für Alte Geschichte<br />
+                Historisches Seminar<br />
+                Universität Leipzig<br />
+                Beethovenstr. 15<br />
+                D-04107 Leipzig<br />
+                E-Mail: schubert@rz.uni-leipzig.de<br />
+                Internet: <a href="http://www.gko.uni-leipzig.de/historisches-seminar/seminar/alte-geschichte/professur.html" title="Homepage Universität Leipzig, Information on Prof. Charlotte Schubert">Homepage</a>
+                </p>
+				        <p><b>ISSN</b><br>
+				        2566-7890 (Print)<br>
+                2627-5988 (Online)
+				        </p>
+                
+              </div>
+			  -->
+		</div>	  
+
+{{pass}}
+
+  </div>  
+
+</div>
+
