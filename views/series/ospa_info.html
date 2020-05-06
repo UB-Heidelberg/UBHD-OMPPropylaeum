@@ -1,0 +1,95 @@
+{{extend 'layout.html'}}
+
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Open Series in Prehistoric Archaeology (OSPA)
+                {{elif session.forced_language =='en': }}
+                OSPA – Open Series in Prehistoric Archaeology
+            {{pass}}
+            </h3>
+        </div>
+
+                {{if session.forced_language =='de': }}
+		<div class="col-lg-9">		
+		    <p>ist eine internationale Schriftenreihe für Monographien, Tagungs- und Sammelbände mit wissenschaftlicher Qualitätssicherung (peer review), welche die Gold Open Access und Open Data Veröffentlichung von qualitativ hochwertigen Forschungsergebnissen ermöglicht, wobei wir unser Hauptaugenmerk auf die europäische prähistorische Archäologie richten.</p>
+            <p>Im Geiste von Open Science werden innovative datengetriebene empirische Forschungsergebnisse sowie neue theoretische und methodische Ansätze in digitalem Format online für die Forschungsgemeinschaft frei zugänglich gemacht und gleichzeitig nachhaltige Print-on-Demand Druckexemplare produziert. Wir orientieren uns eng an den wissenschaftlichen Bedürfnissen nach Zugänglichkeit, Transparenz, Reproduzierbarkeit und Unabhängigkeit aktueller global verflochtener Forschungsgemeinschaften.</p>
+            
+                  <!--<div class="widget">
+                        <ul class="tags">
+
+                            <li>
+
+                               <p><a href="{{=URL('catalog', 'series/byzanzoo')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">	
+		
+         <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/byzanzoo_logo.png'),_width='230px')}}</p>-->
+                <p><!--<b>Herausgeber</b><br>
+                Leibniz-WissenschaftsCampus Mainz: Byzanz zwischen Orient und Okzident<br />
+                Dr. Benjamin Fourlas <br />
+                Römisch-Germanisches Zentralmuseum<br />
+                Ernst-Ludwig-Platz 2<br />
+                D-55116 Mainz<br /><br />
+                
+                E-Mail: fourlas@rgzm.de<br />-->
+                Internet: <a href="http://openprehist.archaeological.science/" title="Homepage">Homepage</a></p>
+                <!--<p><b>ISSN</b><br>
+				          2629-2769 (Online)-->
+				</p>
+         </div>
+		</div> 
+
+
+
+
+                     {{elif session.forced_language =='en': }}
+		<div class="col-lg-9">		
+		    <p>Open Series in Prehistoric Archaeology (OSPA) is an international, peer-reviewed series of monographs, conference proceedings and edited volumes, which enables Gold Open Access and Open Data publication of high-quality research with a focus on European prehistoric archaeology.</p> 
+            <p>In the spirit of Open Science, innovative, data-driven, empirical research as well as novel theoretical and methodological approaches will be made freely accessible to researchers in digital form online while sustainable print-on-demand paper copies will also be available. Our principles are closely aligned with the scientific need of today’s globally linked research community for accessibility, transparency, reproducibility and independence.</p>
+            
+                  <!--<div class="widget">
+                        <ul class="tags">
+
+                            <li>
+
+                               <p><a href="{{=URL('catalog', 'series/byzanzoo')}}">{{=T('Volumes')}}</a></p>
+
+                            </li>
+
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">	
+		
+         <div id="infoBoxRechts"><p><!--{{=IMG(_src=URL('static','images/series/byzanzoo_logo.png'),_width='230px')}}</p>-->
+                <p><!--<b>Editors</b><br>
+                Leibniz-WissenschaftsCampus Mainz: Byzanz zwischen Orient und Okzident<br />
+                Dr. Benjamin Fourlas <br />
+                Römisch-Germanisches Zentralmuseum<br />
+                Ernst-Ludwig-Platz 2<br />
+                D-55116 Mainz<br /><br />
+                
+                E-Mail: fourlas@rgzm.de<br />-->
+                Internet: <a href="http://openprehist.archaeological.science/" title="Homepage">Homepage</a></p>
+                <!--<p><b>ISSN</b><br>
+				          2629-2769 (Online)-->
+				</p>
+         </div>
+		</div> 
+
+
+{{pass}}
+
+        </div>
+    </div>
+
+
