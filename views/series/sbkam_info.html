@@ -1,0 +1,79 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3> 
+                Schweizer Beiträge zur Kulturgeschichte und Archäologie des Mittelalters
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die «Schweizer Beiträge zur Kulturgeschichte und Archäologie des Mittelalters» SBKAM werden seit 1974 als einmal jährlich erscheinendes wissenschaftliches Jahrbuch vom Schweizerischen Burgenverein herausgegeben.</p>
+            <p>Entsprechend den statutengemässen Vereinszielen dient das Jahrbuch der Präsentation und Verbreitung aktueller Forschungsergebnisse der mittelalterlichen und frühneuzeitlichen Archäologie und Kulturgeschichte. Im Zentrum steht insbesondere die Präsentation von Forschungen zu mittelalterlichen Burgen und neuzeitlichen Schlössern, aber ebenso zu Klöstern, Kirchen und ländlichen wie städtischen Siedlungen sowie zur Sachkultur. Das Jahrbuch soll aktuelle wissenschaftliche Forschungsergebnisse so präsentieren, dass sie auch für interessierte Nichtfachleute verständlich sind.</p>
+            <p>SBKAM ist offen für Beiträge von Autoren aller archäologischen oder verwandten Disziplinen. Den geographischen Rahmen bildet die Schweiz, wobei Vergleiche und Einordnungen der untersuchten Fragestellungen in grössere Zusammenhänge erwünscht sind.</p>
+            <p>Die Beiträge in den SBKAM unterliegen einem Peer-Review-Verfahren durch Gutachter aus dem Kreis der Redaktionskommission; gegebenenfalls werden unabhängige externe Gutachter beigezogen.</p>
+            <p>SBKAM erscheint als Buch im Format A4. Es wird den Mitgliedern des Schweizerischen Burgenvereins als Jahresgabe abgegeben. Publikationssprache ist Deutsch mit Zusammenfassungen ins Französische, Italienische und Englische.</p>
+           <div class="widget">
+                <ul class="tags">
+                       <li>
+                        <p><a href="{{=URL('catalog', 'series/sbkam')}}">{{=T('Volumes')}}</a></p>
+                       </li>
+                </ul>
+          </div>
+		</div>
+		
+		<!--<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/baw_logo.png'),_width='230px')}}</p>
+
+                <p><b>Herausgeber</b><br>
+				LWL-Archäologie für Westfalen<br />
+				An den Speichern 7<br />
+				48157 Münster</p>
+                <p>
+				E-Mail: lwl-archaeologie@lwl.org<br />
+				Internet: <a href="https://www.lwl-archaeologie.de/de/" title="Link zur Homepage">www.lwl-archaeologie.de</a>
+				</p>
+
+           </div>
+        </div>-->   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Die «Schweizer Beiträge zur Kulturgeschichte und Archäologie des Mittelalters» SBKAM werden seit 1974 als einmal jährlich erscheinendes wissenschaftliches Jahrbuch vom Schweizerischen Burgenverein herausgegeben.</p>
+            <p>Entsprechend den statutengemässen Vereinszielen dient das Jahrbuch der Präsentation und Verbreitung aktueller Forschungsergebnisse der mittelalterlichen und frühneuzeitlichen Archäologie und Kulturgeschichte. Im Zentrum steht insbesondere die Präsentation von Forschungen zu mittelalterlichen Burgen und neuzeitlichen Schlössern, aber ebenso zu Klöstern, Kirchen und ländlichen wie städtischen Siedlungen sowie zur Sachkultur. Das Jahrbuch soll aktuelle wissenschaftliche Forschungsergebnisse so präsentieren, dass sie auch für interessierte Nichtfachleute verständlich sind.</p>
+            <p>SBKAM ist offen für Beiträge von Autoren aller archäologischen oder verwandten Disziplinen. Den geographischen Rahmen bildet die Schweiz, wobei Vergleiche und Einordnungen der untersuchten Fragestellungen in grössere Zusammenhänge erwünscht sind.</p>
+            <p>Die Beiträge in den SBKAM unterliegen einem Peer-Review-Verfahren durch Gutachter aus dem Kreis der Redaktionskommission; gegebenenfalls werden unabhängige externe Gutachter beigezogen.</p>
+            <p>SBKAM erscheint als Buch im Format A4. Es wird den Mitgliedern des Schweizerischen Burgenvereins als Jahresgabe abgegeben. Publikationssprache ist Deutsch mit Zusammenfassungen ins Französische, Italienische und Englische.</p>
+           <div class="widget">
+                <ul class="tags">
+                       <li>
+                        <p><a href="{{=URL('catalog', 'series/sbkam')}}">{{=T('Volumes')}}</a></p>
+                       </li>
+                </ul>
+          </div>
+		</div>
+		
+		<!--<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/baw_logo.png'),_width='230px')}}</p>
+
+                <p><b>Editors</b><br>
+				LWL-Archäologie für Westfalen<br />
+				An den Speichern 7<br />
+				48157 Münster</p>
+                <p>
+				E-Mail: lwl-archaeologie@lwl.org<br />
+				Internet: <a href="https://www.lwl-archaeologie.de/de/" title="Link zur Homepage">www.lwl-archaeologie.de</a>
+				</p>
+           </div>
+        </div>-->  
+{{pass}}
+
+</div>
+
+
