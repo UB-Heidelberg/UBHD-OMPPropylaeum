@@ -774,6 +774,17 @@ blockquote cite a:visited 				{ color:#555; }
 	color: #eee;
 }
 
+/* Button-Leiste auf Buchseite */
+
+.summary > .btn-group:first-child > .btn.btn-default:first-child {
+  background: #0060aa;
+}
+
+.summary > .btn-group:first-child > .btn.btn-default:first-child > a {
+  color: #ffffff;
+}
+
+
 #dropdownMenu1 {
   background: #0060aa;
   color: white;
