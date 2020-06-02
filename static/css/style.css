@@ -776,6 +776,10 @@ blockquote cite a:visited 				{ color:#555; }
 
 /* Button-Leiste auf Buchseite */
 
+.btn.btn-default > a {
+    font-weight: normal;
+}
+
 .summary > .btn-group:first-child > .btn.btn-default:first-child {
   background: #0060aa;
 }
