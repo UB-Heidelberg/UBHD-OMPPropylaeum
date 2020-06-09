@@ -166,7 +166,33 @@
 			</div>   
 		</div>	
 
-		
+		<div class="container" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>International Congress of Roman Frontier Studies</b><br>
+							<b>Akten des ... Internationalen Limeskongresses</b>
+							
+						</div>	
+						<!--<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint Ende 2018
+							{{elif session.forced_language =='en': }}
+							Coming end of 2018
+							{{pass}}
+						</p>-->
+					</article>
+				</div>
+			</div>
+		</div>		
 			<div class="container" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
@@ -222,33 +248,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container" height="400px">
-			<div class="row">
-				<div class="col-lg-2">
-					<article>
-						<div class="post-image">
-						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
-						</div>
-					</article>
-				</div>
-				<div class="col-lg-9">
-					<article>
-						<div class="post-heading">
-						    <b>International Congress of Roman Frontier Studies</b><br>
-							<b>Akten des ... Internationalen Limeskongresses</b>
-							
-						</div>	
-						<!--<p>
-						    {{if session.forced_language =='de': }}
-							Erscheint Ende 2018
-							{{elif session.forced_language =='en': }}
-							Coming end of 2018
-							{{pass}}
-						</p>-->
-					</article>
-				</div>
-			</div>
-		</div>
+
 		<div class="container" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
@@ -261,9 +261,9 @@
 				<div class="col-lg-9">
 					<article>	
 						<div class="post-heading">
-						    <b>AG Theorien in der Archäologie (Hrsg.)</b><br>
-							<b><a href="{{=URL('series','info/tida')}}" title="Informationen über die Reihe Theoriedenken in der Archäologie (TidA)">Theoriedenken in der Archäologie (TidA)</a></b>							
+							<b><a href="{{=URL('series','info/chnt')}}" title="Informationen über die Reihe Conference of Cultural Heritage and New Technologies">Conference of Cultural Heritage and New Technologies</a></b>							
 						</div>
+						<!--
 						<p>
 						    {{if session.forced_language =='de': }}
 							Erscheint voraussichtlich im Frühjahr 2021
@@ -271,6 +271,7 @@
 							Estimated Coming in spring 2021
 							{{pass}}
 						</p>
+						-->
 					</article>
 				</div>
 			</div>
@@ -346,9 +347,9 @@
 				<div class="col-lg-9">
 					<article>	
 						<div class="post-heading">
-							<b><a href="{{=URL('series','info/chnt')}}" title="Informationen über die Reihe Conference of Cultural Heritage and New Technologies">Conference of Cultural Heritage and New Technologies</a></b>							
+						    <b>AG Theorien in der Archäologie (Hrsg.)</b><br>
+							<b><a href="{{=URL('series','info/tida')}}" title="Informationen über die Reihe Theoriedenken in der Archäologie (TidA)">Theoriedenken in der Archäologie (TidA)</a></b>							
 						</div>
-						<!--
 						<p>
 						    {{if session.forced_language =='de': }}
 							Erscheint voraussichtlich im Frühjahr 2021
@@ -356,9 +357,10 @@
 							Estimated Coming in spring 2021
 							{{pass}}
 						</p>
-						-->
 					</article>
 				</div>
 			</div>
 		</div>
+		
+
 		</div>
