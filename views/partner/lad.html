@@ -1,0 +1,87 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart 
+                {{elif session.forced_language =='en': }}
+                Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart
+            {{pass}}
+            </h3>
+		</div>
+</div>
+
+<div class="row">
+		{{if session.forced_language =='de': }}
+			<div class="col-lg-9">                
+					<p>Das Landesamt für Denkmalpflege ist die für Fragen des Denkmalschutzes zuständige Fachbehörde des Landes Baden-Württemberg. Mit Erlass des Denkmalschutzgesetzes 1972 gegründet, ist es nach Strukturreformen in den Jahren 2005 und 2014 heute ins Regierungspräsidium Stuttgart eingegliedert und untersteht dem Ministerium für Wirtschaft, Arbeit und Wohnungsbau Baden-Württemberg als Oberster Denkmalschutzbehörde. Zu den Aufgaben des Landesamts für Denkmalpflege gehört, Kulturdenkmale zu erfassen, zu dokumentieren und zu erforschen, Eigentümer zu beraten und das kulturelle Erbe sowie Maßnahmen zu seinem Erhalt in der Öffentlichkeit zu vermitteln.</p>
+                    <p>Das Landesamt für Denkmalpflege gibt verschiedene <a href="https://www.denkmalpflege-bw.de/publikationen/" title="Homepage Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart, Übersicht der Publikationen">Zeitschriften, Reihen und Einzelpublikationen</a> mit unterschiedlicher Ausrichtung heraus. Sie decken das gesamte Spektrum der archäologischen Denkmalpflege und der Bau- und Kunstdenkmalpflege ab und richten sich teils an Fachpublikum, teils an eine breitere Öffentlichkeit.</p>
+                    <p>In Kooperation mit Propylaeum eBooks werden derzeit die Bände der folgenden Zeitschriften und Reihen im Open Access verfügbar gemacht:</p>
+                        <ul>
+                            <li><a href="https://journals.ub.uni-heidelberg.de/index.php/nbdpfbw/index" title="Homepage Denkmalpflege in Baden-Württemberg – Nachrichtenblatt der Landesdenkmalpflege">Denkmalpflege in Baden-Württemberg – Nachrichtenblatt der Landesdenkmalpflege</a></li>
+                            <li><a href="https://journals.ub.uni-heidelberg.de/index.php/fbbw/index" title="Homepage Fundberichte aus Baden-Württemberg">Fundberichte aus Baden-Württemberg</a></li>
+                            <li><a href="https://journals.ub.uni-heidelberg.de/index.php/swbhbf/index" title="Homepage Südwestdeutsche Beiträge zur historischen Bauforschung">Südwestdeutsche Beiträge zur historischen Bauforschung</a></li>
+                            <li><a href="https://books.ub.uni-heidelberg.de/propylaeum/series/info/fbarchbw" title="Homepage Propylaeum eBooks, Forschungen und Berichte zur Archäologie in Baden-Württemberg">Forschungen und Berichte zur Archäologie in Baden-Württemberg</a></li>
+                            <li><a href="https://books.ub.uni-heidelberg.de/propylaeum/series/info/aibw" title="Homepage Propylaeum eBooks, Archäologische Informationen aus Baden-Württemberg">Archäologische Informationen aus Baden-Württemberg</a></li>
+                        </ul>    
+
+
+			</div>
+
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+						<p>{{=IMG(_src=URL('static','images/partner/lad_logo.png'),_width='250px')}}</p>
+					   
+						<p><b>Kontakt</b><br>
+						Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart
+                        Berliner Straße 12
+                        73728 Esslingen am Neckar<br /><br />
+						Tel.: +49 711 904 45-109<br />
+                        Fax: +49 711 904 45-444<br /><br />
+                        E-Mail: abteilung8@rps.bwl.de
+						Internet: <a href="https://denkmalpflege-bw.de" title="Homepage Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart">denkmalpflege-bw.de</a><br /><br />
+                        Fachgebiet Publikationswesen<br />
+                        Dr. Thomas Link<br />
+                        Tel.: +49 711 904 45-228<br />
+                        E-Mail: publikationen_lad@rps.bwl.de</p></p>						
+				</div>                
+			</div>		
+			 
+		{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">                
+					<p>Das Landesamt für Denkmalpflege ist die für Fragen des Denkmalschutzes zuständige Fachbehörde des Landes Baden-Württemberg. Mit Erlass des Denkmalschutzgesetzes 1972 gegründet, ist es nach Strukturreformen in den Jahren 2005 und 2014 heute ins Regierungspräsidium Stuttgart eingegliedert und untersteht dem Ministerium für Wirtschaft, Arbeit und Wohnungsbau Baden-Württemberg als Oberster Denkmalschutzbehörde. Zu den Aufgaben des Landesamts für Denkmalpflege gehört, Kulturdenkmale zu erfassen, zu dokumentieren und zu erforschen, Eigentümer zu beraten und das kulturelle Erbe sowie Maßnahmen zu seinem Erhalt in der Öffentlichkeit zu vermitteln.</p>  
+                    <p>Das Landesamt für Denkmalpflege gibt verschiedene <a href="https://www.denkmalpflege-bw.de/publikationen/" title="Homepage Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart, Übersicht der Publikationen">Zeitschriften, Reihen und Einzelpublikationen</a> mit unterschiedlicher Ausrichtung heraus. Sie decken das gesamte Spektrum der archäologischen Denkmalpflege und der Bau- und Kunstdenkmalpflege ab und richten sich teils an Fachpublikum, teils an eine breitere Öffentlichkeit.</p>
+                    <p>In Kooperation mit Propylaeum eBooks werden derzeit die Bände der folgenden Zeitschriften und Reihen im Open Access verfügbar gemacht:</p>
+                        <ul>
+                            <li><a href="https://journals.ub.uni-heidelberg.de/index.php/nbdpfbw/index" title="Homepage Denkmalpflege in Baden-Württemberg – Nachrichtenblatt der Landesdenkmalpflege">Denkmalpflege in Baden-Württemberg – Nachrichtenblatt der Landesdenkmalpflege</a></li>
+                            <li><a href="https://journals.ub.uni-heidelberg.de/index.php/fbbw/index" title="Homepage Fundberichte aus Baden-Württemberg">Fundberichte aus Baden-Württemberg</a></li>
+                            <li><a href="https://journals.ub.uni-heidelberg.de/index.php/swbhbf/index" title="Homepage Südwestdeutsche Beiträge zur historischen Bauforschung">Südwestdeutsche Beiträge zur historischen Bauforschung</a></li>
+                            <li><a href="https://books.ub.uni-heidelberg.de/propylaeum/series/info/fbarchbw" title="Homepage Propylaeum eBooks, Forschungen und Berichte zur Archäologie in Baden-Württemberg">Forschungen und Berichte zur Archäologie in Baden-Württemberg</a></li>
+                            <li><a href="https://books.ub.uni-heidelberg.de/propylaeum/series/info/aibw" title="Homepage Propylaeum eBooks, Archäologische Informationen aus Baden-Württemberg">Archäologische Informationen aus Baden-Württemberg</a></li>
+                        </ul>                        
+			</div>
+			
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+						<p>{{=IMG(_src=URL('static','images/partner/lad_logo.png'),_width='250px')}}</p>
+						<p><b>Kontakt</b><br>
+						Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart
+                        Berliner Straße 12
+                        73728 Esslingen am Neckar<br /><br />
+						Tel.: +49 711 904 45-109<br />
+                        Fax: +49 711 904 45-444<br /><br />
+                        E-Mail: abteilung8@rps.bwl.de
+						Internet: <a href="https://denkmalpflege-bw.de" title="Homepage Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart">denkmalpflege-bw.de</a><br /><br />
+                        Fachgebiet Publikationswesen<br />
+                        Dr. Thomas Link<br />
+                        Tel.: +49 711 904 45-228<br />
+                        E-Mail: publikationen_lad@rps.bwl.de</p>	
+                        
+				</div>                
+			</div>
+	  
+		{{pass}}
+
+</div>
+
+ 
