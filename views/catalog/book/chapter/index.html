@@ -27,9 +27,9 @@
                 </div>
                 <div class="col-lg-9">
                     <article>
+                        <!--vgwPixelCall script - has to be included before pdf_galley.html and chapter_list.html -->
+                        {{include '../static/omp-resources/views/catalog/vgwort.html'}}
                         <div class="summary">
-
-
                         {{include 'catalog/book/chapter/html_galley.html'}}
                         {{include 'catalog/book/chapter/pdf_galley.html'}}
                         <!--purchase -->
