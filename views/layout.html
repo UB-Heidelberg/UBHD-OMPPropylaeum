@@ -68,10 +68,10 @@
                 <ul class="nav nav-pills pull-right">
                     <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
                       {{if session.forced_language =='de': }}
-                    <li><a href="https://www.uni-heidelberg.de/datenschutzerklaerung_web.html" style="padding-right: 0;">{{=T('Privacy Notice')}}</a></li>  
+                    <li><a href="https://www.uni-heidelberg.de/datenschutzerklaerung_web.html" style="padding-right: 0;">{{=T('Privacy Notice')}}</a></li>
                       {{elif session.forced_language =='en': }}
-                    <li><a href="https://www.uni-heidelberg.de/privacypolicy_web.html" style="padding-right: 0;">{{=T('Privacy Notice')}}</a></li>    
-            {{pass}}                     
+                    <li><a href="https://www.uni-heidelberg.de/privacypolicy_web.html" style="padding-right: 0;">{{=T('Privacy Notice')}}</a></li>
+            {{pass}}
                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
                     <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
                     <!--<li><a href="faq.html">FAQ |</a></li>-->
@@ -84,14 +84,14 @@
 
             </div>
 		   </div>
- 
+
 		   <div id="headerLogo" class="print-url">
 			   <div class="container">
 					<img alt="" id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
 					<img alt="" id="heiup-logo-print" class="print" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
 			   </div>
-           </div>		
-		   
+           </div>
+
 	       <div class="navbar navbar-default navbar-static-top">
 				<div class="container">
 					<div class="navbar-header">
@@ -115,7 +115,7 @@
 							</li>
 							<li><a href="{{=URL('catalog','index')}}">{{=T('Books')}}</a></li>
 							<li><a href="{{=URL('series','index')}}">{{=T('Series')}}</a></li>
-							<li><a href="{{=URL('catalog','preview')}}">{{=T('Preview')}}</a></li>							
+							<li><a href="{{=URL('catalog','preview')}}">{{=T('Preview')}}</a></li>
 							<!--<li><a href="{{=URL('journals','index')}}">{{=T('Journals')}}</a></li>-->
 						<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
@@ -144,7 +144,7 @@
 							</li>
 
 							<li><a href="{{=URL('propylaeum','index')}}">{{=T('Propylaeum')}}</a></li>
-						   
+
 						</ul>
 					</div>
 
@@ -155,7 +155,7 @@
 												<map name="socialmap">
 													{{if request.url=='/': }}
 													{{request.url=request.url+myconf.take('web.application')}}
-													{{pass}}	
+													{{pass}}
 													<area shape="rect" coords="0,0,30,30" alt="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{=myconf.take('web.url')+request.url}}">
 													<area shape="rect" coords="30,0,60,30" alt="Twitter" href="http://twitter.com/home?status={{=myconf.take('web.url')+request.url}}">
 													<area shape="rect" coords="60,0,90,30" alt="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{=myconf.take('web.url')+request.url}}">
@@ -163,19 +163,35 @@
 										</li>
 						</ul>
 					</div>
-					
+                    <!-- BEGIN Searchbox -->
+                    <!-- von nw auskommentiert 16.10.2020 -->
+                    <!-- <form class="navbar-form navbar-right" action="{{=URL(c='search',f='index')}}" role="search" >
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="sr-only" for="navbar-search-input">{{=T('search term')}}</label>
+                                <input id="navbar-search-input" type="text" class="form-control" placeholder="{{=T('Search')}}" name="q" style="width: 150px"/>
+                                <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                              <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                          </span>
+                            </div>
+                        </div>
+                    </form>
+                    -->
+                    <!-- END Searchbox -->
 			    </div>
 			</div>
-			
+
 			<div id="headerBild">
 		       <div class="container">
 				   <img alt="" src="{{=URL('static','images/press/home/slideshow/01_nicolini.jpg')}}" />
 			   </div>
 		   </div>
-		   
+
 	   </header>
-					
-       <section id="content">	       
+
+       <section id="content">
 	       <div class="container">
 		         <div class="abstand" style="height:30px;"></div>
 		        {{block center}}
@@ -183,9 +199,9 @@
 				{{end}}
 				<div class="abstand" style="height:30px;"></div>
 	       </div>
-	   </section>                 
+	   </section>
 
-	   <footer>			
+	   <footer>
 			<div class="container">
 				<div class="row">
 									<div class="col-lg-3">
@@ -211,10 +227,10 @@
 									  </div>
 									</div>
 				</div>
-			</div>	
+			</div>
 	   </footer>
 	</div>
-	
+
     <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
   </body>
 </html>
