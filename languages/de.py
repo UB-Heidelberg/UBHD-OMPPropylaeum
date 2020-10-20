@@ -386,6 +386,7 @@
 'Rückenart': 'Rückenart',
 'Save model as...': 'Speichere Vorlage als...',
 'Search': 'Suche',
+'search term': 'Suchbegriff',
 'Semantic': 'Semantik',
 'Send': 'Verschicken',
 'Sendedatum': 'Sendedatum',
