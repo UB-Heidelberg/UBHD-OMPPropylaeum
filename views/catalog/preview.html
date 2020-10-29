@@ -42,37 +42,7 @@
 			</div>
 		</div>   
 			     
-
-
-
-		<div class="container" id="orfanos" height="400px">
-			<div class="row">
-				<div class="col-lg-2">
-					<article>
-						<div class="post-image">
-						{{=IMG(_src=URL('static','images/catalog/cover_orfanos.jpg'),_style='width:230px')}}
-						</div>
-					</article>
-				</div>
-				<div class="col-lg-9">
-					<article>
-						<div class="post-heading">
-						    <b>Vassilis Orfanos / Βασίλης Ορφανός</b><br />
-							<b>Turkish loanwords in Cretan Greek. Turkish loanwords in Cretan Greek. Gathered from dictionaries, textes, and oral speech<br>
-                                Τουρκικά δάνεια στα ελληνικά της Κρήτης. Συναγωγή από λεξικά, κείμενα και προφορικό λόγο</b><br />
-
-						</div>	
-						<p>
-						    {{if session.forced_language =='de': }}
-							Erscheint im Winter 2020
-							{{elif session.forced_language =='en': }}
-							Coming Winter 2020
-							{{pass}}
-						</p>
-					</article>
-				</div>
-			</div>
-		</div> 
+ 
 		
 		<div class="container" id="zoeller" height="400px">
 			<div class="row">
@@ -113,6 +83,32 @@
 				</h4>
 			</div>   
 		</div>	
+		<div class="container" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>	
+						<div class="post-heading">
+						    <b>Forschungsberichte des Landesmuseums für Vorgeschichte Halle</b><br>
+							<!--<b><a href="{{=URL('series','info/tida')}}" title="Informationen über die Reihe Theoriedenken in der Archäologie (TidA)">Forschungsberichte des Landesmuseums für Vorgeschichte Halle</a></b>-->							
+						</div>
+						<!--<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint voraussichtlich im Frühjahr 2021
+							{{elif session.forced_language =='en': }}
+							Estimated Coming in spring 2021
+							{{pass}}
+						</p>-->
+					</article>
+				</div>
+			</div>
+		</div>        
 
 		<div class="container" height="400px">
 			<div class="row">
@@ -256,6 +252,9 @@
 				</div>
 			</div>
 		</div>
+
+
+
 		
 
 		</div>
