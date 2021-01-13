@@ -1,0 +1,91 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+Archäologentage Otzenhausen – Archäologie in der Großregion
+                {{elif session.forced_language =='en': }}
+Archäologentage Otzenhausen – Archäologie in der Großregion           
+             {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Seit 2014 veranstalten die Europäische Akademie Otzenhausen und die Gemeinde Nonnweiler das grenzüberschreitende Symposium „Archäologentage Otzenhausen – Archäologie in der Großregion“ (hier: Saarland, Lothringen, Luxemburg, Rheinland-Pfalz, Wallonien und Elsass). Archäologen aus Universitäten, Denkmalämtern, Museen und Grabungsprojekten in der o.g. Region berichten über ihre Arbeit und Forschungsergebnisse bzw. -fortschritte. Auch der wissenschaftliche Nachwuchs erhält die Möglichkeit, seine Arbeit vorzustellen. Die 4-tägigige Veranstaltung umfasst jeweils etwa 18-20 Vorträge und eine umfangreiche Posterpräsentation mit Büchertischen. Zusätzlich stehen Exkursionen zu Fundstellen und Museen der Großregion auf dem Programm.</p>
+<p>Die Tagung richtet sich sowohl an Fachleute als auch an Interessierte und steht somit jedem offen. Die Vorträge werden simultan deutsch-französisch gedolmetscht. Ziel ist es, den informellen Austausch und die Kontakte in der Großregion zu fördern sowie die Öffentlichkeit für die Belange der Archäologie zu sensibilisieren.</p>
+.</p>
+                    <div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/ato')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+
+           <!--<div id="infoBoxRechts">
+
+                <p><b>Herausgeber</b><br>
+                  Prof. Dr. Lore Benz<br />
+                  (Universität Bielefeld)<br />
+                  Dr. Dorit Funke<br />
+                  (Universität Bielefeld)<br />
+                  Dr. Jochen Sauer<br />
+                  (Universität Bielefeld)<br />
+				 </p>
+				<p><b>ISSN</b><br>
+                2569-0337 (Print) <br>
+                2699-6332 (Online)
+				 </p>                 
+           </div>       -->
+
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Since 2014, the Europäische Akademie Otzenhausen and the community of Nonnweiler have been organising the cross-border symposium "Otzenhausen Archaeology Days - Archaeology in the Greater Region" (here: Saarland, Lorraine, Luxembourg, Rhineland-Palatinate, Wallonia and Alsace). Archaeologists from universities, authorities for the preservation of historic buildings and monuments, museums and excavation projects in the above-mentioned region report on their work and research results and/or progress. Young researchers are also given the opportunity to present their work. The 4-day event includes about 18-20 lectures, an extensive poster presentation and a book sale. Excursions to sites and museums in the Greater Region add to the programme.</p>
+            <p>The conference is directed at both experts and interested parties and is therefore open to everyone. The lectures are simultaneously interpreted in German and French. The objective is to promote informal exchange and contacts in the Greater Region and to raise public awareness of archaeological issues.</p>
+
+			<div class="widget">
+                        <ul class="tags">
+             
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/ato')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                              
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+
+          <!-- <div id="infoBoxRechts">
+                <p><b>Editors</b><br />
+                  Prof. Dr. Lore Benz<br />
+                  (Universität Bielefeld)<br />
+                  Dr. Dorit Funke<br />
+                  (Universität Bielefeld)<br />
+                  Dr. Jochen Sauer<br />
+                  (Universität Bielefeld)<br />
+				 </p>
+				<p><b>ISSN</b><br>
+                2699-5751   (Online)
+				</p>  
+           </div>-->
+
+        </div>   
+{{pass}}
+
+</div>
+
+
