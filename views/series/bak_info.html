@@ -1,0 +1,78 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3> 
+                Beiträge zur Altägyptischen Kunst 
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die „Beiträge zur Altägyptischen Kunst" (BAK) werden im Auftrag des Roemer- und Pelizaeus-Museums Hildesheim herausgegeben und erscheinen ab 2021 in loser Folge. Die Reihe widmet sich speziell der ägyptologischen Kunst- und Bildforschung.</p>
+			<p>Besonderes Anliegen ist es, die besprochenen Kunstwerke auf nachvollziehbare Weise zu analysieren, zu interpretieren und sich dabei auch mit angewandten Termini, kunsttheoretischen Ansätze und Methoden auseinanderzusetzen. </p>
+			<p>In der BAK-Reihe werden überwiegend Sammelbände publiziert, die Beiträge zu übergeordneten Themen oder in Workshops und Tagungen präsentierte Vorträge bündeln. Aufgenommen werden auch Monographien, sofern sie methodisch fundierte, neue und qualitätsvolle Forschungsergebnisse zur Kunst des Alten Ägypten darbieten.</p>
+			<p>Die Bände erscheinen bei Propylaeum-eBooks kostenfrei im Open Access und werden zeitgleich als Hardcover-Bücher im Print-on-Demand-Verfahren angeboten.</p>
+<!--
+           <div class="widget">
+                <ul class="tags">
+                       <li>
+                        <p><a href="{{=URL('catalog', 'series/bak')}}">{{=T('Volumes')}}</a></p>
+                       </li>
+                </ul>
+          </div>
+		  -->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/bak_logo.png'),_width='230px')}}</p>-->
+
+                <p><b>Herausgeber</b><br>
+				Roemer- und Pelizaeus-Museum Hildesheim gGmbH<br />
+				Am Steine 1-2<br />
+				31134 Hildesheim</p>
+                <p>
+				E-Mail: info@rpmuseum.de
+				</p>
+
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>The series „Beiträge zur Altägyptischen Kunst" ((“Contributions to ancient Egyptian art” – BAK) has been published since 2021 on behalf of the Roemer and Pelizaeus Museum Hildesheim and appears in loose succession. This series is specifically dedicated to Art Research and Visual Culture Studies in Egyptology.</p>             
+			<p>Of particular concern is traceable to analyse and interpret the discussed artworks and thereby also to reflect on used terms, art-theoretical approaches and methods. In the BAK-series mainly anthologies are published which bundle articles to superordinate topics or papers collected from workshops and conferences. Monographs are also included, provided they offer methodically founded, new and high-quality research results on the art of Ancient Egypt. </p>
+			<p>The volumes are published by Propylaeum-eBooks in open access free of charge and simultaneously as hardcover books in print-on-demand process.</p>
+			<!--
+          <div class="widget">
+                <ul class="tags">
+                       <li>
+                        <p><a href="{{=URL('catalog', 'series/baw')}}">{{=T('Volumes')}}</a></p>
+                       </li>
+                </ul>
+          </div>
+		  -->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><!--<p>{{=IMG(_src=URL('static','images/series/bak_logo.png'),_width='230px')}}</p>-->
+
+                <p><b>Editors</b><br>
+				Roemer- und Pelizaeus-Museum Hildesheim gGmbH<br />
+				Am Steine 1-2<br />
+				31134 Hildesheim</p>
+                <p>
+				E-Mail: info@rpmuseum.de
+				</p>
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
