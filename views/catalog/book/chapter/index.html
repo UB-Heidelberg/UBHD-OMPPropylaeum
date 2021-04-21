@@ -61,6 +61,9 @@
                                                         {{target='_blank'}}
                                                     {{else:}}
                                                         {{format='PDF'}}
+                                                        {{vgwPixelPublic = c_file.settings.getLocalizedValue("vgWortPublic", "")
+                                                        onclick = "vgwPixelCall('" + vgwPixelPublic+ "')" if vgwPixelPublic else ""}}
+
                                                         {{css_class="fa fa-file-text-o fa-lg"}}
                                                         {{target='_self'}}
                                                     {{pass}} <!--- if xml -->
@@ -68,7 +71,7 @@
                                                 <div class="chapter_cell"> {{=format}}</div>
                                                 <div class="chapter_cell">
                                                     <div class="chapter_file pull-right">
-                                                        {{=A(I(_class=css_class),_target=target, _href=downloadLink(request, c_file.attributes, myconf.take('web.url'), c_file.settings.getLocalizedValue('vgWortPublic', '')))}}
+                                                        {{=A(I(_class=css_class),_target=target, _href=downloadLink(request, c_file.attributes, myconf.take('web.url'), _onclick=onclick))}}
                                                     </div>
                                                 </div>
                                                 <div class="chapter_cell"> </div>
