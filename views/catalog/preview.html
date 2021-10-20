@@ -12,6 +12,35 @@
 	</div>
 
 		
+	<div class="container" id="schrenk" height="400px">
+		<div class="row">
+			<div class="col-lg-2">
+				<article>
+					<div class="post-image">
+					{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+					</div>
+				</article>
+			</div>
+			<div class="col-lg-9">
+				<article>
+					<div class="post-heading">
+						<b>Sabine Schrenk, Ute Verstegen (Hrsg.)</b><br />
+						<b>Forschungsgeschichte als Aufbruch. Beiträge zur Geschichte der Christlichen Archäologie und Byzantinischen Kunstgeschichte, XXIV. Tagung der Arbeitsgemeinschaft Christliche Archäologie, Bonn, 10.–12. Mai 2018</b>
+
+					</div>	
+					<p>
+						{{if session.forced_language =='de': }}
+						Erscheint im Winter 2021/2022
+						{{elif session.forced_language =='en': }}
+						Coming Winter 2021/2022
+						{{pass}}
+					</p>
+				</article>
+			</div>
+		</div>
+	</div>	
+
+
 
 		<div class="container" id="doehl" height="400px">
 			<div class="row">
@@ -125,37 +154,6 @@
 				</div>
 			</div>
 		</div>          
-
-
-		<div class="container" id="schrenk" height="400px">
-			<div class="row">
-				<div class="col-lg-2">
-					<article>
-						<div class="post-image">
-						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
-						</div>
-					</article>
-				</div>
-				<div class="col-lg-9">
-					<article>
-						<div class="post-heading">
-						    <b>Sabine Schrenk, Ute Verstegen (Hrsg.)</b><br />
-							<b>Forschungsgeschichte als Aufbruch. Beiträge zur Geschichte der Christlichen Archäologie und Byzantinischen Kunstgeschichte, XXIV. Tagung der Arbeitsgemeinschaft Christliche Archäologie, Bonn, 10.–12. Mai 2018</b>
-
-						</div>	
-						<p>
-						    {{if session.forced_language =='de': }}
-							Erscheint im Winter 2022
-							{{elif session.forced_language =='en': }}
-							Coming Winter 2022
-							{{pass}}
-						</p>
-					</article>
-				</div>
-			</div>
-		</div>		
-
-
 
 
 		<div class="row">
