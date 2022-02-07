@@ -52,7 +52,7 @@
 			<div class="col-lg-9">
 				<article>
 					<div class="post-heading">
-						<b>Sabine Schrenk, Ute Verstegen (Hrsg.)</b><br />
+						<b>Sabine Schrenk, Ute Verstegen {{=T('(Eds.)')}}</b><br />
 						<b>Forschungsgeschichte als Aufbruch. Beiträge zur Geschichte der Christlichen Archäologie und Byzantinischen Kunstgeschichte, XXIV. Tagung der Arbeitsgemeinschaft Christliche Archäologie, Bonn, 10.–12. Mai 2018</b>
 
 					</div>
@@ -138,7 +138,7 @@
 				<div class="col-lg-9">
 					<article>
 						<div class="post-heading">
-						    <b>Sabine Schrenk, Stefanie Archut (Hrsg.)</b><br />
+						    <b>Sabine Schrenk, Stefanie Archut {{=T('(Eds.)')}}</b><br />
 							<b>Modulare Systeme in der Spätantike </b>
 
 						</div>
@@ -159,7 +159,7 @@
 				<div class="col-lg-2">
 					<article>
 						<div class="post-image">
-						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						{{=IMG(_src=URL('static','images/catalog/cover_senkbeil.jpg'),_style='width:230px')}}
 						</div>
 					</article>
 				</div>
@@ -182,7 +182,34 @@
 			</div>
 		</div>
 
+		<div class="container" id="kandel" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/cover_kandel.jpg'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Andrew W. Kandel, Miriam N. Haidle & Christian Sommer {{=T('(Eds.)')}}</b><br />
+							<b>Human Origins – Digital Future: An International Conference about the Future of Archaeological and Paleoanthropological Databases</b>
 
+						</div>
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint im Frühjahr 2022
+							{{elif session.forced_language =='en': }}
+							Coming Spring 2022
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+		
 		<div class="container" id="knosala" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
@@ -211,7 +238,34 @@
 			</div>
 		</div>
 
+		<div class="container" id="krause" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/cover_krause.jpg'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Celia Krause</b><br />
+							<b>Vox ex imagine. Formen des Zusammenwirkens von Bild und ‚sprechender‘ Beischrift in der antiken Flächenkunst</b>
 
+						</div>
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint im Herbst 2022
+							{{elif session.forced_language =='en': }}
+							Coming Autumn 2022
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+		
 		<div class="row">
 			<div  id="vorschau_reihen" class="col-lg-12">
 				<h4>  {{if session.forced_language =='de': }}
@@ -265,7 +319,7 @@
 				<div class="col-lg-9">
 					<article>
 						<div class="post-heading">
-						    <b>Nikolaus Dietrich / Caterina Maderna / Diamantis Panagiotopoulos (Hrsg.)</b><br />
+						    <b>Nikolaus Dietrich / Caterina Maderna / Diamantis Panagiotopoulos {{=T('(Eds.)')}}</b><br />
 							<b><a href="{{=URL('series','info/akt')}}" title="Informationen über die Reihe Archäologie – Kultur – Theorie. Heidelberger Beiträge zur klassischen Archäologie">Archäologie – Kultur – Theorie. Heidelberger Beiträge zur klassischen Archäologie</a></b>
 
 						</div>
@@ -296,7 +350,7 @@
 				<div class="col-lg-9">
 					<article>
 						<div class="post-heading">
-						    <b>AG Theorien in der Archäologie (Hrsg.)</b><br>
+						    <b>AG Theorien in der Archäologie {{=T('(Ed.)')}}</b><br>
 							<b><a href="{{=URL('series','info/tida')}}" title="Informationen über die Reihe Theoriedenken in der Archäologie (TidA)">Theoriedenken in der Archäologie (TidA)</a></b>
 						</div>
 					</article>
