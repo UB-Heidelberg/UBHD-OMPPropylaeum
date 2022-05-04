@@ -12,36 +12,7 @@
 	</div>
 
 
-	<div class="container" id="sauer" height="400px">
-		<div class="row">
-			<div class="col-lg-2">
-				<article>
-					<div class="post-image">
-					{{=IMG(_src=URL('static','images/catalog/cover_sauer.jpg'),_style='width:230px')}}
-					</div>
-				</article>
-			</div>
-			<div class="col-lg-9">
-				<article>
-					<div class="post-heading">
-						<b>Jochen Sauer (Hrsg.)</b><br />
-						<b>Lateinische Grammatik unterrichten: analog und digital in Theorie und Praxis (Acta Didactica Classica, Band 3)</b>
-						
 
-					</div>
-					<p>
-						{{if session.forced_language =='de': }}
-						Erscheint im Winter 2021/2022
-						{{elif session.forced_language =='en': }}
-						Coming Winter 2021/2022
-						{{pass}}
-					</p>
-				</article>
-			</div>
-		</div>
-	</div>
-
-	
 	<div class="container" id="bruder" height="400px">
 		<div class="row">
 			<div class="col-lg-2">
@@ -303,5 +274,25 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="container" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Landesamt für Denkmalpflege Hessen, Abteilung hessenARCHÄOLOGIE {{=T('(Ed.)')}}</b><br>
+							<b><a href="{{=URL('series','info/fbheb')}}" title="Informationen über die Reihe Fundberichte aus Hessen, Beihefte">Fundberichte aus Hessen, Beihefte</a></b>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>		
 
 	</div>
