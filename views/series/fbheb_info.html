@@ -1,0 +1,83 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>{{if session.forced_language =='de': }}
+                Fundberichte aus Hessen, Beihefte
+                {{elif session.forced_language =='en': }}
+                Fundberichte aus Hessen, Beihefte
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Schriftenreihe „Fundberichte aus Hessen, Beihefte“ (FbHeB) wird von der hessenARCHÄOLOGIE des Landesamtes für Denkmalpflege Hessen herausgegeben. Sie präsentiert in Form von Monografien – hauptsächlich ausgewählte universitäre Examensarbeiten und Dissertationen – und Sammelbänden Forschungen zur Archäologie und Paläontologie in Hessen. Eingeführt im Jahr 1969 und nach einer Unterbrechung im Jahr 2006 wiederaufgenommen, sind bis 2018 insgesamt elf Bände als Druckexemplare erschienen.</p>
+            <p>Die Beihefte verfolgen das Ziel, unter systematischer Einbindung der Autorinnen und Autoren in die Publikationsvorbereitung Forschungsergebnisse zeitnah und als kostengünstiges Druckerzeugnis zu veröffentlichen. Ab Band 12 ist eine Veränderung des Publikationsmodus wirksam: Die betreffenden Bände erscheinen in Erstveröffentlichung digital und Open Access (frei zugänglich und kostenfrei); eine Zweitveröffentlichung im Print-On-Demand-Verfahren (Digitaldruck) erfolgt nur auf ausdrücklichen Wunsch der Autorinnen und Autoren oder bei Sammelbänden von Herausgeberinnen und Herausgebern. Im Falle der Erteilung aller jeweils erforderlichen Nutzungsrechte durch Urheber und Urheberinnen werden auch ältere Bände sukzessive online gestellt.</p>
+
+            <div class="widget">
+                <ul class="tags">
+                   <li>
+                      <p><a href="{{=URL('catalog', 'series/fbheb')}}">{{=T('Volumes')}}</a></p>
+                   </li>
+                </ul>
+             </div>
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts">{{=IMG(_src=URL('static','images/series/logo_hessen-archaeologie.png'),_width='230px')}}</p>
+                <p><b>Herausgeber</b><br>
+                Landesamt für Denkmalpflege Hessen,<br>
+                Abteilung hessenARCHÄOLOGIE<br>
+                Schloss Biebrich (Ostflügel)<br>
+                Rheingaustr. 140<br>
+                65203 Wiesbaden</p>
+                <p>E-Mail: <a href="mailto:poststelle.archaeologie@lfd-hessen.de">poststelle.archaeologie@lfd-hessen.de</a><br />
+                Internet: <a href="https://lfd.hessen.de/hessenARCHAEOLOGIE" title="Homepage Landesamt für Denkmalpflege Hessen, hessenARCHÄOLOGIE">https://lfd.hessen.de/hessenARCHAEOLOGIE</a></p>
+				<!--<p><b>ISSN</b><br>
+				 2699-6294 (Print)<br />
+				 2699-6286 (Online)
+				 </p>-->
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>Die Schriftenreihe „Fundberichte aus Hessen, Beihefte“ (FbHeB) wird von der hessenARCHÄOLOGIE des Landesamtes für Denkmalpflege Hessen herausgegeben. Sie präsentiert in Form von Monografien – hauptsächlich ausgewählte universitäre Examensarbeiten und Dissertationen – und Sammelbänden Forschungen zur Archäologie und Paläontologie in Hessen. Eingeführt im Jahr 1969 und nach einer Unterbrechung im Jahr 2006 wiederaufgenommen, sind bis 2018 insgesamt elf Bände als Druckexemplare erschienen.</p>
+            <p>Die Beihefte verfolgen das Ziel, unter systematischer Einbindung der Autorinnen und Autoren in die Publikationsvorbereitung Forschungsergebnisse zeitnah und als kostengünstiges Druckerzeugnis zu veröffentlichen. Ab Band 12 ist eine Veränderung des Publikationsmodus wirksam: Die betreffenden Bände erscheinen in Erstveröffentlichung digital und Open Access (frei zugänglich und kostenfrei); eine Zweitveröffentlichung im Print-On-Demand-Verfahren (Digitaldruck) erfolgt nur auf ausdrücklichen Wunsch der Autorinnen und Autoren oder bei Sammelbänden von Herausgeberinnen und Herausgebern. Im Falle der Erteilung aller jeweils erforderlichen Nutzungsrechte durch Urheber und Urheberinnen werden auch ältere Bände sukzessive online gestellt.</p>
+
+            <div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/fbheb')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/logo_hessen-archaeologie.png'),_width='230px')}}</p>
+                <p><b>Editor</b><br>
+                    Landesamt für Denkmalpflege Hessen,<br>
+                    Abteilung hessenARCHÄOLOGIE<br>
+                    Schloss Biebrich (Ostflügel)<br>
+                    Rheingaustr. 140<br>
+                    65203 Wiesbaden</p>
+                <p>Email: <a href="mailto:poststelle.archaeologie@lfd-hessen.de">poststelle.archaeologie@lfd-hessen.de</a><br />
+                    Internet: <a href="https://lfd.hessen.de/hessenARCHAEOLOGIE" title="Homepage Landesamt für Denkmalpflege Hessen, hessenARCHÄOLOGIE">https://lfd.hessen.de/hessenARCHAEOLOGIE</a></p>
+                <!--<p><b>ISSN</b><br>
+				 2699-6294 (Print)<br />
+				 2699-6286 (Online)
+				 </p>-->
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
