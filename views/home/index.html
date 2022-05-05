@@ -10,6 +10,15 @@ $('.flexslider').flexslider();
 
 		<div class="row">
             <div class="col-lg-3">
+                <div class="box">
+                  <div class="box-gray aligncenter">
+                     <h4>{{=T('New Titles')}}</h4>
+                        {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/1025/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/1025'))}}                      
+                  </div>
+                 <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/1025'))}}</div>
+                </div>
+            </div>  
+            <div class="col-lg-3">
 
                  <div class="box">
                       <div class="box-gray aligncenter">
@@ -19,15 +28,7 @@ $('.flexslider').flexslider();
                      <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/976'))}}</div>
                  </div>
             </div>
-            <div class="col-lg-3">
-                <div class="box">
-                  <div class="box-gray aligncenter">
-                     <h4>{{=T('New Titles')}}</h4>
-                        {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/1006/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/1006'))}}                      
-                  </div>
-                 <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/1006'))}}</div>
-                </div>
-            </div>            
+          
 
 
 
@@ -61,31 +62,32 @@ $('.flexslider').flexslider();
                 <div class="box">
                   <div class="box-gray aligncenter">
                      <h4>{{=T('New Titles')}}</h4>
+                        {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/1006/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/1006'))}}                      
+                  </div>
+                 <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/1006'))}}</div>
+                </div>
+            </div>              
+            <div class="col-lg-3">
+                <div class="box">
+                  <div class="box-gray aligncenter">
+                     <h4>{{=T('New Titles')}}</h4>
                         {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/986/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/986'))}}                      
                   </div>
                  <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/986'))}}</div>
              </div>
             </div>            
-            <div class="col-lg-3">
-                <div class="box">
-                  <div class="box-gray aligncenter">
-                     <h4>{{=T('New Titles')}}</h4>
-                        {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/1030/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/1030'))}}                      
-                  </div>
-                 <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/1030'))}}</div>
-             </div>
-            </div>            
+          
             <div class="col-lg-6 boxAktuelles">
                 <div class="box">
                     <div class="box-gray">
           						<h4>Propylaeum–eBOOKS</h4>
                                 <p class="boxText aligncenter">
           						{{if session.forced_language =='de': }}
-          						ist die Open-Access-Publikationsplattform von <a href="http://www.propylaeum.de" title="Homepage Portal Propylaum - Fachinformationsdienst für Altertumswissenschaften">Propylaeum</a> für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
+          						ist die Open-Access-Publikationsplattform von <a href="https://www.propylaeum.de" title="Homepage Portal Propylaum - Fachinformationsdienst für Altertumswissenschaften">Propylaeum</a> für wissenschaftliche E-Books aus den Altertumswissenschaften.<br>
           						Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen ("goldener Weg") als auch Zweitveröffentlichungen ("grüner Weg"). Das kostenfreie Angebot richtet sich an Altertumswissenschaftlerinnen und Altertumswissenschaftler weltweit.<br>
           						Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
           						{{elif session.forced_language =='en': }}                
-          						is the Open Access publication platform by <a href="http://www.propylaeum.de" title="Homepage Propylaeum - Specialized Information Service Classics">Propylaeum </a> for scientific ebooks on Classical Studies.<br>
+          						is the Open Access publication platform by <a href="https://www.propylaeum.de" title="Homepage Propylaeum - Specialized Information Service Classics">Propylaeum </a> for scientific ebooks on Classical Studies.<br>
           						We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). The service is free of charge and aimed at academics from all over the world.<br>
           						We are using the Open-Source-Software OMP (Open Monograph Press) by the Public Knowledge Project (PKP).
           						{{pass}}
@@ -105,20 +107,21 @@ $('.flexslider').flexslider();
                     <div class="box">
                       <div class="box-gray aligncenter">
                          <h4>{{=T('New Titles')}}</h4>
+                            {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/1030/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/1030'))}}                      
+                      </div>
+                     <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/1030'))}}</div>
+                 </div>
+                </div>                   
+                <div class="col-lg-3">
+                    <div class="box">
+                      <div class="box-gray aligncenter">
+                         <h4>{{=T('New Titles')}}</h4>
                             {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/1028/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/1028'))}}                      
                       </div>
                      <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/1028'))}}</div>
                  </div>
                 </div>                 
-                <div class="col-lg-3">
-                    <div class="box">
-                      <div class="box-gray aligncenter">
-                         <h4>{{=T('New Titles')}}</h4>
-                            {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/3/monographs/926/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/926'))}}                      
-                      </div>
-                     <div class="box-bottom">{{=A(T('More Information'),_href=URL('catalog','book/926'))}}</div>
-                 </div>
-                </div>                  
+                 
             
            
               
