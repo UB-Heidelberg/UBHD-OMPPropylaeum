@@ -1,0 +1,104 @@
+{{extend 'layout.html'}}
+
+<div class="container-fluid">
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}                
+                Kataloge Vor- und Frühgeschichtlicher Altertümer
+                {{elif session.forced_language =='en': }}              
+                Kataloge Vor- und Frühgeschichtlicher Altertümer
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die <strong>„Kataloge Vor- und Frühgeschichtlicher Altertümer“</strong> sind ab 1909 bis 2021 mit insgesamt 50 Bänden erschienen. Das Römisch-Germanischen Zentralmuseum hat damit grundlegende Materialübersichten zu bestimmten regional oder zeitlich begrenzten Epochen der Vor- und Frühgeschichte vorgelegt.</p>
+            <p>Die archäologische Sammlung des RGZM ist in ihrer Zusammenstellung einzigartig und zugleich ein direktes Abbild der Forschungen des Hauses. Schon bei der Gründung des RGZM im Jahre 1852 war es ein erklärtes Ziel, in Mainz eine zentrale Referenzsammlung der bedeutendsten und aussagekräftigsten archäologischen Fundobjekte zwischen dem Mittelmeerraum und Nordeuropa zu etablieren. Diese bildete die Grundlage für groß angelegte und Kultur übergreifende Studien, wie sie an anderen Orten zu diesem Zeitpunkt kaum möglich gewesen wären. Da die Originalobjekte natürlich bei den jeweiligen Besitzern verbleiben sollten, wurden in Mainz detailgetreue Kopien angefertigt. Mit Einsatz verschiedener, neuerdings auch digitaler Methoden erfolgt die Produktion von Kopien auch heute noch auf allerhöchstem Niveau. Erst seit dem ausgehenden 19. Jahrhundert gelangten zunehmend auch Originalobjekte durch Schenkungen, Kauf oder Tausch in die Sammlung des RGZM. Die Sammlung umfasst heute etwa 200.000 Einzelobjekte, wobei sich Kopien und Originale die Waage halten.</p>
+            <p>In dieser Publikationsreihe wurden zahlreiche Objektgruppen, insbesondere aus dem Bestand an Originalen, veröffentlicht oder sind Bestandteile noch laufender Forschungsprojekte. In digitaler Form kann der gesamte archäologische Sammlungsbestand des RGZM bereits jetzt anhand einer Online-Version der analogen Inventarbücher eingesehen werden.</p>
+            <p>Ein Teil dieser Bände ist zwischenzeitlich vergriffen. Die noch erhältlichen Printmedien können unter <a href="mailto:verlag@rgzm.de" title="Email an den Verlag des RGZM senden">verlag@rgzm.de</a> bestellt werden.</p>
+
+            
+        <div class="widget">
+          <ul class="tags">
+            <li>
+                <p><a href="{{=URL('catalog', 'series/rgzmkata')}}">{{=T('Volumes')}}</a></p>
+            </li>
+          </ul>
+        </div> 
+
+        <h4>Vorgängerreihe</h4>
+          <p><a href="https://digi.ub.uni-heidelberg.de/diglit/kataloge_rgzm" title="Homepage UB Heidelberg, Digitalisate der Kataloge des Römisch-Germanischen Zentralmuseums">Kataloge des Römisch-Germanischen Zentralmuseums (Im Aufbau)</a></p>
+                    
+        
+    </div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts">
+		        <p>{{=IMG(_src=URL('static','images/partner/rgzm_logo.png'),_width='230px')}}</p>
+                <p><b>Verlag</b><br>
+                Römisch-Germanisches Zentralmuseum,<br /> 
+                Leibniz-Forschungsinstitut für Archäologie<br />
+                Ernst-Ludwig-Platz 2<br />
+                D-55116 Mainz<br /><br />
+                Tel.: +49 6131 9124 0<br>
+                Fax: +49 6131 9124 199<br>
+                E-mail: verlag@rgzm.de</p>
+				<p><b>ISSN</b><br>
+				      2629-673X (Online)
+				</p>
+           </div>
+    </div>   
+
+		
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>The <strong>&ldquo;Kataloge Vor- und Frühgeschichtlicher Altertümer&rdquo;</strong> were published from 1909 to 2021 with a total of 50 volumes. The Römisch-Germanisches Zentralmuseum has thus presented fundamental overviews of material on specific regional or temporally limited epochs of prehistory and early history.</p>
+            <p>The archaeological collection of the RGZM is unique in its compilation and at the same time a direct reflection of the museum's research. When the RGZM was founded in 1852, it was already a declared goal to establish a central reference collection in Mainz of the most important and significant archaeological finds between the Mediterranean region and northern Europe. This formed the basis for large-scale and cross-cultural studies that would hardly have been possible elsewhere at that time. Since the original objects were naturally to remain with their respective owners, detailed copies were made in Mainz. With the use of various methods, recently also digital ones, the production of copies still takes place today at the very highest level. It was not until the end of the 19th century that original objects increasingly entered the collection of the RGZM through donations, purchase or exchange. Today, the collection comprises about 200,000 individual objects, with copies and originals in balance.</p>
+            <p>In this publication series, numerous groups of objects, especially from the stock of originals, have been published or are components of still ongoing research projects.</p>
+            <p>In digital form, the entire archaeological collection of the RGZM can already be viewed using an online version of the analogue inventory books.</p>
+            <p>Some of these volumes are now out of print. The print media still available can be ordered at <a href="mailto:verlag@rgzm.de" title="send Email to the publishing department of RGZM">verlag@rgzm.de</a>.</p>
+                    
+            <div class="widget">
+              <ul class="tags">
+                <li>
+                  <p><a href="{{=URL('catalog', 'series/rgzmkata')}}">{{=T('Volumes')}}</a></p>
+                </li>
+              </ul>
+            </div>
+
+            <h4>Preceding series</h4>
+            <p><a href="https://digi.ub.uni-heidelberg.de/diglit/kataloge_rgzm" title="Homepage UB Heidelberg, digital presentation of the Kataloge des Römisch-Germanischen Zentralmuseums">Kataloge des Römisch-Germanischen Zentralmuseums (Under construction)</a></p>
+        </div>    
+		
+		<div class="col-lg-3">
+
+           <div id="infoBoxRechts">
+		   <p>{{=IMG(_src=URL('static','images/partner/rgzm_logo.png'),_width='230px')}}</p>
+                <p><b>Press</b><br>
+                Römisch-Germanisches Zentralmuseum<br />
+                Leibniz-Forschungsinstitut für Archäologie<br />
+                Römisch-Germanisches Zentralmuseum<br />
+                Ernst-Ludwig-Platz 2<br />
+                D-55116 Mainz<br /><br />
+                Tel.: +49 6131 9124 0<br>
+                Fax: +49 6131 9124 199<br>
+                E-mail: verlag@rgzm.de</p>
+				<p><b>ISSN</b><br>
+				2629-673X (Online)
+				</p>
+           </div>
+
+        </div>   
+{{pass}}
+
+</div>
+
+
+
+</div>
