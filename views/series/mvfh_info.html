@@ -1,0 +1,86 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>{{if session.forced_language =='de': }}
+                Materialien zur Vor- und Frühgeschichte von Hessen
+                {{elif session.forced_language =='en': }}
+                Materialien zur Vor- und Frühgeschichte von Hessen
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die hessenARCHÄOLOGIE des Landesamtes für Denkmalpflege Hessen gibt seit 1976 die Schriftenreihe „Materialien zur Vor- und Frühgeschichte von Hessen“ (MVFH) heraus. Die fachwissenschaftlichen Monografien und Sammelbände sind herausragenden archäologischen Forschungsprojekten in Hessen gewidmet. Zu den Titeln zählen unter anderem Dissertationen sowie von der Deutschen Forschungsgemeinschaft geförderte Untersuchungen. </p>
+
+            <p>Ab Band 32 erscheinen die Ausgaben nicht nur gedruckt, sondern stehen auch in digitaler Form frei zugänglich zum kostenlosen Download bereit. Nach Erteilung aller jeweils erforderlichen Nutzungsrechte sollen auch ältere Bände im Zuge einer Retrodigitalisierung sukzessive online veröffentlicht werden.</p>
+
+        <!--<div class="widget">
+                <ul class="tags">
+                   <li>
+                      <p><a href="{{=URL('catalog', 'series/mvfh')}}">{{=T('Volumes')}}</a></p>
+                   </li>
+                </ul>
+             </div>-->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts">{{=IMG(_src=URL('static','images/series/logo_hessen-archaeologie.png'),_width='230px')}}<br>
+            {{=IMG(_src=URL('static','images/series/logo_landesamt.png'),_width='230px')}}</p>
+                <p><b>Herausgeber</b><br>
+                Landesamt für Denkmalpflege Hessen,<br>
+                Abteilung hessenARCHÄOLOGIE<br>
+                Schloss Biebrich (Ostflügel)<br>
+                Rheingaustr. 140<br>
+                65203 Wiesbaden</p>
+                <p>E-Mail: <a href="mailto:poststelle.archaeologie@lfd-hessen.de">poststelle.archaeologie@lfd-hessen.de</a><br />
+                Internet: <a href="https://lfd.hessen.de/hessenARCHAEOLOGIE" title="Homepage Landesamt für Denkmalpflege Hessen, hessenARCHÄOLOGIE">https://lfd.hessen.de/hessenARCHAEOLOGIE</a></p>
+				<!--<p><b>ISSN</b><br>
+				 2699-6294 (Print)<br />
+				 2699-6286 (Online)
+				 </p>-->
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>„Materialien zur Vor- und Frühgeschichte von Hessen“ (MVFH) ist published since 1976 by hessenARCHÄOLOGIE of the Landesamt für Denkmalpflege Hessen. The monographs and anthologies on topics of particular interest for the archaeology of Hesse aim mainly for a scientific audience and comprise for example PhD theses or research funded by Deutsche Forschungsgemeinschaft.</p>
+            <p>From volume 32, the issues are not only published in print but also digitally and open access (freely accessible and free of charge). If all the necessary rights of use can be obtained, older volumes will also be gradually put online.</p>
+
+        <!--    <div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/mvfh')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>-->
+		</div>
+		
+		<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/logo_hessen-archaeologie.png'),_width='230px')}}<br>
+            {{=IMG(_src=URL('static','images/series/logo_landesamt.png'),_width='230px')}}</p>
+                <p><b>Editor</b><br>
+                    Landesamt für Denkmalpflege Hessen,<br>
+                    Abteilung hessenARCHÄOLOGIE<br>
+                    Schloss Biebrich (Ostflügel)<br>
+                    Rheingaustr. 140<br>
+                    65203 Wiesbaden</p>
+                <p>Email: <a href="mailto:poststelle.archaeologie@lfd-hessen.de">poststelle.archaeologie@lfd-hessen.de</a><br />
+                    Internet: <a href="https://lfd.hessen.de/hessenARCHAEOLOGIE" title="Homepage Landesamt für Denkmalpflege Hessen, hessenARCHÄOLOGIE">https://lfd.hessen.de/hessenARCHAEOLOGIE</a></p>
+                <!--<p><b>ISSN</b><br>
+				 2699-6294 (Print)<br />
+				 2699-6286 (Online)
+				 </p>-->
+           </div>
+        </div>  
+{{pass}}
+
+</div>
+
+
