@@ -13,7 +13,7 @@
 
 
 
-		<!-- Winter -->
+		<!-- Frühling -->
 
 
 
@@ -67,6 +67,33 @@
 							Erscheint im Frühling 2023
 							{{elif session.forced_language =='en': }}
 							Coming Spring 2023
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="krmnicek" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/cover_krmnicek.jpg'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Stefan Krmnicek & Dominik Maschek {{=T('(Eds.)')}}</b><br />
+							<b>Römische Archäologie in Deutschland. Positionsbestimmung und Perspektiven </b>
+
+						</div>
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint im Sommer 2023
+							{{elif session.forced_language =='en': }}
+							Coming Summer 2023
 							{{pass}}
 						</p>
 					</article>
