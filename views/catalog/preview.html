@@ -44,7 +44,33 @@
 				</div>
 			</div>
 		</div>
+		<div class="container" id="schipp" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/cover_schipp.jpg'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Oliver Schipp</b><br />
+							<b>Den Kolonat neu denken. Zur Aktualität eines Forschungsproblems</b>
 
+						</div>
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint im Frühling 2023
+							{{elif session.forced_language =='en': }}
+							Coming Spring 2023
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
 
 		<div class="container" id="urz" height="400px">
 			<div class="row">
