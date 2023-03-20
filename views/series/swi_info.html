@@ -1,0 +1,82 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+                <h3>Schriften des Winckelmann-Instituts</h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die „Schriften des Winckelmann-Instituts der Humboldt-Universität zu Berlin“ bilden den Neubeginn einer älteren, zwischen 1996 und 2008 unregelmäßig erschienenen Publikationsreihe des Instituts. In Form von Monografien, Sammelbänden, Tagungspublikationen und Ausstellungskatalogen werden aktuelle und herausragende Forschungs- sowie Ausstellungsprojekte des Instituts aus verschiedenen Bereichen der Klassischen Archäologie vorgelegt. Die Reihe soll bewusst die große Vielfalt der archäologischen Arbeit am Winckelmann-Institut abbilden. </p>
+            <p>Die Bände der Reihe erscheinen in loser Folge kostenfrei bei <em>Propylaeum-eBOOKS</em> zum Download. Parallel dazu werden die Publikationen auch im Print-on-Demand-Verfahren als Buch angeboten. </p>
+			 
+
+                    <!--<div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/archuge')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>-->
+
+		</div>
+		
+		<!--<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <!--<p><b>Derzeitige Herausgeber</b><br>
+				Prof. Dr. Sebastian Brather<br>
+                Prof. Dr. Jürgen Dendorfer<br>
+                Prof. Dr. Alexander Heising<br>
+                Prof. Dr. Christoph Huth<br><br>
+				Internet: <a href="https://www.fvag.uni-freiburg.de" title="Link zur Albert-Ludwig-Universität Freiburg">https://www.fvag.uni-freiburg.de</a>
+				</p>
+                <p><b>ISSN</b><br>
+                    1436-2686 (Print) <br>
+                    2751-0972  (Online)
+                </p>                     
+           </div>
+        </div>   -->
+
+
+                     {{elif session.forced_language =='en': }}
+		<div class="col-lg-9">		
+		    <p>The &ldquo;Schriften des Winckelmann-Instituts der Humboldt-Universität zu Berlin&rdquo; are the new start of an older series of publications of the Institute, which appeared irregularly between 1996 and 2008. In the form of monographs, thematic volumes, conference publications and exhibition catalogues, current and outstanding research as well as exhibition projects of the Institute from various fields of Classical Archaeology are presented. The series is intended to reflect the great variety of archaeological work at the Winckelmann-Institut.</p>
+            <p>The volumes of the series are published in irregular order and can be downloaded free of charge from <em>Propylaeum-eBOOKS</em>. In addition, the publications are also offered in print-on-demand as a book.</p>
+			
+
+                    <!--<div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/archuge')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>-->
+
+		</div>
+
+		
+		<!--<div class="col-lg-3">
+           <div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/archber_logo.jpg'),_width='230px')}}</p>-->
+
+                <!--<p><b>Current editors</b><br>
+				Prof. Dr. Sebastian Brather<br>
+                Prof. Dr. Jürgen Dendorfer<br>
+                Prof. Dr. Alexander Heising<br>
+                Prof. Dr. Christoph Huth<br><br>
+				Internet: <a href="https://www.fvag.uni-freiburg.de" title="Link to the Albert-Ludwig-University Freiburg">https://www.fvag.uni-freiburg.de</a>
+				</p>
+                <p><b>ISSN</b><br>
+                    1436-2686 (Print) <br>
+                    2751-0972  (Online)
+                </p>                  
+           </div>
+        </div>  -->
+{{pass}}
+
+</div>
+
+
