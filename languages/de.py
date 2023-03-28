@@ -467,6 +467,7 @@
 'Verlagsverkehrsnummer': 'Verlagsverkehrsnummer',
 'Verpackungsangaben In mm': 'Verpackungsangaben In mm',
 'Veröffentlichungen des Staatlichen Mathematisch-Physikalischen Salons': 'Veröffentlichungen des Staatlichen Mathematisch-Physikalischen Salons',
+'VG Wort': 'VG Wort',
 'Videos': 'Videos',
 'View': 'Ansicht',
 'View Journal': 'Zur Zeitschrift',
