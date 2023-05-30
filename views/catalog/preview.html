@@ -44,6 +44,33 @@
 			</div>
 		</div>
 
+		<div class="container" id="dapschauskas" height="400px">
+			<div class="row">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+						{{=IMG(_src=URL('static','images/catalog/cover_dapschauskas.jpg'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Rimtautas Dapschauskas</b><br />
+							<b>Der evolutionäre Ursprung von Ritualen. Eine disziplinübergreifende Synthese des aktuellen Forschungsstandes aus archäologischer Perspektive</b>
+						</div>
+						<p>
+						    {{if session.forced_language =='de': }}
+							Erscheint im Sommer 2023
+							{{elif session.forced_language =='en': }}
+							Coming Summer 2023
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+		
 		<div class="container" id="krmnicek" height="400px">
 			<div class="row">
 				<div class="col-lg-2">
@@ -153,7 +180,7 @@
 					<article>
 						<div class="post-heading">
 						    <b>International Congress of Roman Frontier Studies</b><br>
-							<b>Akten des ... Internationalen Limeskongresses</b>
+							<b>Akten des &hellip; Internationalen Limeskongresses</b>
 
 						</div>
 						<!--<p>
