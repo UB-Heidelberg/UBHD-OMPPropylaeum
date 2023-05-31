@@ -1,0 +1,88 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+		<div class="col-lg-12 contentbox-12">
+            <h3>  {{if session.forced_language =='de': }}
+                Tagungen des Landesmuseums für Vorgeschichte Halle
+                {{elif session.forced_language =='en': }}
+                Conference proceedings of the State Museum of Prehistory Halle
+            {{pass}}
+            </h3>
+		</div>	
+</div>
+
+<div class="row">
+        {{if session.forced_language =='de': }}
+				
+		<div class="col-lg-9">		
+		    <p>Die Reihe der Tagungsbände des Landesmuseums wurde 2008 ins Leben gerufen. Anlass dazu war die Konferenz „Luthers Lebenswelten“, die im Jahr 2007 in Halle (Saale) ausgerichtet wurde. Der zweite Tagungsband widmete sich mit dem Thema „Schlachtfeldarchäologie“ dem Mitteldeutschen Archäologentag, der seit 2008 jährlich vom Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt in Halle veranstaltet und zeitnah publiziert wird. Im Laufe der Jahre sind über 20 Bände dieser Reihe entstanden, die ein breites Spektrum an Tagungsthemen dokumentieren.</p>
+            <p>In den Bänden werden jeweils die Vorträge renommierter Wissenschaftlerinnen und Wissenschaftler verschiedenster Fachdisziplinen vorgelegt, die zu Gast bei den Konferenzen in Halle waren.</p>
+            <p>Dem großen Anteil internationaler Autorinnen und Autoren entsprechend, erscheinen viele Beitrage dieser Reihe in englischer Sprache mit deutscher Zusammenfassung. Deutsche Beiträge haben eine englische Zusammenfassung.
+               Zur Sicherung der wissenschaftlichen Qualität unterliegen die Beiträge der Tagungsbände in der Regel einem Peer Review-Verfahren.</p>
+
+            <div class="widget">
+                <ul class="tags">
+                   <li>
+                      <p><a href="{{=URL('catalog', 'series/taglmh')}}">{{=T('Volumes')}}</a></p>
+                   </li>
+                </ul>
+             </div>
+		</div>
+		
+		<div class="col-lg-3" style="margin-bottom: 2em;">
+           <div id="infoBoxRechts">{{=IMG(_src=URL('static','images/series/fblmh_logo.png'),_width='230px')}}</p>
+                <p><b>Herausgeber</b><br>
+                Prof. Dr. Harald Meller</p>
+                <p>Manuela Schwarz<br>
+                Redaktion<br>
+                Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt<br>
+                – Landesmuseum für Vorgeschichte –<br>
+                Richard-Wagner-Straße 9<br>
+                06114 Halle (Saale)<br>
+                Tel. 0345/5247-526<br>
+                E-Mail: <a href="mailto:MSchwarz@lda.stk.sachsen-anhalt.de">MSchwarz@lda.stk.sachsen-anhalt.de</a></p>
+				<p><b>ISSN</b><br>
+				 2194-9441 (Print)
+				 </p>
+           </div>
+        </div>   
+
+
+                     {{elif session.forced_language =='en': }}
+
+		<div class="col-lg-9">		
+		    <p>The series of conference proceedings of the State Museum was launched in 2008. The occasion was the conference „Luthers Lebenswelten“, which was held in Halle (Saale) in 2007. The second volume was dedicated to the Archaeological Conference of Central Germany, which has been organised annually since 2008 by the State Office for Heritage Management and Archaeology Saxony-Anhalt in Halle and published in a timely manner. Over the years, more than 20 volumes of this series have been produced, documenting a broad spectrum of conference topics.</p>
+            <p>The volumes present papers by renowned scholars from a wide range of disciplines who were participants at the conferences in Halle.</p>
+            <p>In keeping with the large proportion of international authors, many of the contributions in this series are published in English along with a German summary. German contributions include an English abstract.</p>
+            <p>In order to ensure scientific quality, the contributions to the conference proceedings are usually subject to a peer review process.</p>
+                    <div class="widget">
+                        <ul class="tags">
+                            <li>
+                               <p><a href="{{=URL('catalog', 'series/taglmh')}}">{{=T('Volumes')}}</a></p>
+                            </li>
+                        </ul>
+                    </div>
+		</div>
+		
+		<div class="col-lg-3" style="margin-bottom: 2em;">
+           <div id="infoBoxRechts">{{=IMG(_src=URL('static','images/series/fblmh_logo.png'),_width='230px')}}</p>
+                <p><b>Herausgeber</b><br>
+                Prof. Dr. Harald Meller</p>
+                <p>Manuela Schwarz<br>
+                Redaktion<br>
+                Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt<br>
+                – Landesmuseum für Vorgeschichte –<br>
+                Richard-Wagner-Straße 9<br>
+                06114 Halle (Saale)<br>
+                Tel. 0345/5247-526<br>
+                E-Mail: <a href="mailto:MSchwarz@lda.stk.sachsen-anhalt.de">MSchwarz@lda.stk.sachsen-anhalt.de</a></p>
+				<p><b>ISSN</b><br>
+				 2194-9441 (Print)
+				 </p>
+           </div>
+        </div 
+{{pass}}
+
+</div>
+
+
