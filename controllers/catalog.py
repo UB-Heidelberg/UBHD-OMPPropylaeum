@@ -330,6 +330,7 @@ def preview():
 
 
 def book():
+    import heiviewer
     ompdal = OMPDAL(db, myconf)
 
     submission_id = request.args[0] if request.args  and request.args[0].isdigit() else raise400()
@@ -387,10 +388,13 @@ def book():
         publication_format = OMPItem(pf, OMPSettings(ompdal.getPublicationFormatSettings(pf.publication_format_id)), {'identification_codes': ompdal.getIdentificationCodesByPublicationFormat(pf.publication_format_id), 'publication_dates': ompdal.getPublicationDatesByPublicationFormat(pf.publication_format_id)})
         full_file = ompdal.getLatestRevisionOfFullBookFileByPublicationFormat(submission_id, pf.publication_format_id)
         full_epub_file = ompdal.getLatestRevisionOfEBook(submission_id, pf.publication_format_id)
+        if heiviewer.is_enabled(publication_format):
+            full_file = ompdal.getLatestRevisionOfFileByPublicationFormatAndGenreKey(submission_id, pf.publication_format_id, 'MANUSCRIPT')
+        else:
+            full_file = ompdal.getLatestRevisionOfFullBookFileByPublicationFormat(submission_id, pf.publication_format_id)
         if full_epub_file:
             publication_format.associated_items['full_file'] = OMPItem(full_epub_file, OMPSettings(ompdal.getSubmissionFileSettings(full_epub_file.file_id)))
-
-        if full_file:
+        elif full_file:
             publication_format.associated_items['full_file'] = OMPItem(full_file, OMPSettings(ompdal.getSubmissionFileSettings(full_file.file_id)))
 
         digital_publication_formats.append(publication_format)
@@ -398,6 +402,7 @@ def book():
         for i in chapters:
             chapter_file = ompdal.getLatestRevisionOfChapterFileByPublicationFormat(i.attributes.chapter_id, pf.publication_format_id)
             if chapter_file:
+                publication_format.associated_items['has_chapter_files'] = True
                 i.associated_items.setdefault('files', {})[pf.publication_format_id] = OMPItem(chapter_file, OMPSettings(ompdal.getSubmissionFileSettings(chapter_file.file_id)))
             if chapter_id > 0 and chapter_id == i.attributes.chapter_id:
                 c = i
@@ -492,9 +497,13 @@ def book():
         additional_attribution = ""
 
     response.title = "{} - {}".format(cleanTitle, settings.short_title if settings.short_title else settings.title)
-
+    table_of_contents = ''
     if c:
-        # Select different template for chapters
+        # Chapter landing page was requested, select different template
         citation = ompformat.formatChapterCitation(citation, c, locale)
         response.view = 'catalog/book/chapter/index.html'
-    return locals()
+    elif chapters:
+        import ompcatalog
+        table_of_contents = ompcatalog.table_of_contents(submission_id, chapters, digital_publication_formats, locale)
+    has_download_format = [(pf.associated_items.get('full_file', None).attributes.file_type != "text/html" and pf.associated_items.get('full_file', None).attributes.file_type != "text/xml") for pf in digital_publication_formats if pf.associated_items.get('full_file', None)].count(True)
+    return dict(locals())

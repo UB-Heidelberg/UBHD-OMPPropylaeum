@@ -61,7 +61,7 @@
 
                         <!--annotation -->
                         <div class="post-heading">
-                            <br />
+                            <br/>
                             <div class="row">
                                 <!--authors -->
                                 <div id="autoren" class="col-lg-9 col-md-9 col-xs-7">
@@ -80,7 +80,7 @@
                         {{if abstract:}}<p>{{=XML(abstract)}}</p> {{pass}}
                         {{include '../static/omp-resources/views/catalog/reviews.html' }}
                         {{include 'catalog/book/submission/author_biography.html'}}
-                        {{include 'catalog/book/submission/chapter_list.html'}}
+                        {{=table_of_contents}}
                         </div>
                     </article>
                 </div>
