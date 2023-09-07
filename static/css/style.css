@@ -396,6 +396,7 @@ li {
 
 /*'Empfohlene Zitierweise' auf Buch-Seiten - doi-Angaben-Umbruch in Chrome */
 
+.box-gray.alignleft > div > a[href^="https://doi.org/10.11588"],
 .box-gray.alignleft > p > a[href^="https://doi.org/10.11588"] {
   word-break: break-all;
   width: 180px;
